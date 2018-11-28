@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Playercontroller : MonoBehaviour {
 
     public float speed;
+    public float sprint;
     Transform position;
     Rigidbody rb;
 
@@ -20,12 +21,17 @@ public class Playercontroller : MonoBehaviour {
 	void Update () {
         float moveVertical = Input.GetAxis("Vertical") * speed;
         float moveHorizontal = Input.GetAxis("Horizontal") * speed;
-
+        
         moveVertical *= Time.deltaTime;
         moveHorizontal *= Time.deltaTime;
 
-        transform.Translate(moveHorizontal, 0, moveVertical);
+        if (Input.GetKey("joystick button 4")) 
+        {
+            moveVertical = Input.GetAxis("Vertical") * speed * sprint;
+            moveHorizontal = Input.GetAxis("Horizontal") * speed * sprint;
+        }
 
+        transform.Translate(moveHorizontal, 0, moveVertical);
         //float xboxVertical = Input.GetAxisRaw("Vertical") * speed;
         //float xboxHorizontal = Input.GetAxisRaw("Horizontal") * speed;
         //xboxVertical *= Time.deltaTime;

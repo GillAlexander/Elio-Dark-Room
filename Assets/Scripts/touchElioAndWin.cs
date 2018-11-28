@@ -13,4 +13,10 @@ public class touchElioAndWin : MonoBehaviour {
 	void Update () {
 		
 	}
-}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(this.gameObject);
+        Debug.Log("You found Elio! You won!");
+    }
+    }

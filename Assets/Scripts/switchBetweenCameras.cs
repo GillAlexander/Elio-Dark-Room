@@ -18,16 +18,16 @@ public class switchBetweenCameras : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.anyKey)
+        if (Input.GetKey("joystick button 3"))
         {
             playerCamera.gameObject.SetActive(false);
             elioCamera.gameObject.SetActive(true);
-
         }
         else
         {
             playerCamera.gameObject.SetActive(true);
             elioCamera.gameObject.SetActive(false);
         }
+
 	}
 }
