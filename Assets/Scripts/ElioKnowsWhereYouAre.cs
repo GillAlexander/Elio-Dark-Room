@@ -11,7 +11,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
         //elioRadar = this.GetComponent<SphereCollider>();
 
 	}
-	void checkDistance()
+	void CheckDistance()
 {
         if (elio){
             float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
@@ -21,6 +21,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
             {
                 Debug.Log("You are less than 10 from me");
                 Debug.Log("You found me");
+
             }
             else if (Distance <= 30 )
             {
@@ -33,7 +34,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
         }
     }
 	void Update () {
-        checkDistance();
+        CheckDistance();
         }
 
 
