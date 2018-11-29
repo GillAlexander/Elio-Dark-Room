@@ -6,6 +6,8 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
     //public Transform Other;
     public GameObject elio;
     public GameObject player;
+
+    public Transform Target;
     //Collider elioRadar;
 	void Start () {
         //elioRadar = this.GetComponent<SphereCollider>();
@@ -21,7 +23,6 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
             {
                 Debug.Log("You are less than 10 from me");
                 Debug.Log("You found me");
-
             }
             else if (Distance <= 30 )
             {
@@ -33,14 +34,24 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
             }
         }
     }
+
+    void CheckAngle()
+    {
+        Vector3 elioPosition = Target.position - transform.position;
+        float elioAngle = Vector3.Angle(elioPosition, transform.forward);
+        if (elioAngle < 5.0f)
+        {
+            Debug.Log("You are looking at Elio!");
+        }
+    }
+
+    //Elio har två functioner
+    //true och false
+    //Sprint eller gömma sig  
+
 	void Update () {
         CheckDistance();
         }
-
-
-
-
-
 
 
 
