@@ -20,14 +20,14 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Vector2 cameraChange = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+        Vector2 cameraChange = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         Vector2 xboxCamera = new Vector2(Input.GetAxis("xboxX"), Input.GetAxisRaw("xboxY"));
 
-        //cameraChange = Vector2.Scale(cameraChange, new Vector2(sensitivity, sensitivity));
+        cameraChange = Vector2.Scale(cameraChange, new Vector2(sensitivity, sensitivity));
         xboxCamera = Vector2.Scale(xboxCamera, new Vector2(sensitivity, sensitivity));
 
-        //mouseLook += cameraChange;
-        //mouseLook.y = Mathf.Clamp(mouseLook.y, -90, 90);
+        mouseLook += cameraChange;
+        mouseLook.y = Mathf.Clamp(mouseLook.y, -90, 90);
 
         xboxLook += xboxCamera;
         xboxLook.y = Mathf.Clamp(xboxCamera.y, -90, 90);
