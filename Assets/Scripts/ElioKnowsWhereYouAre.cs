@@ -54,7 +54,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour
 
     void Update()
     {
-        CheckDistance();
+       // CheckDistance();
     }
 
 
