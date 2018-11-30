@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElioKnowsWhereYouAre : MonoBehaviour {
+public class ElioKnowsWhereYouAre : MonoBehaviour
+{
     //public Transform Other;
     public GameObject elio;
     public GameObject player;
 
     public Transform Target;
     //Collider elioRadar;
-	void Start ()
+    void Start()
     {
         //elioRadar = this.GetComponent<SphereCollider>();
-	}
-	void CheckDistance()
-{
-        if (elio){
+    }
+    /*
+    void CheckDistance()
+    {
+        if (elio)
+        {
             float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
             //print("Distance to other: " + Distance);
 
@@ -24,7 +27,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
                 Debug.Log("You are less than 10 from me");
                 Debug.Log("You found me");
             }
-            else if (Distance <= 30 )
+            else if (Distance <= 30)
             {
                 Debug.Log("You are Less than 30 from me");
             }
@@ -34,7 +37,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
             }
         }
     }
-
+    */
     void CheckAngle()
     {
         Vector3 elioPosition = Target.position - transform.position;
@@ -49,9 +52,10 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
     //true och false
     //Sprint eller gömma sig  
 
-	void Update () {
+    void Update()
+    {
         CheckDistance();
-        }
+    }
 
 
 
@@ -74,6 +78,6 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
     //    {
 
     //    }
-        
+
     //}
 }

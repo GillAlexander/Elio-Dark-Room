@@ -2,17 +2,20 @@
 
 public class ElioSounds : MonoBehaviour
 {
-    
+    public AudioClip[] sounds;
+    public AudioSource source;
+
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
     }
-    
+
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && elio)
+        if (Input.GetButtonDown("Jump"))
         {
-            elio.Play(0);
+            int rnd = Random.Range(0, 2);
+            
         }
     }
 }
