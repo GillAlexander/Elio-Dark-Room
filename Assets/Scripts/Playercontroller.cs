@@ -22,11 +22,6 @@ public class Playercontroller : MonoBehaviour
             moveVertical *= sprint;
             moveHorizontal *= sprint;
         }
-        transform.Translate(moveHorizontal, 0, moveVertical);
-
-        if (Input.GetButtonDown("Jump") && elio)
-        {
-            elio.Play(0);
-        }
+        transform.Translate(moveHorizontal, 0, moveVertical);        
     }
 }
