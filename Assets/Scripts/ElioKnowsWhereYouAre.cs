@@ -9,9 +9,9 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
 
     public Transform Target;
     //Collider elioRadar;
-	void Start () {
+	void Start ()
+    {
         //elioRadar = this.GetComponent<SphereCollider>();
-
 	}
 	void CheckDistance()
 {
