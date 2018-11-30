@@ -10,9 +10,7 @@ public class CameraController : MonoBehaviour
     Vector2 mouseLook;
     Vector2 xboxLook;
 
-
     public float sensitivity;
-
 
     void Start()
     {
@@ -21,10 +19,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-
-        
         Vector2 cameraChange = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-
         cameraChange = Vector2.Scale(cameraChange, new Vector2(sensitivity, sensitivity));
         mouseLook += cameraChange;
         mouseLook.y = Mathf.Clamp(mouseLook.y, -90, 90);
@@ -36,9 +31,11 @@ public class CameraController : MonoBehaviour
         xboxCamera = Vector2.Scale(xboxCamera, new Vector2(sensitivity, sensitivity));
         xboxLook += xboxCamera;
         xboxLook.y = Mathf.Clamp(xboxCamera.y, -90, 90);
-        transform.localRotation = Quaternion.AngleAxis(-xboxLook.y, Vector3.right);
-        character.transform.localRotation = Quaternion.AngleAxis(xboxLook.x, character.transform.up);
+        if (xboxCamera.x != 0 || xboxCamera.y != 0)
+        {
+            transform.localRotation = Quaternion.AngleAxis(-xboxLook.y, Vector3.right);
+            character.transform.localRotation = Quaternion.AngleAxis(xboxLook.x, character.transform.up);
+        }
 
-        
     }
 }
