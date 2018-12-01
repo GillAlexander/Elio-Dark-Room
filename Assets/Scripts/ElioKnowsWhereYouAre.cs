@@ -53,7 +53,10 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
         CheckDistance();
         }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
 
     //private void OnCollisionEnter(Collision collision)
@@ -74,6 +77,6 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
     //    {
 
     //    }
-        
+
     //}
 }
