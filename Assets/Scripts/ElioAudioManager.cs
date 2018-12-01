@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioScript : MonoBehaviour {
+public class ElioAudioManager : MonoBehaviour
+{
     private ElioRaycast ElioRaycastReference;
     public AudioSource detected;
 
