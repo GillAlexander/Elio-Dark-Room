@@ -13,8 +13,6 @@ public class JonathanPlayerController : MonoBehaviour
         //moveVertical *= Time.deltaTime;
         //moveHorizontal *= Time.deltaTime;
 
-        
-
         //transform.Translate(moveHorizontal, 0, moveVertical);
 
         float moveVertical = InputManager.MainVertical() * speed;
@@ -29,7 +27,22 @@ public class JonathanPlayerController : MonoBehaviour
             moveHorizontal *= sprint;
 
             Debug.Log("You are now sprinting");
-
+        }
+        if (InputManager.AButton())
+        {
+            Debug.Log("you are pressing A Button");
+        }
+        if (InputManager.BButton())
+        {
+            Debug.Log("you are pressing B Button");
+        }
+        if (InputManager.XButton())
+        {
+            Debug.Log("you are pressing X Button");
+        }
+        if (InputManager.YButton())
+        {
+            Debug.Log("you are pressing Y Button");
         }
 
         //if (Input.GetKey("joystick button 4") || Input.GetButton("Sprint"))
