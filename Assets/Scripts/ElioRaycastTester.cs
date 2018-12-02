@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ElioRaycastTester : MonoBehaviour {
-    private ElioRaycast ElioRaycastReference;
+    public ElioRaycast ER;
     
     void Start()
     {
-        ElioRaycastReference = GameObject.Find("ElioRaycastTest").GetComponent<ElioRaycast>();
+        ER = GameObject.FindWithTag("ElioRaycastTest").GetComponent<ElioRaycast>();
     }
 
     void update()
     {
-        if (ElioRaycast.PlayerDetected == true)
+        if (ER.PlayerDetected==true)
         {
-            Debug.Log("Player detedted");
+            Debug.Log("Player detected");
         }
     }
 

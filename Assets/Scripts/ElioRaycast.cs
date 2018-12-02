@@ -6,10 +6,11 @@ public class ElioRaycast : MonoBehaviour {
 
     int layerMask = 1 << 9;
     public float ElioVisionRange;
+    public float RaycastDensity;
     RaycastHit hit;
-    public static bool PlayerDetected;
+    public bool PlayerDetected;
 
-    private void Start()
+       private void Start()
     {
         
     }
@@ -17,20 +18,19 @@ public class ElioRaycast : MonoBehaviour {
     void Update () {
       
 
-        for (float i=0; i<360; i++)
+        for (float i=0; i< RaycastDensity; i++)
         {
             float ElioRayX = ElioVisionRange * Mathf.Cos( i);
             float ElioRayY = ElioVisionRange * Mathf.Sin(i);
-
+           
             Physics.Raycast(transform.position, transform.TransformDirection(ElioRayX, 0, ElioRayY), out hit, ElioVisionRange, layerMask);
-            if (hit.collider.tag == "player")
+            if (hit.CapsuleCollider.tag == "player")
             {
                 PlayerDetected = true;
             }
-            else
-            {
-                PlayerDetected = false;
-            }
+           
+
+            Debug.DrawRay(transform.position, transform.TransformDirection(ElioRayX, 0, ElioRayY), Color.red);
 
         }
 

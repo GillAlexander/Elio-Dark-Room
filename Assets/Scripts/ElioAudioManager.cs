@@ -14,7 +14,7 @@ public class ElioAudioManager : MonoBehaviour
 
     void update()
     {
-        if (ElioRaycast.PlayerDetected==true)
+        if (ElioRaycastReference.PlayerDetected==true)
         {
             detected.Play();
         }
