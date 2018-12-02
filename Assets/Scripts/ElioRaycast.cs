@@ -9,8 +9,9 @@ public class ElioRaycast : MonoBehaviour {
     public float RaycastDensity;
     RaycastHit hit;
     public bool PlayerDetected;
+    public AudioSource detected;
 
-       private void Start()
+    private void Start()
     {
         
     }
@@ -22,15 +23,17 @@ public class ElioRaycast : MonoBehaviour {
         {
             float ElioRayX = ElioVisionRange * Mathf.Cos( i);
             float ElioRayY = ElioVisionRange * Mathf.Sin(i);
-           
-            Physics.Raycast(transform.position, transform.TransformDirection(ElioRayX, 0, ElioRayY), out hit, ElioVisionRange, layerMask);
-            if (hit.CapsuleCollider.tag == "player")
+            Debug.DrawRay(transform.position, transform.TransformDirection(ElioRayX, 0, ElioRayY), Color.red);
+
+            if (Physics.Raycast(transform.position, transform.TransformDirection(ElioRayX, 0, ElioRayY), out hit, ElioVisionRange, layerMask))
             {
                 PlayerDetected = true;
+                Debug.Log("Player detected");
+                detected.Play();
             }
            
 
-            Debug.DrawRay(transform.position, transform.TransformDirection(ElioRayX, 0, ElioRayY), Color.red);
+            
 
         }
 
