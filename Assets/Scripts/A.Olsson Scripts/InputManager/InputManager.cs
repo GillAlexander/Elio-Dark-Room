@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class InputManager
 {
+    
     //Axis
     public static float MainHorizontal()
     {
@@ -26,6 +27,28 @@ public static class InputManager
         return new Vector3(MainHorizontal(), 0, MainVertical());
     }
 
+    //Camera Axis
+    public static float MainCameraHorizontal()
+    {
+        float result = 0.0f;
+        result += Input.GetAxis("Mouse X");
+        result += Input.GetAxis("xboxX");
+
+        return Mathf.Clamp(result, -1.0f, 1.0f);
+    }
+    public static float MainCameraVertical()
+    {
+        float result = 0.0f;
+        result += Input.GetAxis("Mouse Y");
+        result += Input.GetAxis("xboxY");
+
+        return Mathf.Clamp(result, -1.0f, 1.0f);
+    }
+    public static Vector3 MainCameraController()
+    {
+        return new Vector3(MainCameraHorizontal(), 0, MainCameraVertical());
+    }
+
     //Knappar
     public static bool AButton()
     {
@@ -33,21 +56,19 @@ public static class InputManager
     }
     public static bool BButton()
     {
-        return Input.GetButtonDown("A_Button");
+        return Input.GetButtonDown("B_Button");
     }
     public static bool XButton()
     {
-        return Input.GetButtonDown("A_Button");
+        return Input.GetButtonDown("X_Button");
     }
     public static bool YButton()
     {
-        return Input.GetButtonDown("A_Button");
+        return Input.GetButtonDown("Y_Button");
     }
     public static bool SprintButton()
     {
-        return Input.GetButtonDown("Sprint");
+        return Input.GetButton("Sprint");
     }
-
-    // sätt input i update 
-
+    //Note To self, GetButtonDown = 1frame. GetButton = While hodling down
 }
