@@ -1,4 +1,4 @@
-﻿using UnityEngine; 
+﻿using UnityEngine;
 
 public class touchElioAndWin : MonoBehaviour
 {
@@ -6,6 +6,6 @@ public class touchElioAndWin : MonoBehaviour
     {
         Destroy(this.gameObject);
         Debug.Log("You found Elio! You won!");
-        
+
     }
 }

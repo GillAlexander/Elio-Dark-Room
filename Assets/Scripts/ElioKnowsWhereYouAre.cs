@@ -16,9 +16,9 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
 	void CheckDistance()
 {
         if (elio){
-            float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
+            /*float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
             //print("Distance to other: " + Distance);
-
+            
             if (Distance <= 10)
             {
                 Debug.Log("You are less than 10 from me");
@@ -31,7 +31,7 @@ public class ElioKnowsWhereYouAre : MonoBehaviour {
             else
             {
                 Debug.Log("You are far away");
-            }
+            }*/
         }
     }
 
