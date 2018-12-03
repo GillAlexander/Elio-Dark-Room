@@ -10,12 +10,16 @@ public class ElioRaycastTester : MonoBehaviour {
         ER = GameObject.FindWithTag("ElioTest").GetComponent<ElioRaycast>();
     }
 
-    void update()
+    void Update()
     {
         if (ER.PlayerDetected==true)
         {
             Debug.Log("Player detected");
-            
+
+        }
+        else
+        {
+            Debug.Log("Player hidden");
         }
     }
 
