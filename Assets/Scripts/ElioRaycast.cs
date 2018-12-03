@@ -21,7 +21,7 @@ public class ElioRaycast : MonoBehaviour {
     void Update () {
         int elioLayerMask = 1 << 9;
 
-        elioLayerMask = ~elioLayerMask;
+       // elioLayerMask = ~elioLayerMask;
 
         for (float i=0; i< RaycastDensity; i++)
         {

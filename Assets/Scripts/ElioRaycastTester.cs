@@ -17,7 +17,7 @@ public class ElioRaycastTester : MonoBehaviour {
             Debug.Log("Player detected");
 
         }
-        else
+        else if(ER.PlayerDetected==false)
         {
             Debug.Log("Player hidden");
         }
