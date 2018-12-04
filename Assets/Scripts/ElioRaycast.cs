@@ -10,7 +10,7 @@ public class ElioRaycast : MonoBehaviour {
 
     float ElapsedTime = 0;
 
-    public bool PlayerDetected = false;
+    public bool PlayerDetectedStandard = false;
 
     RaycastHit hit;
     
@@ -28,7 +28,7 @@ public class ElioRaycast : MonoBehaviour {
 
                 if (hit.collider.tag=="Player")
                 {
-                    PlayerDetected = true;
+                    PlayerDetectedStandard = true;
                     ElapsedTime = 0;
                     Debug.Log("Timer reset in for loop");
                    
@@ -49,13 +49,13 @@ public class ElioRaycast : MonoBehaviour {
         void RaycastTimerReset()
         {
         Debug.Log("RaycastTimerReset run");
-            if (ElapsedTime >= PlayerDetectedResetTimer && PlayerDetected == true)
+            if (ElapsedTime >= PlayerDetectedResetTimer && PlayerDetectedStandard == true)
             {
-                PlayerDetected = false;
+                PlayerDetectedStandard = false;
                 ElapsedTime = 0;
                 Debug.Log("Timer and player detected reset");
             }
-            else if (ElapsedTime >= PlayerDetectedResetTimer && PlayerDetected == false)
+            else if (ElapsedTime >= PlayerDetectedResetTimer && PlayerDetectedStandard == false)
             {
                 ElapsedTime = 0;
                 Debug.Log("Timer reset");

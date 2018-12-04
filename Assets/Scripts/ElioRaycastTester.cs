@@ -12,12 +12,12 @@ public class ElioRaycastTester : MonoBehaviour {
 
     void Update()
     {
-        if (ER.PlayerDetected==true)
+        if (ER.PlayerDetectedStandard==true)
         {
             Debug.Log("Player detected");
 
         }
-        else if(ER.PlayerDetected==false)
+        else if(ER.PlayerDetectedStandard==false)
         {
             Debug.Log("Player hidden");
         }
