@@ -8,10 +8,13 @@ public class JonathanPlayerController : MonoBehaviour
     PlayerIndex playerIndex;
     GamePadState state;
     GamePadState prevState;
+    public int leftVibration;
+    public int rightVibration;
     bool playerIndexSet = false;
+
     void FixedUpdate()
     {
-        GamePad.SetVibration(playerIndex, state.Triggers.Left, state.Triggers.Right);
+        //GamePad.SetVibration(playerIndex, state.Triggers.Left, state.Triggers.Right);
     }
     void Update()
     {
@@ -56,7 +59,6 @@ public class JonathanPlayerController : MonoBehaviour
         if (InputManager.XButton())
         {
             Debug.Log("you are pressing X Button");
-            GamePad.SetVibration(playerIndex, state.Triggers.Left, state.Triggers.Right);
         }
         if (InputManager.YButton())
         {
