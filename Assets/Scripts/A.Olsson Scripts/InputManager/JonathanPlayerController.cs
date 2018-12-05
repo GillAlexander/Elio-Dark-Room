@@ -18,25 +18,13 @@ public class JonathanPlayerController : MonoBehaviour
     }
     void Update()
     {
-        if (!playerIndexSet || !prevState.IsConnected)
-        {
-            for (int i = 0; i < 4; ++i)
-            {
-                PlayerIndex testPlayerIndex = (PlayerIndex)i;
-                GamePadState testState = GamePad.GetState(testPlayerIndex);
-                if (testState.IsConnected)
-                {
-                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
-                    playerIndex = testPlayerIndex;
-                    playerIndexSet = true;
-                }
-            }
-        }
-        prevState = state;
-        state = GamePad.GetState(playerIndex);
-
         float moveVertical = InputManager.MainVertical() * speed;
         float moveHorizontal = InputManager.MainHorizontal() * speed;
+
+        if (moveHorizontal != 0 || moveVertical != 0)
+            PlayerFootsteps.isMoving = true;
+        else
+            PlayerFootsteps.isMoving = false;
 
         moveVertical *= Time.deltaTime;
         moveHorizontal *= Time.deltaTime;
@@ -47,7 +35,11 @@ public class JonathanPlayerController : MonoBehaviour
             moveHorizontal *= sprint;
 
             Debug.Log("You are now sprinting");
+            PlayerFootsteps.isRunning = true;
         }
+        else
+            PlayerFootsteps.isRunning = false;
+        
         if (InputManager.AButton())
         {
             Debug.Log("you are pressing A Button");

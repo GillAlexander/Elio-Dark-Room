@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XInputDotNetPure;
+using UnityEngine.Audio;
 
 public class _TESTPlayerVibrantingWalls : MonoBehaviour {
 
@@ -12,98 +13,121 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour {
     public float leftVibration;
     public float rightVibration;
     public float vibrationTime;
+    public float vibrationDuration;
 
-    public GameObject redBall;
+    //Johans ljud
+    public AudioSource source;
+    public AudioClip[] walkGrass;
+    public AudioMixerGroup audioMixer;
+    public static bool isMoving = false;
+    public static bool isRunning = false;
+    public static int startedRunning;
+
+
     void Start () {
-		
-	}
-    /*
-     * DWORD dwResult;    
-for (DWORD i=0; i< XUSER_MAX_COUNT; i++ )
-{
-  XINPUT_STATE state;
-  ZeroMemory( &state, sizeof(XINPUT_STATE) );
-
-        // Simply get the state of the controller from XInput.
-        dwResult = XInputGetState( i, &state );
-
-        if( dwResult == ERROR_SUCCESS )
-  {
-      // Controller is connected 
-  }
-        else
-  {
-            // Controller is not connected 
-  }
-}
-     */
+        StartCoroutine(Footsteps());
+    }
     void Update () {
         if(vibrationTime > 0)
         {
             vibrationTime -= Time.deltaTime;
         }
-        if (!playerIndexSet || !prevState.IsConnected)
+
+        if (isRunning)
+            startedRunning++;
+        else
+            startedRunning = 0;
+
+        if (startedRunning == 1)
         {
-            for (int i = 0; i < 4; ++i)
-            {
-                PlayerIndex testPlayerIndex = (PlayerIndex)i;
-                GamePadState testState = GamePad.GetState(testPlayerIndex);
-                if (testState.IsConnected)
-                {
-                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
-                    playerIndex = testPlayerIndex;
-                    playerIndexSet = true;
-                }
-            }
+            StopAllCoroutines();
+            StartCoroutine(Footsteps());
         }
-        prevState = state;
-        state = GamePad.GetState(playerIndex);
 
-
-        
-        
     }
-    //foreach (ContactPoint contact in wall.contacts)
-    //{
-    //    GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
-    //}
-    void OnCollisionEnter(Collision wall)
+    void OnCollisionStay(Collision collision)
     {
-
-        if (wall.gameObject.name == ("wall"))
+        if (collision.gameObject.name == ("wall"))
         {
             Debug.Log("You are touching the wall");
-            GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
-
-        }
-        if (wall.gameObject.name == ("wall"))
-        {
-            TouchWallVibration();
-            //Handheld.vibrate();
-        }
-        /*
-            function Update()
+            if (vibrationTime < 0)
             {
-                timeLeft -= Time.deltaTime;
-                if ( timeLeft < 0 )
-                {
-                    GameOver();
-                }
+                GamePad.SetVibration(playerIndex, 0, 0);
             }
-        */
-    }
-    void  TouchWallVibration()
-    {
-        
-        if (vibrationTime < 0)
+            else
+            {
+                GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
+            }
+        }
+        foreach (ContactPoint contact in collision.contacts)
         {
-            GamePad.SetVibration(playerIndex, 0, 0);
+            Debug.DrawRay(contact.point, contact.normal * 10, Color.white);            
+        }
+
+        if (collision.gameObject.name == ("outerWall"))
+        {
+            GamePad.SetVibration(playerIndex, 1, 1);
         }
     }
-    void OnCollisionExit(Collision wall)
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == ("wall"))
+        {
+            vibrationTime = vibrationDuration;
+        }
+        if (collision.gameObject.name == ("tree"))
+        {
+            vibrationTime = vibrationDuration;
+        }
+    }
+    void OnCollisionExit(Collision collision)
     {
         Debug.Log("You are not touching the wall");
         GamePad.SetVibration(playerIndex, 0, 0);
     }
+
+    public IEnumerator Footsteps()
+    {
+        if (isMoving)
+        {
+
+            if (isRunning)
+            {
+                //source.clip = runGrass[Random.Range(0, walkGrass.Length)];
+                source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
+
+            }
+
+            else
+                source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
+
+
+            source.pitch = Random.Range(0.85f, 1.15f);
+            source.outputAudioMixerGroup = audioMixer;
+            source.Play();
+        }
+
+        if (isRunning)
+            yield return new WaitForSeconds(0.3f);
+        else
+            yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(Footsteps());
+    }
 }
- 
+
+
+
+
+
+//Handheld.vibrate();
+/*
+          function Update()
+          {
+              timeLeft -= Time.deltaTime;
+              if ( timeLeft < 0 )
+              {
+                  GameOver();
+              }
+          }
+      */
