@@ -128,7 +128,7 @@ AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Dialogue
+  m_Name: Voice
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 43f4cf04cda7e3f46b798162ce2da5c0
   m_Children: []

@@ -27,15 +27,12 @@ public class ElioSounds : MonoBehaviour
             source.Play();
         }
 
-        /*
-        if (ElioIsOnTheMove)
+        if (isMoving)
         {
             isMoving = true;
         }
         else
             isMoving = false;
-        */
-
     }
 
     IEnumerator Footsteps()
@@ -45,6 +42,7 @@ public class ElioSounds : MonoBehaviour
             source.Stop();
             source.clip = footsteps[Random.Range(0, footsteps.Length)];
             source.pitch = Random.Range(0.85f, 1.2f);
+            source.outputAudioMixerGroup = audioMixer[1];
             source.Play();
         }
         yield return new WaitForSeconds(0.5f);
