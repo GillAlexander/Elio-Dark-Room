@@ -15,6 +15,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         character = this.transform.parent.gameObject;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -37,5 +38,7 @@ public class CameraController : MonoBehaviour
             character.transform.localRotation = Quaternion.AngleAxis(xboxLook.x, character.transform.up);
         }
 
+        if (Input.GetKeyDown("escape"))
+            Cursor.lockState = CursorLockMode.None;
     }
 }
