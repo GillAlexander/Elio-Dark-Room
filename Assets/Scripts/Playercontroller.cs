@@ -22,6 +22,11 @@ public class Playercontroller : MonoBehaviour
             moveHorizontal *= sprint;
         }
 
-        transform.Translate(moveHorizontal, 0, moveVertical);       
-    }    
+        transform.Translate(moveHorizontal, 0, moveVertical);
+
+        if (moveHorizontal != 0 || moveVertical != 0)
+            PlayerFootsteps.isMoving = true;
+        else
+            PlayerFootsteps.isMoving = false;
+    }
 }

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerFootsteps : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip[] footsteps;
-    bool isMoving;
+    public AudioMixerGroup audioMixer;
+    public static bool isMoving;
 
     void Start()
     {
@@ -14,19 +16,20 @@ public class PlayerFootsteps : MonoBehaviour
 
     IEnumerator Footsteps()
     {
-        if (Playercontroller.moveHorizontal != 0 || Playercontroller.moveVertical != 0)
-            isMoving = true;
-        else
-            isMoving = false;
-
         if (isMoving)
         {
+            source.Stop();
             source.clip = footsteps[Random.Range(0, footsteps.Length)];
             source.pitch = Random.Range(0.85f, 1.2f);
+            source.outputAudioMixerGroup = audioMixer;
             source.Play();
         }
 
-        yield return new WaitForSeconds(1);
+        if (Input.GetButton("Sprint"))
+            yield return new WaitForSeconds(0.3f);
+        else
+            yield return new WaitForSeconds(0.5f);
+
         StartCoroutine(Footsteps());
     }
 }
