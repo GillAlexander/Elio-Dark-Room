@@ -6,6 +6,7 @@ public class PlayerWhistleRaycast : MonoBehaviour {
     public float WhistleRange;
     float EchoDistance;
     RaycastHit contact;
+    private GameObject PlayerHead;
 
     
     void Start () {
@@ -18,6 +19,7 @@ public class PlayerWhistleRaycast : MonoBehaviour {
         if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out contact, WhistleRange))
         {
             EchoDistance = contact.distance;
+            Instantiate(PlayerHead, contact.point.normalized, transform.rotation);
             Debug.Log("Player sees something: "+EchoDistance);
         }
         Debug.DrawRay(transform.position, contact.point - transform.position, Color.blue);
