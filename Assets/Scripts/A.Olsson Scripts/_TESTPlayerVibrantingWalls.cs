@@ -4,16 +4,28 @@ using UnityEngine;
 using XInputDotNetPure;
 using UnityEngine.Audio;
 
-public class _TESTPlayerVibrantingWalls : MonoBehaviour {
+
+// IFplayer is touching wall
+//If player is walking
+//Två bools 
+//Båda måste vara true för att få vibration respons. 
+//Koppla isplayer moving till vibration scriptet. 
+//ifall spelaren springer blir det snabbare vibrationer. 
+//
+public class _TESTPlayerVibrantingWalls : MonoBehaviour
+{
 
     PlayerIndex playerIndex;
     GamePadState state;
     GamePadState prevState;
     bool playerIndexSet = false;
-    public float leftVibration;
-    public float rightVibration;
+
     public float vibrationTime;
     public float vibrationDuration;
+    [Range(0, 65)]
+    public float leftVibration;
+    [Range(0, 65)]
+    public float rightVibration;
 
     //Johans ljud
     public AudioSource source;
@@ -24,26 +36,25 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour {
     public static int startedRunning;
 
 
-    void Start () {
+    void Start()
+    {
         StartCoroutine(Footsteps());
     }
-    void Update () {
-        if(vibrationTime > 0)
+    void Update()
+    {
+        if (vibrationTime > 0)
         {
             vibrationTime -= Time.deltaTime;
         }
-
         if (isRunning)
             startedRunning++;
         else
             startedRunning = 0;
-
         if (startedRunning == 1)
         {
             StopAllCoroutines();
             StartCoroutine(Footsteps());
         }
-
     }
     void OnCollisionStay(Collision collision)
     {
@@ -59,9 +70,21 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour {
                 GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
             }
         }
+        if (collision.gameObject.name == ("tree"))
+        {
+            Debug.Log("You are touching the tree");
+            if (vibrationTime < 0)
+            {
+                GamePad.SetVibration(playerIndex, 0, 0);
+            }
+            else
+            {
+                GamePad.SetVibration(playerIndex, 0, 0.25f);
+            }
+        }
         foreach (ContactPoint contact in collision.contacts)
         {
-            Debug.DrawRay(contact.point, contact.normal * 10, Color.white);            
+            Debug.DrawRay(contact.point, contact.normal * 10, Color.white);
         }
 
         if (collision.gameObject.name == ("outerWall"))
@@ -88,30 +111,25 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour {
 
     public IEnumerator Footsteps()
     {
-        if (isMoving)
-        {
-
-            if (isRunning)
-            {
-                //source.clip = runGrass[Random.Range(0, walkGrass.Length)];
+        if (isMoving){
+            if (isRunning){
                 source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
-
             }
-
-            else
+            else{
                 source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
-
-
+                GamePad.SetVibration(playerIndex, 0, 0);
+            }
             source.pitch = Random.Range(0.85f, 1.15f);
             source.outputAudioMixerGroup = audioMixer;
             source.Play();
         }
-
-        if (isRunning)
+        if (isRunning){
             yield return new WaitForSeconds(0.3f);
+            GamePad.SetVibration(playerIndex, 0.5f, 0.5f);
+        }
         else
             yield return new WaitForSeconds(0.5f);
-
+        GamePad.SetVibration(playerIndex, 0, 0);
         StartCoroutine(Footsteps());
     }
 }
