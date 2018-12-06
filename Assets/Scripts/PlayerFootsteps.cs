@@ -4,16 +4,6 @@ using UnityEngine.Audio;
 
 public class PlayerFootsteps : MonoBehaviour
 {
-    public AudioSource source;
-    public AudioClip[] walkConcrete;
-    public AudioClip[] walkDirt;
-    public AudioClip[] walkGrass;
-    public AudioClip[] walkGravel;
-    public AudioClip[] walkIndoors;
-    public AudioClip[] walkMetal;
-    public AudioClip[] walkSnow;
-    public AudioClip[] walkWater;
-    public AudioClip[] walkWood;
     public AudioClip[] runConcrete;
     public AudioClip[] runDirt;
     public AudioClip[] runGrass;
@@ -23,6 +13,16 @@ public class PlayerFootsteps : MonoBehaviour
     public AudioClip[] runSnow;
     public AudioClip[] runWater;
     public AudioClip[] runWood;
+    public AudioClip[] walkConcrete;
+    public AudioClip[] walkDirt;
+    public AudioClip[] walkGrass;
+    public AudioClip[] walkGravel;
+    public AudioClip[] walkIndoors;
+    public AudioClip[] walkMetal;
+    public AudioClip[] walkSnow;
+    public AudioClip[] walkWater;
+    public AudioClip[] walkWood;
+    public AudioSource audioSource;
     public AudioMixerGroup audioMixer;
     public static bool isMoving = false;
     public static bool isRunning = false;
@@ -51,16 +51,16 @@ public class PlayerFootsteps : MonoBehaviour
     {
         if (isMoving)
         {
-            source.Stop();
+            audioSource.Stop();
 
             if (isRunning)
-                source.clip = runGrass[Random.Range(0, walkGrass.Length)];
+                audioSource.clip = runGrass[Random.Range(0, walkGrass.Length)];
             else
-                source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
+                audioSource.clip = walkGrass[Random.Range(0, walkGrass.Length)];
 
-            source.pitch = Random.Range(0.85f, 1.15f);
-            source.outputAudioMixerGroup = audioMixer;
-            source.Play();
+            audioSource.pitch = Random.Range(0.85f, 1.15f);
+            audioSource.outputAudioMixerGroup = audioMixer;
+            audioSource.Play();
         }
 
         if (isRunning)
