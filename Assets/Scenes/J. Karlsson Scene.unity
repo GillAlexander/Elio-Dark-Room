@@ -693,7 +693,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh45670
+  m_Name: pb_Mesh-978460
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -890,7 +890,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh45566
+  m_Name: pb_Mesh-978504
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2231,6 +2231,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114396489753005310, guid: cda55f82586266246a63e41ef2405e7e,
+        type: 2}
+      propertyPath: leftVibration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114396489753005310, guid: cda55f82586266246a63e41ef2405e7e,
+        type: 2}
+      propertyPath: rightVibration
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda55f82586266246a63e41ef2405e7e, type: 2}
   m_IsPrefabAsset: 0
@@ -2244,7 +2254,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh45620
+  m_Name: pb_Mesh-978482
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

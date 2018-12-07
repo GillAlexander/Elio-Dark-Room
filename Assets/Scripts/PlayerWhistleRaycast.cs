@@ -24,10 +24,11 @@ public class PlayerWhistleRaycast : MonoBehaviour {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out contact, WhistleRange))
             {
                 EchoDistance = contact.distance;
-                Instantiate(PlayerHead, contact.point.normalized, transform.rotation);
+              //  Instantiate(soundsource, contact.point.normalized, transform.rotation);
                 Debug.Log("Player sees something: " + EchoDistance);
+                Debug.DrawRay(transform.position, contact.point - transform.position, Color.red);
             }
-            Debug.DrawRay(transform.position, contact.point - transform.position, Color.blue);
+            
         }
     }
 }
