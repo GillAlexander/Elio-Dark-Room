@@ -2,10 +2,14 @@
 
 public class touchElioAndWin : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
-        Debug.Log("You found Elio! You won!");
+        if (other.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            Debug.Log("You found Elio! You won!");
+
+        }
 
     }
 }
