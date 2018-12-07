@@ -20,7 +20,7 @@ public class ElioSounds : MonoBehaviour
     private void Update()
     {
         //call Elio. JUMP KEY IS PLACEHOLDER!!
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Whistle"))
             StartCoroutine(Giggle());
 
         if (isMoving)

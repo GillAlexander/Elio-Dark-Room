@@ -10,7 +10,7 @@ public class PlayerNoise : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Whistle"))
         {
             audioSource.Stop();
             audioSource.clip = whistles[Random.Range(0, whistles.Length)];
