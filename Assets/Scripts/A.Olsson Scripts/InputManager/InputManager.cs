@@ -70,5 +70,9 @@ public static class InputManager
     {
         return Input.GetButton("Sprint");
     }
+    public static bool WhistleButton()
+    {
+        return Input.GetButton("Whistle");
+    }
     //Note To self, GetButtonDown = 1frame. GetButton = While hodling down
 }

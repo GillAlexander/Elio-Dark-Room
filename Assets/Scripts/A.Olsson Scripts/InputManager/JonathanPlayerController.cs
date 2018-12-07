@@ -56,6 +56,10 @@ public class JonathanPlayerController : MonoBehaviour
         {
             Debug.Log("you are pressing Y Button");
         }
+        if (InputManager.WhistleButton())
+        {
+            Debug.Log("You pressed the spacebar");
+        }
 
         transform.Translate(moveHorizontal, 0, moveVertical);
 
