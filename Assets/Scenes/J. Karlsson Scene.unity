@@ -1493,6 +1493,40 @@ RectTransform:
   m_AnchoredPosition: {x: 17, y: 3.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1032528474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1299326946428438, guid: 253ba1dc608369d44b73e2812c4364cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1074488304}
+--- !u!114 &1032528475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032528474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858ccb88c7920f842ba0de7c0ff7fbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1032528476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032528474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0266ecf2849e8b4f8585a3b5e5d4f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElioDetectionRangeClose: 3
+  ElioDetectionrangeFar: 10
+  ElioVisionRange: 10
+  RaycastDensity: 360
+  PlayerDetectedStandard: 0
+  PlayerDetectedFarAway: 0
+  PlayerDetectedClose: 0
 --- !u!114 &1037780924 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114811694112562744, guid: 253ba1dc608369d44b73e2812c4364cb,
@@ -1642,6 +1676,11 @@ Prefab:
         type: 2}
       propertyPath: PlayerDetectedResetTimer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114811694112562744, guid: 253ba1dc608369d44b73e2812c4364cb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253ba1dc608369d44b73e2812c4364cb, type: 2}
