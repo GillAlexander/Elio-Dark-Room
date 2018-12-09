@@ -19,13 +19,14 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     GamePadState state;
     GamePadState prevState;
     bool playerIndexSet = false;
-
     public float vibrationTime;
     public float vibrationDuration;
     [Range(0, 65)]
     public float leftVibration;
     [Range(0, 65)]
     public float rightVibration;
+    bool playerIsTouchingWall = false;
+    bool playerIsWalkingWhileTouchingwall = false;
 
     //Johans ljud
     public AudioSource source;
@@ -60,6 +61,7 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     {
         if (collision.gameObject.name == ("wall"))
         {
+            playerIsTouchingWall = true;
             Debug.Log("You are touching the wall");
             if (vibrationTime < 0)
             {
@@ -105,6 +107,7 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     }
     void OnCollisionExit(Collision collision)
     {
+        playerIsTouchingWall = false;
         Debug.Log("You are not touching the wall");
         GamePad.SetVibration(playerIndex, 0, 0);
     }
@@ -112,6 +115,11 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     public IEnumerator Footsteps()
     {
         if (isMoving){
+            playerIsWalkingWhileTouchingwall = true;
+            if (playerIsWalkingWhileTouchingwall)
+            {
+                Debug.Log("playeriswlakingwhiletouchingwall");
+            }
             if (isRunning){
                 source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
             }
@@ -119,9 +127,20 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
                 source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
                 GamePad.SetVibration(playerIndex, 0, 0);
             }
+            if (playerIsTouchingWall)
+            {
+                if (playerIsWalkingWhileTouchingwall)
+                {
+                    Debug.Log("You are touching the wall and moving");
+                }
+            }
             source.pitch = Random.Range(0.85f, 1.15f);
             source.outputAudioMixerGroup = audioMixer;
             source.Play();
+        }
+        if (!isMoving)
+        {
+            playerIsWalkingWhileTouchingwall = false;
         }
         if (isRunning){
             yield return new WaitForSeconds(0.3f);

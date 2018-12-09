@@ -92,6 +92,7 @@ public class _TESTElioKnowsWhereYouAre : MonoBehaviour
         if (spheres.gameObject.name == ("Close"))
         {
             Debug.Log("You are leaving the closest sphear");
+            //elio.transform
         }
     }
 }
