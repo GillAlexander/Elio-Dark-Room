@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWhistleRaycast : MonoBehaviour {
+
+    public GameObject EchoSource;
+
     public float WhistleRange;
+
+
     float EchoDistance;
     RaycastHit contact;
-    private GameObject PlayerHead;
- 
+
+    private float time;
     
     void Start () {
       
@@ -19,14 +24,15 @@ public class PlayerWhistleRaycast : MonoBehaviour {
 
         if (ElioWhistle)
         {
-
-
+            
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out contact, WhistleRange))
             {
                 EchoDistance = contact.distance;
-              //  Instantiate(soundsource, contact.point.normalized, transform.rotation);
+                Instantiate(EchoSource, contact.point.normalized, transform.rotation);
                 Debug.Log("Player sees something: " + EchoDistance);
                 Debug.DrawRay(transform.position, contact.point - transform.position, Color.red);
+
+                Destroy(EchoSource, time);
             }
             
         }

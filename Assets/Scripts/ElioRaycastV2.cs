@@ -13,7 +13,7 @@ public class ElioRaycastV2 : MonoBehaviour
     public float ElioVisionRange;
 
     public float RaycastDensity;
-    public static float PlayerDetectedResetTimer;
+
 
 
     public static float ElapsedTime = 0;
@@ -56,7 +56,7 @@ public class ElioRaycastV2 : MonoBehaviour
                     Debug.Log("PlayerDetectedClose");
                 }
 
-                else if (hit.collider.tag == "Player" && hit.distance > ElioDetectionRangeClose && hit.distance > ElioDetectionrangeFar)
+                else if (hit.collider.tag == "Player" && hit.distance < ElioVisionRange && hit.distance > ElioDetectionrangeFar)
                 {
                     PlayerDetectedFarAway = true;
                     ElapsedTime = 0;
