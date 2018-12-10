@@ -8,67 +8,34 @@ public class _TESTElioKnowsWhereYouAre : MonoBehaviour
     public GameObject elio;
     public GameObject player;
 
-    public Transform Target;
-
-    public float speed;
-    //Collider elioRadar;
-    void Start()
-    {
-        //elioRadar = this.GetComponent<SphereCollider>();
-
-    }
-    //void CheckDistance()
-    //{
-    //    if (elio)
-    //    {
+    //void CheckDistance(){
+    //    if (elio){
     //        float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
     //        //print("Distance to other: " + Distance);
-
-    //        if (Distance <= 10)
-    //        {
+    //        if (Distance <= 10){
     //            Debug.Log("You are less than 10 from me");
     //            Debug.Log("You found me");
     //        }
-    //        else if (Distance <= 30)
-    //        {
+    //        else if (Distance <= 30){
     //            Debug.Log("You are Less than 30 from me");
     //        }
-    //        else
-    //        {
+    //        else{
     //            Debug.Log("You are far away");
     //        }
     //    }
     //}
-
-    void CheckAngle()
-    {
-        Vector3 elioPosition = Target.position - transform.position;
-        float elioAngle = Vector3.Angle(elioPosition, transform.forward);
-        if (elioAngle < 5.0f)
-        {
-            Debug.Log("You are looking at Elio!");
-        }
-    }
-
     //Elio har två functioner
     //true och false
     //Sprint eller gömma sig  
-
     void Update()
     {
         //CheckDistance();
     }
-
-    private void OnTriggerEnter(Collider spheres)
+    private void OnTriggerStay(Collider spheres)
     {
-        //Vector3 playerPosition = player.transform.position;
-        //Vector3 elioPosition = Target.position - transform.position;
-        //float steg = speed * Time.deltaTime;
         if (spheres.gameObject.name == "Far")
         {
             Debug.Log("You are far away");
-            //elio.transform.position = Vector3.MoveTowards(playerPosition, playerPosition, steg * Time.deltaTime);
-            //elio.transform.position = (elio.transform.position - player.transform.position)/2;
         }
         if (spheres.gameObject.name == "Middle")
         {
@@ -92,7 +59,6 @@ public class _TESTElioKnowsWhereYouAre : MonoBehaviour
         if (spheres.gameObject.name == ("Close"))
         {
             Debug.Log("You are leaving the closest sphear");
-            //elio.transform
         }
     }
 }

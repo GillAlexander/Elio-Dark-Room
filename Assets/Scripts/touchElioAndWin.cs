@@ -6,10 +6,8 @@ public class touchElioAndWin : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Destroy(this.gameObject);
+            Destroy(transform.parent.gameObject);
             Debug.Log("You found Elio! You won!");
-
         }
-
     }
 }

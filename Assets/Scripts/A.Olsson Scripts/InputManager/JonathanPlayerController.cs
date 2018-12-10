@@ -42,19 +42,19 @@ public class JonathanPlayerController : MonoBehaviour
         
         if (InputManager.AButton())
         {
-            Debug.Log("you are pressing A Button");
+            //Debug.Log("you are pressing A Button");
         }
         if (InputManager.BButton())
         {
-            Debug.Log("you are pressing B Button");
+            //Debug.Log("you are pressing B Button");
         }
         if (InputManager.XButton())
         {
-            Debug.Log("you are pressing X Button");
+            //Debug.Log("you are pressing X Button");
         }
         if (InputManager.YButton())
         {
-            Debug.Log("you are pressing Y Button");
+            //Debug.Log("you are pressing Y Button");
         }
         if (InputManager.WhistleButton())
         {
