@@ -25,6 +25,7 @@ public class PlayerNoise : MonoBehaviour
             audioSource.Stop();
             audioSource.clip = found;
             audioSource.outputAudioMixerGroup = audioMixer;
+            audioSource.Play();
             foundElio = false;
         }
     }
