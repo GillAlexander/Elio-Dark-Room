@@ -17,8 +17,8 @@ public class JonathanCameraController : MonoBehaviour
     //BlitzBurn was here
     void Update()
     {
-
-        Vector2 cameraChange = new Vector2(InputManager.MainCameraHorizontal(), InputManager.MainCameraVertical());
+        //Vector2 cameraChange = new Vector2(InputManager.MainCameraHorizontal(), InputManager.MainCameraVertical());
+        Vector2 cameraChange = new Vector2(InputManager.MainCameraHorizontal(), 0);
         cameraChange = Vector2.Scale(cameraChange, new Vector2(sensitivity, sensitivity));
         mouseLook += cameraChange;
         mouseLook.y = Mathf.Clamp(mouseLook.y, -90, 90);

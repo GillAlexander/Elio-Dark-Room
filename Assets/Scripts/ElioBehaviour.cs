@@ -2,8 +2,6 @@
 
 public class ElioBehaviour : MonoBehaviour
 {
-
-
     //Tar från raycast och säger vad elio ska göra.
     //Gör så att elio kan röra sig runt kartan
     //fixa så elio ska springa ifrån spelaren

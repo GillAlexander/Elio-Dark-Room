@@ -52,19 +52,19 @@ public static class InputManager
     //Knappar
     public static bool AButton()
     {
-        return Input.GetButtonDown("A_Button");
+        return Input.GetButton("A_Button");
     }
     public static bool BButton()
     {
-        return Input.GetButtonDown("B_Button");
+        return Input.GetButton("B_Button");
     }
     public static bool XButton()
     {
-        return Input.GetButtonDown("X_Button");
+        return Input.GetButton("X_Button");
     }
     public static bool YButton()
     {
-        return Input.GetButtonDown("Y_Button");
+        return Input.GetButton("Y_Button");
     }
     public static bool SprintButton()
     {

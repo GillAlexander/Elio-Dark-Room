@@ -27,6 +27,8 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     public float rightVibration;
     bool playerIsTouchingWall = false;
     bool playerIsWalkingWhileTouchingwall = false;
+    Rigidbody rb;
+    Vector3 playerAngelWhileTouchingWall;
 
     //Johans ljud
     public AudioSource source;
@@ -40,9 +42,11 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     void Start()
     {
         StartCoroutine(Footsteps());
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
+        playerAngelWhileTouchingWall = rb.velocity;
         if (vibrationTime > 0)
         {
             vibrationTime -= Time.deltaTime;
@@ -62,15 +66,19 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
         if (collision.gameObject.name == ("wall"))
         {
             playerIsTouchingWall = true;
-            Debug.Log("You are touching the wall");
-            if (vibrationTime < 0)
+            if (playerIsTouchingWall)
             {
-                GamePad.SetVibration(playerIndex, 0, 0);
+                Debug.Log("ifPlayerIsTouchingTheWall = You are touching the wall");
             }
-            else
-            {
-                GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
-            }
+            
+            //if (vibrationTime < 0)
+            //{
+            //    GamePad.SetVibration(playerIndex, 0, 0);
+            //}
+            //else
+            //{
+            //    GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
+            //}
         }
         if (collision.gameObject.name == ("tree"))
         {
@@ -109,45 +117,78 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     {
         playerIsTouchingWall = false;
         Debug.Log("You are not touching the wall");
-        GamePad.SetVibration(playerIndex, 0, 0);
+        //GamePad.SetVibration(playerIndex, 0, 0);
     }
 
     public IEnumerator Footsteps()
     {
-        if (isMoving){
-            playerIsWalkingWhileTouchingwall = true;
-            if (playerIsWalkingWhileTouchingwall)
-            {
-                Debug.Log("playeriswlakingwhiletouchingwall");
-            }
-            if (isRunning){
-                source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
-            }
-            else{
-                source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
-                GamePad.SetVibration(playerIndex, 0, 0);
-            }
-            if (playerIsTouchingWall)
-            {
-                if (playerIsWalkingWhileTouchingwall)
-                {
-                    Debug.Log("You are touching the wall and moving");
-                }
-            }
-            source.pitch = Random.Range(0.85f, 1.15f);
-            source.outputAudioMixerGroup = audioMixer;
-            source.Play();
-        }
-        if (!isMoving)
+        if (PlayerFootsteps.isMoving && playerIsTouchingWall)
         {
-            playerIsWalkingWhileTouchingwall = false;
+            Debug.Log("ifIsMoving = You are moving and touching the wall");
+            GamePad.SetVibration(playerIndex, 1f, 0);
+
         }
-        if (isRunning){
+        if (PlayerFootsteps.isMoving && !playerIsTouchingWall)
+        {
+            Debug.Log("ifIsMoving = You are moving and but not touching the wall");
+            GamePad.SetVibration(playerIndex, 0, 0);
+        }
+        if (!PlayerFootsteps.isMoving && !playerIsTouchingWall)
+        {
+            Debug.Log("ifIsMoving = You are not moving and not touching the wall");
+            GamePad.SetVibration(playerIndex, 0, 0);
+        }
+        if (!PlayerFootsteps.isMoving && playerIsTouchingWall)
+        {
+            Debug.Log("ifIsMoving = You are not moving and touching the wall");
+            GamePad.SetVibration(playerIndex, 0, 0);
+        }
+        //else
+        //{
+        //    Debug.Log("Else!IsMoving = You are not moving");
+        //}
+        //if (isMoving){
+        //    Debug.Log("You are moving");
+
+        //    if (playerIsWalkingWhileTouchingwall)
+        //    {
+        //        Debug.Log("playeriswlakingwhiletouchingwall");
+        //    }
+        //    if (isRunning){
+        //        source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
+        //    }
+        //    else{
+        //        source.clip = walkGrass[Random.Range(0, walkGrass.Length)];
+        //        //GamePad.SetVibration(playerIndex, 0, 0);
+        //    }
+        //    if (playerIsTouchingWall)
+        //    {
+        //        Debug.Log("You are debuging and touching the wall");
+        //        if (playerIsWalkingWhileTouchingwall)
+        //        {
+        //            Debug.Log("You are touching the wall and moving");
+        //        }
+        //    }
+        //    source.pitch = Random.Range(0.85f, 1.15f);
+        //    source.outputAudioMixerGroup = audioMixer;
+        //    source.Play();
+        //}
+        //else
+        //{
+        //    Debug.Log("You are not moving");
+        //    playerIsWalkingWhileTouchingwall = false;
+        //}
+
+        if (isRunning)
+        {
             yield return new WaitForSeconds(0.3f);
             GamePad.SetVibration(playerIndex, 0.5f, 0.5f);
         }
         else
+        {
             yield return new WaitForSeconds(0.5f);
+        }
+            
         GamePad.SetVibration(playerIndex, 0, 0);
         StartCoroutine(Footsteps());
     }

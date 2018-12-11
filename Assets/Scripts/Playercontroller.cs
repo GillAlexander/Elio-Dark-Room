@@ -2,17 +2,16 @@
 
 public class Playercontroller : MonoBehaviour
 {
-    public float speed;
-    public float sprint;
-    public float moveVertical;
-    public float moveHorizontal;
+    float speed = 8;
+    float sprint = 2;
+    Vector2 movement;
 
     void Update()
     {
-        moveVertical = Input.GetAxis("Vertical") * speed;
-        moveHorizontal = Input.GetAxis("Horizontal") * speed;
+        movement.x = Input.GetAxis("Horizontal") * speed;
+        movement.y = Input.GetAxis("Vertical") * speed;
 
-        if (moveHorizontal != 0 || moveVertical != 0)
+        if (movement.x != 0 || movement.y != 0)
             PlayerFootsteps.isMoving = true;
         else
             PlayerFootsteps.isMoving = false;
@@ -20,17 +19,22 @@ public class Playercontroller : MonoBehaviour
         //sprint
         if (Input.GetKey("joystick button 4") || Input.GetButton("Sprint"))
         {
-            moveVertical *= sprint;
-            moveHorizontal *= sprint;
+            movement.x *= sprint;
+            movement.y *= sprint;
             PlayerFootsteps.isRunning = true;
         }
         else
             PlayerFootsteps.isRunning = false;
 
-        moveVertical *= Time.deltaTime;
-        moveHorizontal *= Time.deltaTime;
+        movement.x *= Time.deltaTime;
+        movement.y *= Time.deltaTime;
 
-        transform.Translate(moveHorizontal, 0, moveVertical);
+        transform.Translate(movement.x, 0, movement.y);
 
+    }
+
+    void OnCollisionStay(Collision hit)
+    {
+        PlayerFootsteps.surfaceTag = hit.transform.tag;
     }
 }

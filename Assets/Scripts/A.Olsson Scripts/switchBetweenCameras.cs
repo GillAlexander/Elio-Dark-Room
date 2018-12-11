@@ -20,7 +20,7 @@ public class switchBetweenCameras : MonoBehaviour {
 	void Update () {
         if (elioCamera.gameObject != null)
         {
-            if (Input.GetKey("joystick button 3"))
+            if (InputManager.YButton())
             {
                 playerCamera.gameObject.SetActive(false);
                 elioCamera.gameObject.SetActive(true);
