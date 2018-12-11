@@ -70,7 +70,7 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
             {
                 Debug.Log("ifPlayerIsTouchingTheWall = You are touching the wall");
             }
-            
+
             //if (vibrationTime < 0)
             //{
             //    GamePad.SetVibration(playerIndex, 0, 0);
@@ -188,7 +188,7 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
         }
-            
+
         GamePad.SetVibration(playerIndex, 0, 0);
         StartCoroutine(Footsteps());
     }

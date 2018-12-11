@@ -67,7 +67,7 @@ public class MenuController : MonoBehaviour {
                         MoveSelection();
                         break;
                     case "About":
-                        currentSelect = 3;
+                        currentSelect = 3;2§    
                         MoveSelection();
                         break;
                     case "Quit":
