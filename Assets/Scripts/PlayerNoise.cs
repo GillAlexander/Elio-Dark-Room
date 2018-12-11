@@ -5,8 +5,10 @@ public class PlayerNoise : MonoBehaviour
 {
     public AudioClip[] whistles;
     public AudioClip[] claps;
+    public AudioClip found;
     public AudioMixerGroup audioMixer;
     public AudioSource audioSource;
+    public static bool foundElio = false;
 
     void Update()
     {
@@ -17,6 +19,13 @@ public class PlayerNoise : MonoBehaviour
             audioSource.pitch = Random.Range(0.98f, 1.04f);
             audioSource.outputAudioMixerGroup = audioMixer;
             audioSource.Play();
+        }
+        if (foundElio)
+        {
+            audioSource.Stop();
+            audioSource.clip = found;
+            audioSource.outputAudioMixerGroup = audioMixer;
+            foundElio = false;
         }
     }
 }
