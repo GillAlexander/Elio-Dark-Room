@@ -29,6 +29,7 @@ public class PlayerFootsteps : MonoBehaviour
     public static bool isRunning = false;
     public static int startedRunning;
     public static string surfaceTag;
+    float stepDelay;
 
     void Start()
     {
@@ -38,9 +39,15 @@ public class PlayerFootsteps : MonoBehaviour
     void Update()
     {
         if (isRunning)
+        {
             startedRunning++;
+            stepDelay = 0.3f;
+        }
         else
+        {
             startedRunning = 0;
+            stepDelay = 0.5f;
+        }
 
         if (startedRunning == 1)
         {
@@ -61,10 +68,7 @@ public class PlayerFootsteps : MonoBehaviour
             audioSource.Play();
         }
 
-        if (isRunning)
-            yield return new WaitForSeconds(0.3f);
-        else
-            yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(stepDelay);
 
         StartCoroutine(Footsteps());
     }

@@ -17,7 +17,7 @@ public class Playercontroller : MonoBehaviour
             PlayerFootsteps.isMoving = false;
 
         //sprint
-        if (Input.GetKey("joystick button 4") || Input.GetButton("Sprint"))
+        if (Input.GetButton("Sprint"))
         {
             movement.x *= sprint;
             movement.y *= sprint;
@@ -31,10 +31,16 @@ public class Playercontroller : MonoBehaviour
 
         transform.Translate(movement.x, 0, movement.y);
 
+        CheckGround();
     }
 
-    void OnCollisionStay(Collision hit)
+    void CheckGround()
     {
-        PlayerFootsteps.surfaceTag = hit.transform.tag;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
+        {
+            PlayerFootsteps.surfaceTag = hit.transform.tag;
+            Debug.DrawRay(transform.position, hit.point - transform.position, Color.red, 1);
+        }
     }
 }

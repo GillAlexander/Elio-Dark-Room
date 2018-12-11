@@ -4,10 +4,10 @@ using UnityEngine.Audio;
 public class PlayerNoise : MonoBehaviour
 {
     public AudioClip[] whistles;
+    public AudioClip[] claps;
     public AudioMixerGroup audioMixer;
     public AudioSource audioSource;
-    
-    
+
     void Update()
     {
         if (Input.GetButtonDown("Whistle"))

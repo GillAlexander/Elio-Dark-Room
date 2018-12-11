@@ -10,7 +10,7 @@ public class JonathanPlayerController : MonoBehaviour
     GamePadState prevState;
     public int leftVibration;
     public int rightVibration;
-    bool playerIndexSet = false;
+    //bool playerIndexSet = false;
 
     void FixedUpdate()
     {
