@@ -29,8 +29,8 @@ public class PlayerWhistleRaycast : MonoBehaviour {
 
             for(int i=0; i<3; i++) {
 
-                float PlayerRayX = WhistleRange * Mathf.Cos(60 + (30 * i));
-                float PlayerRayY = WhistleRange * Mathf.Sin(60 + (30 * i));
+                float PlayerRayX = WhistleRange * Mathf.Cos(120 - (30 * i));
+                float PlayerRayY = WhistleRange * Mathf.Sin(120 - (30 * i));
 
                 if (Physics.Raycast(transform.position, transform.TransformDirection(PlayerRayX, 0, PlayerRayY), out contact, WhistleRange))
                 {
