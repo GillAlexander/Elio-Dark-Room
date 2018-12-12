@@ -13,7 +13,7 @@ public class ElioWinCondition : MonoBehaviour {
     {
         if (spheres.gameObject.name == ("Player"))
         {
-            Debug.Log("You found Elio! You won!");
+            //Debug.Log("You found Elio! You won!");
             foundElio = true;
             PlayerNoise.foundElio = true;
             distance = Vector3.Distance(elio.transform.position, player.transform.position);
@@ -24,7 +24,7 @@ public class ElioWinCondition : MonoBehaviour {
                 elio.transform.position =
                 ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position;
                 distance = Vector3.Distance(elio.transform.position, player.transform.position);
-                Debug.Log(distance);
+                //Debug.Log(distance);
             }
             foundElio = false;
             //void CheckDistance(){

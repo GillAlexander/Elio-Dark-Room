@@ -108,7 +108,7 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     void OnCollisionExit(Collision collision)
     {
         //playerIsTouchingWall = false;
-        Debug.Log("You are not touching the wall");
+        //Debug.Log("You are not touching the wall");
         GamePad.SetVibration(playerIndex, 0, 0);
     }
 
