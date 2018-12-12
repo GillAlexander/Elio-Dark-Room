@@ -50,13 +50,13 @@ public static class InputManager
     }
 
     //Knappar
-    public static bool AButton()
+    public static bool ClapButton()
     {
-        return Input.GetButton("A_Button");
+        return Input.GetButton("clapButton");
     }
-    public static bool BButton()
+    public static bool Whistle()
     {
-        return Input.GetButton("B_Button");
+        return Input.GetButton("Whistle");
     }
     public static bool XButton()
     {

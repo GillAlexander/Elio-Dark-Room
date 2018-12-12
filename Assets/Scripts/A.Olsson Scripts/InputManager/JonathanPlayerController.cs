@@ -40,14 +40,14 @@ public class JonathanPlayerController : MonoBehaviour
         else
             PlayerFootsteps.isRunning = false;
         
-        if (InputManager.AButton())
-        {
-            //Debug.Log("you are pressing A Button");
-        }
-        if (InputManager.BButton())
-        {
-            //Debug.Log("you are pressing B Button");
-        }
+        //if (InputManager.AButton())
+        //{
+        //    //Debug.Log("you are pressing A Button");
+        //}
+        //if (InputManager.BButton())
+        //{
+        //    //Debug.Log("you are pressing B Button");
+        //}
         if (InputManager.XButton())
         {
             //Debug.Log("you are pressing X Button");

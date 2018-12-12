@@ -8,8 +8,8 @@ public class Playercontroller : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal") * speed;
-        movement.y = Input.GetAxis("Vertical") * speed;
+        movement.x = InputManager.MainHorizontal() * speed;
+        movement.y = InputManager.MainVertical() * speed;
 
         if (movement.x != 0 || movement.y != 0)
             PlayerFootsteps.isMoving = true;
@@ -17,7 +17,7 @@ public class Playercontroller : MonoBehaviour
             PlayerFootsteps.isMoving = false;
 
         //sprint
-        if (Input.GetButton("Sprint"))
+        if (InputManager.SprintButton())
         {
             movement.x *= sprint;
             movement.y *= sprint;
