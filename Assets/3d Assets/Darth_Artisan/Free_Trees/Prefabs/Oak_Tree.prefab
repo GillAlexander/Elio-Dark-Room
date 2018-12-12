@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 405256}
   - component: {fileID: 3398346}
   - component: {fileID: 2340482}
+  - component: {fileID: 136098081718631696}
   m_Layer: 0
   m_Name: Oak_Tree
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191266}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.309672, y: -25.939, z: -5.931318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,3 +88,16 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 191266}
   m_IsPrefabAsset: 1
+--- !u!136 &136098081718631696
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.29259926
+  m_Height: 5.3144393
+  m_Direction: 1
+  m_Center: {x: -0.008994043, y: 2.6472833, z: 0.1388815}
