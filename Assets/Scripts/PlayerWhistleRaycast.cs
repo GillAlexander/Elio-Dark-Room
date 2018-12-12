@@ -8,12 +8,11 @@ public class PlayerWhistleRaycast : MonoBehaviour {
     private GameObject instantiatedEchoSource;
 
     public float WhistleRange;
-    float numberOfEchoes;
-    public float maxEchoes;
+
+
     public float echoCooldown;
     float time = 0;
 
-    float EchoDistance;
     RaycastHit contact;
     
     void Start ()
@@ -24,45 +23,61 @@ public class PlayerWhistleRaycast : MonoBehaviour {
 
 	void Update ()
     {
-        bool ElioWhistle = Input.GetButton("Fire1");
+        bool ElioWhistle = Input.GetButton("Clap");
         time += Time.deltaTime;
         if (ElioWhistle && time >= echoCooldown)
         {
 
-            StartCoroutine(EchoDelay());
+            
 
-            for(int i=0; i<3; i++) {
+            if (Physics.Raycast(transform.position, transform.forward, out contact, WhistleRange))
+            {
+                StartCoroutine(EchoDelay(contact.distance));
+                Debug.DrawRay(transform.position, contact.point - transform.position, Color.red, WhistleRange);
+               
+            }
 
-                float PlayerRayX = WhistleRange * Mathf.Cos(120 - (30 * i));
-                float PlayerRayY = WhistleRange * Mathf.Sin(120 - (30 * i));
+            if (Physics.Raycast(transform.position, transform.TransformDirection(-1, 0, 1), out contact, WhistleRange))
+            {
+                StartCoroutine(EchoDelay(contact.distance));
+                Debug.DrawRay(transform.position, contact.point - transform.position, Color.red, WhistleRange);
+             
+            }
 
-                if (Physics.Raycast(transform.position, transform.TransformDirection(PlayerRayX, 0, PlayerRayY), out contact, WhistleRange))
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(PlayerRayX, 0, PlayerRayY), Color.red);
-
-                    EchoDistance = contact.distance;
-
-                    instantiatedEchoSource = (GameObject)Instantiate(EchoSource, contact.point.normalized, transform.rotation);
-
-                    Debug.Log("Player sees something: " + EchoDistance);
-                    
-
-                    Destroy(instantiatedEchoSource, 1);
-
-                    
-                }
+            if (Physics.Raycast(transform.position, transform.TransformDirection(1, 0, 1), out contact, WhistleRange))
+            {
+                StartCoroutine(EchoDelay(contact.distance));
+                Debug.DrawRay(transform.position, contact.point-transform.position, Color.red, WhistleRange);
                 
             }
+
+
             time = 0;
+        }
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out contact, WhistleRange))
+        {
+           
+        }
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(-20, 0, 1), out contact, WhistleRange))
+        {
+            
+        }
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(20, 0, 1), out contact, WhistleRange))
+        {
+            
         }
     }
 
-    IEnumerator EchoDelay()
+    IEnumerator EchoDelay(float EchoDistance)
     {
-    
-        yield return new WaitForSeconds(2);
-
-
+  
+        yield return new WaitForSeconds(EchoDistance/10);
+        Debug.Log("Delay run"+EchoDistance);
+        instantiatedEchoSource = Instantiate(EchoSource, contact.point.normalized, transform.rotation);
+        Destroy(instantiatedEchoSource, 0.5f);
     }
 
 }
