@@ -24,7 +24,7 @@ public class PlayerWhistleRaycast : MonoBehaviour {
 
 	void Update ()
     {
-        bool ElioWhistle = Input.GetButton("Whistle");
+        bool ElioWhistle = Input.GetButton("Fire1");
         time += Time.deltaTime;
         if (ElioWhistle && time >= echoCooldown)
         {
