@@ -13,6 +13,7 @@ public class JonathanCameraController : MonoBehaviour
     void Start()
     {
         character = this.transform.parent.gameObject;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     //BlitzBurn was here
     void Update()
@@ -24,5 +25,10 @@ public class JonathanCameraController : MonoBehaviour
         mouseLook.y = Mathf.Clamp(mouseLook.y, -90, 90);
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+
+        if (Input.GetKeyDown("escape"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
