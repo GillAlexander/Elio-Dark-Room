@@ -16,16 +16,20 @@ public class PlayerWhistleRaycast : MonoBehaviour {
     float EchoDistance;
     RaycastHit contact;
     
-    void Start () {
+    void Start ()
+    {
       
 	}
 	
 
-	void Update () {
+	void Update ()
+    {
         bool ElioWhistle = Input.GetButton("Whistle");
         time += Time.deltaTime;
         if (ElioWhistle && time >= echoCooldown)
         {
+
+            StartCoroutine(EchoDelay());
 
             for(int i=0; i<3; i++) {
 
@@ -34,12 +38,14 @@ public class PlayerWhistleRaycast : MonoBehaviour {
 
                 if (Physics.Raycast(transform.position, transform.TransformDirection(PlayerRayX, 0, PlayerRayY), out contact, WhistleRange))
                 {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(PlayerRayX, 0, PlayerRayY), Color.red);
+
                     EchoDistance = contact.distance;
 
                     instantiatedEchoSource = (GameObject)Instantiate(EchoSource, contact.point.normalized, transform.rotation);
 
                     Debug.Log("Player sees something: " + EchoDistance);
-                    Debug.DrawRay(transform.position, contact.point - transform.position, Color.red);
+                    
 
                     Destroy(instantiatedEchoSource, 1);
 
@@ -49,6 +55,14 @@ public class PlayerWhistleRaycast : MonoBehaviour {
             }
             time = 0;
         }
+    }
+
+    IEnumerator EchoDelay()
+    {
+    
+        yield return new WaitForSeconds(2);
+
+
     }
 
 }
