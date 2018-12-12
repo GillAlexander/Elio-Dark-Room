@@ -5,21 +5,8 @@ using UnityEngine;
 public class JonathanElioAI : MonoBehaviour {
 
     public Transform player;
-    public GameObject Elio;
-    public GameObject ElioHidingSpot1, ElioHidingSpot2, ElioHidingSpot3;
+    
 	void Update (){
-        if (InputManager.XButton())
-        {
-            Elio.transform.position = ElioHidingSpot1.transform.position;
-        }
-        if (InputManager.BButton())
-        {
-            Elio.transform.position = ElioHidingSpot2.transform.position;
-        }
-        if (InputManager.YButton())
-        {
-            Elio.transform.position = ElioHidingSpot3.transform.position;
-        }
 	}
     private void OnTriggerStay(Collider spheres){
         if (spheres.gameObject.name == "Far")
@@ -35,6 +22,7 @@ public class JonathanElioAI : MonoBehaviour {
             Debug.Log("You are close to Elio");
         }
     }
+   
     private void OnTriggerExit(Collider spheres)
     {
         if (spheres.gameObject.name == "Far")
@@ -49,5 +37,7 @@ public class JonathanElioAI : MonoBehaviour {
         {
             Debug.Log("You are leaving the closest sphear");
         }
+        //Win Condition
+        
     }
 }

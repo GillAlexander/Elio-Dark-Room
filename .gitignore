@@ -36,3 +36,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.meta
+*.meta
+Assets/Scenes/J. Karlsson Scene.unity
