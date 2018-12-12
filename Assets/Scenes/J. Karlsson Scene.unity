@@ -217,7 +217,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 187013045}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -583,7 +583,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-208846
+  m_Name: pb_Mesh-845406
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -780,7 +780,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-208848
+  m_Name: pb_Mesh-845408
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1336,10 +1336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0266ecf2849e8b4f8585a3b5e5d4f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElioDetectionRangeClose: 120
+  ElioDetectionRangeClose: 4
   ElioDetectionrangeFar: 8
   ElioVisionRange: 10
-  RaycastDensity: 1
+  RaycastDensity: 180
   PlayerDetectedStandard: 0
   PlayerDetectedFarAway: 0
   PlayerDetectedClose: 0
@@ -1568,8 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EchoSource: {fileID: 1547791024348650, guid: 541b3dad30cd3724cb0d99aca385f403, type: 2}
-  WhistleRange: 10
-  maxEchoes: 0
+  WhistleRange: 100
   echoCooldown: 1
 --- !u!1001 &1224326760
 Prefab:
@@ -2035,6 +2034,11 @@ Prefab:
       propertyPath: vibrationDuration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114812098214433788, guid: cda55f82586266246a63e41ef2405e7e,
+        type: 2}
+      propertyPath: sensitivity
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda55f82586266246a63e41ef2405e7e, type: 2}
   m_IsPrefabAsset: 0
@@ -2053,7 +2057,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-208844
+  m_Name: pb_Mesh-845404
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

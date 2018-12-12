@@ -42,9 +42,12 @@ GameObject:
   - component: {fileID: 54068473369472110}
   - component: {fileID: 114995324763183118}
   - component: {fileID: 114760216911203540}
+  - component: {fileID: 114596422244077910}
+  - component: {fileID: 114212662854144918}
+  - component: {fileID: 114411111055205922}
   m_Layer: 0
   m_Name: Elio
-  m_TagString: Untagged
+  m_TagString: ElioTest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,6 +183,48 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1204541748068872}
   m_Enabled: 1
+--- !u!114 &114212662854144918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488904644398422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415cb1c56335bfc44bf9079c73d9bdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ER: {fileID: 0}
+--- !u!114 &114411111055205922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488904644398422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858ccb88c7920f842ba0de7c0ff7fbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDetectedResetTimer: 0
+--- !u!114 &114596422244077910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488904644398422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0266ecf2849e8b4f8585a3b5e5d4f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElioDetectionRangeClose: 0
+  ElioDetectionrangeFar: 0
+  ElioVisionRange: 0
+  RaycastDensity: 0
+  PlayerDetectedStandard: 0
+  PlayerDetectedFarAway: 0
+  PlayerDetectedClose: 0
 --- !u!114 &114760216911203540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elio: {fileID: 1488904644398422}
   player: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!114 &114995324763183118
 MonoBehaviour:
   m_ObjectHideFlags: 1
