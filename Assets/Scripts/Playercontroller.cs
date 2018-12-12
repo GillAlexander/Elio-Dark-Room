@@ -2,7 +2,7 @@
 
 public class Playercontroller : MonoBehaviour
 {
-    float speed = 8;
+    public float speed = 5;
     float sprint = 2;
     Vector2 movement;
 
