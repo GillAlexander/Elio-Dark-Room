@@ -20,6 +20,14 @@ public class PlayerNoise : MonoBehaviour
             audioSource.outputAudioMixerGroup = audioMixer;
             audioSource.Play();
         }
+        if (Input.GetButtonDown("Clap"))
+        {
+            audioSource.Stop();
+            audioSource.clip = claps[Random.Range(0, claps.Length)];
+            audioSource.pitch = Random.Range(0.96f, 1.04f);
+            audioSource.outputAudioMixerGroup = audioMixer;
+            audioSource.Play();
+        }
         if (foundElio)
         {
             audioSource.Stop();

@@ -37,10 +37,8 @@ public class Playercontroller : MonoBehaviour
     void CheckGround()
     {
         RaycastHit hit;
+
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
-        {
             PlayerFootsteps.surfaceTag = hit.transform.tag;
-            Debug.DrawRay(transform.position, hit.point - transform.position, Color.red, 1);
-        }
     }
 }
