@@ -20,6 +20,7 @@ public class PlayerNoise : MonoBehaviour
             audioSource.outputAudioMixerGroup = audioMixer;
             audioSource.Play();
         }
+        /*
         if (Input.GetButtonDown("Clap"))
         {
             audioSource.Stop();
@@ -28,6 +29,7 @@ public class PlayerNoise : MonoBehaviour
             audioSource.outputAudioMixerGroup = audioMixer;
             audioSource.Play();
         }
+        */
         if (foundElio)
         {
             audioSource.Stop();

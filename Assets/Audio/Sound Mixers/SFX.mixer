@@ -22,6 +22,7 @@ AudioMixerController:
     - 0ae40e2efeef96a4baa51748b7019cf4
     - 5cab27527b8bfff428864474a25c32d0
     - 0dca6723a3578e84d8b402233804bbdd
+    - 0cacff2792351e8499889a7997a80ee6
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -37,6 +38,7 @@ AudioMixerGroupController:
   - {fileID: 243978377151723378}
   - {fileID: 243827785072369040}
   - {fileID: 243093321953100610}
+  - {fileID: 243631084137351324}
   m_Volume: 3beaae8ba0fcef143b6159c7416491f4
   m_Pitch: 46f0c71d7f5438344bbad40e3357d6bc
   m_Effects:
@@ -88,6 +90,23 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &243631084137351324
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PlayerClap
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 0cacff2792351e8499889a7997a80ee6
+  m_Children: []
+  m_Volume: 22aa9ad50d268c44399f7e348ef14a77
+  m_Pitch: 900445c37d18d034b9d7130978953f8d
+  m_Effects:
+  - {fileID: 244270910603505830}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &243827785072369040
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -122,6 +141,19 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &244270910603505830
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 22574b3eb95b1a7479f89d98df568467
+  m_EffectName: Attenuation
+  m_MixLevel: c67451faa11aa7e43b220684ebc4d2ae
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244335491109163312
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
