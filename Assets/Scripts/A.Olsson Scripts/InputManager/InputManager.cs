@@ -52,7 +52,7 @@ public static class InputManager
     //Knappar
     public static bool ClapButton()
     {
-        return Input.GetButton("clapButton");
+        return Input.GetButton("Clap");
     }
     public static bool Whistle()
     {
