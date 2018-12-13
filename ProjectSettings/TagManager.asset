@@ -14,6 +14,7 @@ TagManager:
   - Snow
   - Water
   - Wood
+  - Terrain
   layers:
   - Default
   - TransparentFX
