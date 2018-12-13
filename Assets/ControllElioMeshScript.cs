@@ -4,39 +4,43 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class ControllElioMeshScript : MonoBehaviour {
-
-    public GameObject elio;
-    public GameObject player;
+    //public GameObject elio;
+    //public GameObject player;
     bool foundElio = false;
     public GameObject[] ElioHidingSpot;
     public NavMeshAgent elioAgent;
     Vector3 elioVector;
-    Vector3 destination;
     public Transform target;
+    public Camera cam;
 
     void Start () {
-
-        destination = elioAgent.destination;
         elioAgent = GetComponent<NavMeshAgent>();
-	}
+    }
 	
 	void Update () {
         if (InputManager.ClapButton())
         {
+            Vector3 elioHidingNumber = ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position;
+            
+            elioAgent.SetDestination(elioHidingNumber);
 
+
+            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            //RaycastHit hit;
+            //if (Physics.Raycast(ray, out hit))
+            //{
+            //    elioAgent.SetDestination(hit.point);
+            //}
         }
 
-
-        Vector3 elioVector = new Vector3(
-                ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.x,
-                0f,
-                ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.y
-                                        );
     }
-
 }
 
-
+//Vector3 elioVector = new Vector3(
+//        ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.x,
+//        0f,
+//        ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.y
+//                                );
 
 
 /*

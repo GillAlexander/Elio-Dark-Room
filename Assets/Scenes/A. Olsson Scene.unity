@@ -3160,7 +3160,7 @@ GameObject:
   - component: {fileID: 74521215}
   - component: {fileID: 74521217}
   - component: {fileID: 74521216}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8148,7 +8148,7 @@ GameObject:
   - component: {fileID: 329003980}
   - component: {fileID: 329003979}
   - component: {fileID: 329003978}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WinSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8177,21 +8177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 329003976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38977b246244d944d94ae97678de82a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cffc3bfae82f8b4488da96dc833c425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   elio: {fileID: 1443753463}
   player: {fileID: 843432856}
-  ElioHidingSpot:
-  - {fileID: 1316717305}
-  - {fileID: 678125407}
-  - {fileID: 1590911214}
-  - {fileID: 2129444937}
-  - {fileID: 1916966549}
-  - {fileID: 567992961}
-  - {fileID: 1805218010}
-  - {fileID: 74521214}
-  - {fileID: 1872202628}
+  ElioHidingSpot: []
 --- !u!54 &329003979
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12242,13 +12233,13 @@ GameObject:
   - component: {fileID: 455892312}
   - component: {fileID: 455892311}
   - component: {fileID: 455892310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &455892309
 Transform:
   m_ObjectHideFlags: 0
@@ -14577,7 +14568,7 @@ GameObject:
   - component: {fileID: 567992962}
   - component: {fileID: 567992964}
   - component: {fileID: 567992963}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15636,7 +15627,7 @@ GameObject:
   - component: {fileID: 678125408}
   - component: {fileID: 678125410}
   - component: {fileID: 678125409}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17697,7 +17688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 767358639}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Elio hiding places
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17711,7 +17702,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 767358638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47, y: -110.29346, z: -42.5}
+  m_LocalPosition: {x: -47, y: -111.3, z: -42.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1316717306}
@@ -18997,7 +18988,7 @@ GameObject:
   - component: {fileID: 843432859}
   - component: {fileID: 843432858}
   - component: {fileID: 843432857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25178,7 +25169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 927230828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df27b9289d1e8c4fb82e0df4f4673ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 4113721eb09c57d4c93c8dc8f8368f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
@@ -25187,7 +25178,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1335
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -25197,7 +25188,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 2fa973e112457504fae6c3d48012f9f0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 55d25a5dbb7e3794a8bcb859ae9dcae7, type: 2}
 --- !u!1 &937064305
 GameObject:
   m_ObjectHideFlags: 0
@@ -26866,10 +26857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &957176386
 GameObject:
   m_ObjectHideFlags: 0
@@ -30283,10 +30270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!43 &1048594911
 Mesh:
   m_ObjectHideFlags: 0
@@ -42549,7 +42532,7 @@ GameObject:
   - component: {fileID: 1316717306}
   - component: {fileID: 1316717308}
   - component: {fileID: 1316717307}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42563,7 +42546,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1316717305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.1, y: 119.6, z: 118.8}
+  m_LocalPosition: {x: 66.1, y: 111.6, z: 118.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767358639}
@@ -43500,6 +43483,83 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &1376054486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376054489}
+  - component: {fileID: 1376054488}
+  - component: {fileID: 1376054487}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1376054487
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376054486}
+  m_Enabled: 1
+--- !u!20 &1376054488
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376054486}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1376054489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376054486}
+  m_LocalRotation: {x: -0.019732073, y: 0.906986, z: -0.41851962, w: -0.04276052}
+  m_LocalPosition: {x: -36.851852, y: 93.96504, z: 110.76042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379289021
 GameObject:
   m_ObjectHideFlags: 0
@@ -44560,7 +44620,7 @@ GameObject:
   - component: {fileID: 1443753464}
   - component: {fileID: 1443753471}
   - component: {fileID: 1443753470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Elio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44661,7 +44721,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443753463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -106, y: 2, z: 9}
+  m_LocalPosition: {x: -104, y: 3, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644107588}
@@ -44677,9 +44737,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443753463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b29e05b2077264eb98e188aebcb916, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f4556e9000dd8342a56f045cee21d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elio: {fileID: 1443753463}
+  player: {fileID: 843432856}
+  ElioHidingSpot:
+  - {fileID: 1316717305}
+  - {fileID: 678125407}
+  - {fileID: 1590911214}
+  - {fileID: 2129444937}
+  - {fileID: 1916966549}
+  - {fileID: 567992961}
+  - {fileID: 1805218010}
+  - {fileID: 74521214}
+  - {fileID: 1872202628}
+  elioAgent: {fileID: 1443753471}
+  target: {fileID: 1316717306}
 --- !u!195 &1443753471
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -45305,10 +45379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!43 &1476515214
 Mesh:
   m_ObjectHideFlags: 0
@@ -48069,7 +48139,7 @@ GameObject:
   - component: {fileID: 1590911215}
   - component: {fileID: 1590911217}
   - component: {fileID: 1590911216}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48761,7 +48831,7 @@ GameObject:
   - component: {fileID: 1644107588}
   - component: {fileID: 1644107590}
   - component: {fileID: 1644107589}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ELioAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55625,7 +55695,7 @@ GameObject:
   - component: {fileID: 1805218011}
   - component: {fileID: 1805218013}
   - component: {fileID: 1805218012}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60279,7 +60349,7 @@ GameObject:
   - component: {fileID: 1872202629}
   - component: {fileID: 1872202631}
   - component: {fileID: 1872202630}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62130,7 +62200,7 @@ GameObject:
   - component: {fileID: 1916966550}
   - component: {fileID: 1916966552}
   - component: {fileID: 1916966551}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68313,7 +68383,7 @@ GameObject:
   - component: {fileID: 2046848438}
   - component: {fileID: 2046848437}
   - component: {fileID: 2046848436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68444,7 +68514,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1bc785915f3ae224ba29db950355d884, type: 3}
   - {fileID: 8300000, guid: 959e8a442a6133f469a582099e909e4a, type: 3}
   claps:
-  - {fileID: 8300000, guid: 064273b311fdeb948bbbf3b7c33b63e9, type: 3}
+  - {fileID: 0}
   found: {fileID: 8300000, guid: 8c7d40426718bf840a32f61ef1d355ad, type: 3}
   audioMixer: {fileID: 243093321953100610, guid: c0eab942f41957d4c930b0a911c010d9,
     type: 2}
@@ -69533,7 +69603,7 @@ GameObject:
   - component: {fileID: 2129444938}
   - component: {fileID: 2129444940}
   - component: {fileID: 2129444939}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElioHidingspot#3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
