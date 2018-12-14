@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElioWinCondition : MonoBehaviour {
+public class ElioWinCondition : MonoBehaviour
+{
     public GameObject elio;
     public GameObject player;
-    public bool foundElio;
+    public static bool foundElio;
     public GameObject[] ElioHidingSpot;
     float distance;
     float passedTime;
@@ -21,8 +22,9 @@ public class ElioWinCondition : MonoBehaviour {
 
         passedTime += Time.deltaTime;
 
-        if (foundElio == true&&passedTime>=5)
+        if (foundElio == true&& passedTime >=5)
         {
+            Debug.Log(foundElio);
             StartCoroutine(elioFoundReset());
         }
     }
@@ -38,15 +40,9 @@ public class ElioWinCondition : MonoBehaviour {
             PlayerNoise.foundElio = true;
             distance = Vector3.Distance(elio.transform.position, player.transform.position);
 
-            while (foundElio && distance < 10)
-            {
-                
-                elio.transform.position =
-                ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position;
-                distance = Vector3.Distance(elio.transform.position, player.transform.position);
-                //Debug.Log(distance);
-            }
+            
             passedTime = 0;
+            Debug.Log(passedTime);
         }
 
         
@@ -55,11 +51,12 @@ public class ElioWinCondition : MonoBehaviour {
 
     IEnumerator elioFoundReset()
     {
+        
         Debug.Log("elioFoundResetActivated");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         foundElio = false;
         Debug.Log("foundElioResetCompleted");
-
+        
     }
 
 }
