@@ -38,11 +38,9 @@ public class ElioWinCondition : MonoBehaviour
             Debug.Log("You found Elio! You won!");
             foundElio = true;
             PlayerNoise.foundElio = true;
-            distance = Vector3.Distance(elio.transform.position, player.transform.position);
-
-            
+                       
             passedTime = 0;
-            Debug.Log(passedTime);
+            //Debug.Log(passedTime);
         }
 
         

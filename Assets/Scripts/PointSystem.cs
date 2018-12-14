@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PointSystem : MonoBehaviour {
-    ElioWinCondition Eliofound;
+    float delayTimer;
     int gameScore = 0;
 
     private void Start()
@@ -15,20 +15,29 @@ public class PointSystem : MonoBehaviour {
 
     void Update () {
 
-     
+        delayTimer += Time.deltaTime;
         
 
         Debug.Log("pointSystemUpdate");
 
-        if (ElioWinCondition.foundElio == true)
+        if (ElioWinCondition.foundElio == true && delayTimer>=2)
         {
+           
             gameScore = gameScore + 1;
-            Debug.Log("Gamescore: "+gameScore);
+            Debug.Log("Gamescore: " + gameScore);
             Debug.Log("Elio found true");
+
+            delayTimer = 0;
         }
         else if (ElioWinCondition.foundElio == false)
         {
             Debug.Log("Elio found false");
         }
 	}
+
+    IEnumerator ScoreDelay()
+    {
+      yield return new WaitForSeconds(3);
+        StartCoroutine(ScoreDelay());
+    }
 }
