@@ -24,17 +24,17 @@ public class ElioAI : MonoBehaviour
         }
         else
         {
-            Wander();
+            //Wander();
         }
     }
 
 
-    void Wander()
-    {
-        Vector3 wanderDude = new Vector3(Random.Range(-100f, 100f), 0f, Random.Range(-100f, 100f));
-        agent.destination = wanderDude;
+    //void Wander()
+    //{
+      //  Vector3 wanderDude = new Vector3(Random.Range(-100f, 100f), 0f, Random.Range(-100f, 100f));
+     //   agent.destination = wanderDude;
 
-    }
+    //}
 
 }
 
