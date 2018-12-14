@@ -3,73 +3,74 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ControllElioMeshScript : MonoBehaviour {
-    //public GameObject elio;
-    //public GameObject player;
+public class ControllElioMeshScript : MonoBehaviour
+{
+    public GameObject elio;
+    public GameObject player;
     bool foundElio = false;
-    public GameObject[] ElioHidingSpot;
+    //public GameObject[] ElioHidingSpot;
+    public GameObject[] Area1HidingSpots;
+    public GameObject[] Area2HidingSpots;
+    public GameObject[] Area3HidingSpots;
+    public GameObject[] Area4HidingSpots;
     public NavMeshAgent elioAgent;
-    Vector3 elioVector;
-    public Transform target;
-    public Camera cam;
 
-    void Start () {
+    static Vector3 elioHidingNumber;
+
+    int playerHasTouchedElio;
+    float hidingAreaNumber;
+    float distance;
+
+    void Start()
+    {
         elioAgent = GetComponent<NavMeshAgent>();
     }
-	
-	void Update () {
-        if (InputManager.ClapButton())
+
+    void Update()
+    {
+        if (InputManager.YButton())
         {
-            Vector3 elioHidingNumber = ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position;
-            
-            elioAgent.SetDestination(elioHidingNumber);
-
-
-            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            //RaycastHit hit;
-            //if (Physics.Raycast(ray, out hit))
-            //{
-            //    elioAgent.SetDestination(hit.point);
-            //}
+            hidingAreaNumber++;
+            Debug.Log(hidingAreaNumber);
         }
+    }
+    private void OnCollisionEnter(Collision spheres)
+    {
+        if (spheres.gameObject.name == ("Player"))
+        {
+            while (true)
+            {
 
+            }
+            if (hidingAreaNumber == 1)
+            {
+                elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+                elioAgent.SetDestination(elioHidingNumber);
+                
+            }
+            else if (hidingAreaNumber == 2)
+            {
+                elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
+                elioAgent.SetDestination(elioHidingNumber);
+                
+            }
+            else if(hidingAreaNumber == 3)
+            {
+                elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
+                elioAgent.SetDestination(elioHidingNumber);
+            }
+            else if (hidingAreaNumber == 4)
+            {
+                elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
+                elioAgent.SetDestination(elioHidingNumber);
+            }
+        }
+    }
+
+
+    private void checkDistance()
+    {
+        distance = Vector3.Distance(elio.transform.position, player.transform.position);
     }
 }
 
-//Vector3 elioVector = new Vector3(
-//        ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.x,
-//        0f,
-//        ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.y
-//                                );
-
-
-/*
-  if (InputManager.ClapButton())
-        {
-            
-            {
-                elioAgent.SetDestination(hit.point);
-            }
-            //Vector3 elioVector =  new Vector3(
-            //        ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.x, 
-            //        0f, 
-            //        ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position.y
-            //                                );
-
-            //Vector3 elioVector = new Vector3(
-            //       ElioHidingSpot[0].transform.position.x,
-            //       0f,
-            //       ElioHidingSpot[0].transform.position.y
-            //                               );
-
-            //if (Vector3.Distance(destination, target.position) > 1.0f)
-            //{
-            //    destination = target.position;
-            //    elioAgent.destination = destination;
-            //}
-            //foundElio = true;
-            //elio.transform.position =
-            //    ElioHidingSpot[Random.Range(0, ElioHidingSpot.Length)].transform.position;
-            //elioAgent.destination(elioVector);
-        }
-*/

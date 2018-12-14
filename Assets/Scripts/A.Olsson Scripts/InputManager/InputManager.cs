@@ -64,7 +64,7 @@ public static class InputManager
     }
     public static bool YButton()
     {
-        return Input.GetButton("Y_Button");
+        return Input.GetButtonDown("Y_Button");
     }
     public static bool SprintButton()
     {
