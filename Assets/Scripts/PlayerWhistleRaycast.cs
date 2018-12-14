@@ -6,8 +6,8 @@ public class PlayerWhistleRaycast : MonoBehaviour
     public GameObject EchoSource;
     private RaycastHit contact;
     private GameObject instantiatedEchoSource;
-    private float ClapRange = 50;
-    private float echoCooldown = 1.5f;
+    private float ClapRange = 100;
+    private float echoCooldown = 1;
     private float time = 0;
 
     void Update()
@@ -17,21 +17,11 @@ public class PlayerWhistleRaycast : MonoBehaviour
 
         if (ElioClap && time >= echoCooldown)
         {
-            if (Physics.Raycast(transform.position, transform.forward, out contact, ClapRange))
+            for (float i = 0.8f; i > -0.8; i -= 0.1f)
             {
-                StartCoroutine(EchoDelay(contact));
+                if (Physics.Raycast(transform.position, transform.forward - (i * transform.right), out contact, ClapRange))
+                    StartCoroutine(EchoDelay(contact));
             }
-
-            if (Physics.Raycast(transform.position, transform.forward - transform.right, out contact, ClapRange))
-            {
-                StartCoroutine(EchoDelay(contact));
-            }
-
-            if (Physics.Raycast(transform.position, transform.forward + transform.right, out contact, ClapRange))
-            {
-                StartCoroutine(EchoDelay(contact));
-            }
-
             time = 0;
         }
     }
@@ -39,9 +29,11 @@ public class PlayerWhistleRaycast : MonoBehaviour
 
     IEnumerator EchoDelay(RaycastHit hit)
     {
-        float delay = hit.distance / 100;
+        float delay;
+
+        delay = (hit.distance * 0.0029154519f) * 5;
+
         yield return new WaitForSeconds(delay);
-        Debug.Log("distance / 100 = " + delay);
 
         instantiatedEchoSource = Instantiate(EchoSource, hit.point, transform.rotation);
         Destroy(instantiatedEchoSource, 0.5f);
