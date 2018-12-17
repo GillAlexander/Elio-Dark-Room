@@ -14,7 +14,6 @@ public class ControllElioMeshScript : MonoBehaviour
     public GameObject[] Area3HidingSpots;
     public GameObject[] Area4HidingSpots;
     public NavMeshAgent elioAgent;
-
     static Vector3 elioHidingNumber;
 
     int playerHasTouchedElio;
@@ -36,23 +35,28 @@ public class ControllElioMeshScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision spheres)
     {
+        /*
+         Elio springer och gömmer sig-
+         Elio springer till ny posision när du hittar han-
+         Elio's områdespositioner är timer kopplade
+         Elio byter område efter en viss tid
+         Elio kommer ha en övergångsfas till sitt nya område?
+         Elio vet alltid hur långt bort spelaren befinner sig
+         Elio ropar mot spelaren när spelaren går förlångt bort 
+         Elio ser till att spelaren inte går förlångt bort genom att göra ljud ifrån sig som spelaren hör.
+         Elio svarar inte på spelarens visselljud när spelaren är inom en viss distans från Elio / göra det svårare för spelaren att hitta Elio
+        */
         if (spheres.gameObject.name == ("Player"))
         {
-            while (true)
-            {
-
-            }
             if (hidingAreaNumber == 1)
             {
                 elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
                 elioAgent.SetDestination(elioHidingNumber);
-                
             }
             else if (hidingAreaNumber == 2)
             {
                 elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
                 elioAgent.SetDestination(elioHidingNumber);
-                
             }
             else if(hidingAreaNumber == 3)
             {
