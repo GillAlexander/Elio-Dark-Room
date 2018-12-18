@@ -1,54 +1,41 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWhistleRaycast : MonoBehaviour {
-
+public class PlayerWhistleRaycast : MonoBehaviour
+{
     public GameObject EchoSource;
+    private RaycastHit contact;
     private GameObject instantiatedEchoSource;
+    private float ClapRange = 100;
+    private float echoCooldown = 1;
+    private float time = 0;
 
-    public float WhistleRange;
-    float numberOfEchoes;
-    public float maxEchoes;
-    public float echoCooldown;
-    float time = 0;
-
-    float EchoDistance;
-    RaycastHit contact;
-    
-    void Start () {
-      
-	}
-	
-
-	void Update () {
-        bool ElioWhistle = Input.GetButton("Whistle");
+    void Update()
+    {
+        bool ElioClap = Input.GetButtonDown("Clap");
         time += Time.deltaTime;
-        if (ElioWhistle && time >= echoCooldown)
+
+        if (ElioClap && time >= echoCooldown)
         {
-
-            for(int i=0; i<3; i++) {
-
-                float PlayerRayX = WhistleRange * Mathf.Cos(120 - (30 * i));
-                float PlayerRayY = WhistleRange * Mathf.Sin(120 - (30 * i));
-
-                if (Physics.Raycast(transform.position, transform.TransformDirection(PlayerRayX, 0, PlayerRayY), out contact, WhistleRange))
-                {
-                    EchoDistance = contact.distance;
-
-                    instantiatedEchoSource = (GameObject)Instantiate(EchoSource, contact.point.normalized, transform.rotation);
-
-                    Debug.Log("Player sees something: " + EchoDistance);
-                    Debug.DrawRay(transform.position, contact.point - transform.position, Color.red);
-
-                    Destroy(instantiatedEchoSource, 1);
-
-                    
-                }
-                
+            for (float i = 0.8f; i > -0.8; i -= 0.1f)
+            {
+                if (Physics.Raycast(transform.position, transform.forward - (i * transform.right), out contact, ClapRange))
+                    StartCoroutine(EchoDelay(contact));
             }
             time = 0;
         }
     }
 
+
+    IEnumerator EchoDelay(RaycastHit hit)
+    {
+        float delay;
+
+        delay = (hit.distance * 0.0029154519f) * 5;
+
+        yield return new WaitForSeconds(delay);
+
+        instantiatedEchoSource = Instantiate(EchoSource, hit.point, transform.rotation);
+        Destroy(instantiatedEchoSource, 0.5f);
+    }
 }

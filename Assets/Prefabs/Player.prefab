@@ -26,9 +26,10 @@ GameObject:
   - component: {fileID: 114396489753005310}
   - component: {fileID: 114270446751795494}
   - component: {fileID: 114275854431936466}
+  - component: {fileID: 114732219156250458}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,8 +363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elio: {fileID: 0}
   player: {fileID: 1212771887425534}
-  Target: {fileID: 224677254662747610}
-  speed: 1
 --- !u!114 &114275854431936466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -375,13 +374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52cd5ceac9198141975c1e0be1a9dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftVibration: 1
-  rightVibration: 1
   vibrationTime: 0
   vibrationDuration: 0
-  source: {fileID: 0}
-  walkGrass: []
-  audioMixer: {fileID: 0}
+  leftVibration: 1
+  rightVibration: 1
 --- !u!114 &114396489753005310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,6 +393,20 @@ MonoBehaviour:
   sprint: 3
   leftVibration: 0
   rightVibration: 0
+--- !u!114 &114732219156250458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212771887425534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c67d038a40723b249b9ad6598631afdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EchoSource: {fileID: 0}
+  WhistleRange: 0
+  echoCooldown: 0
 --- !u!114 &114812098214433788
 MonoBehaviour:
   m_ObjectHideFlags: 1

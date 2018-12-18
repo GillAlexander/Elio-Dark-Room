@@ -4,7 +4,6 @@ using UnityEngine.Audio;
 public class PlayerNoise : MonoBehaviour
 {
     public AudioClip[] whistles;
-    public AudioClip[] claps;
     public AudioClip found;
     public AudioMixerGroup audioMixer;
     public AudioSource audioSource;
@@ -20,6 +19,7 @@ public class PlayerNoise : MonoBehaviour
             audioSource.outputAudioMixerGroup = audioMixer;
             audioSource.Play();
         }
+
         if (foundElio)
         {
             audioSource.Stop();

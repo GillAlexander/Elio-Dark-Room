@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 471828}
   - component: {fileID: 3384114}
   - component: {fileID: 2377290}
+  - component: {fileID: 136148979492947112}
   m_Layer: 0
   m_Name: Fir_Tree
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192044}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -18.1, y: -25.9, z: -72.7}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,3 +88,16 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192044}
   m_IsPrefabAsset: 1
+--- !u!136 &136148979492947112
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13099289
+  m_Height: 5.71314
+  m_Direction: 1
+  m_Center: {x: -0.0055567427, y: 2.8566527, z: -0.00022570293}

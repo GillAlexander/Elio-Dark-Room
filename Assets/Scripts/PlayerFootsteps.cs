@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 
 public class PlayerFootsteps : MonoBehaviour
 {
-    AudioClip[] footstepsBank;
+    private AudioClip[] footstepsBank;
     public AudioClip[] runConcrete;
     public AudioClip[] runDirt;
     public AudioClip[] runGrass;
