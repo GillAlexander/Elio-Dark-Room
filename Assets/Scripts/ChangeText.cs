@@ -14,8 +14,10 @@ public class ChangeText : MonoBehaviour {
 	
 	
 	void Update () {
-        count = count + 1;
-        Score.text = "Score: " + count.ToString();
 
+        if (Input.GetButtonDown("Clap")){
+            count = count + 1;
+            Score.text = "Score: " + count.ToString();
+        }
     }
 }

@@ -12340,8 +12340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4974f53d8349374f89072f98dbd955d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultScore: {fileID: 1511993175}
-  newScore: Score 1
+  Score: {fileID: 1511993175}
 --- !u!43 &473179188
 Mesh:
   m_ObjectHideFlags: 0
@@ -46400,7 +46399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -224, y: 222}
+  m_AnchoredPosition: {x: -489, y: 307}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511993175
@@ -46423,7 +46422,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 73641232b0499374db0c516ca0f84540, type: 3}
+    m_Font: {fileID: 12800000, guid: 81c954e3ea7bedf458fd6d2e132ef1fa, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -46435,7 +46434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 
 --- !u!222 &1511993176
 CanvasRenderer:
   m_ObjectHideFlags: 0
