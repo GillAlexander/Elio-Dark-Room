@@ -7,6 +7,14 @@ public class Playercontroller : MonoBehaviour
     Vector2 movement;
     void Update()
     {
+        if (Input.GetKeyDown("p"))
+        {
+            speed += 0.5f;
+        }
+        if (Input.GetKeyDown("o"))
+        {
+            speed -= 0.5f;
+        }
         if (Input.GetKeyDown("escape"))
         {
             Application.Quit(); // Quits the game

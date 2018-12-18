@@ -39,3 +39,5 @@ sysinfo.txt
 *.meta
 *.meta
 Assets/Scenes/J. Karlsson Scene.unity
+*.asset
+*.meta

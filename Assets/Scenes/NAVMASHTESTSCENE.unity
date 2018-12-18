@@ -232,10 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c97b60e6e26b514aad1fc13b18a1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!64 &42628199
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -877,7 +873,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh7072
+  m_Name: pb_Mesh7294
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1129,7 +1125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 369131329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4556e9000dd8342a56f045cee21d6d, type: 3}
+  m_Script: {fileID: 11500000, guid: dd44f41d3ca166940b009b1d31213599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   elio: {fileID: 369131329}
@@ -1254,7 +1250,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 369131329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 3.8, z: -166}
+  m_LocalPosition: {x: 9, y: 1.55, z: -166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2119189726}
@@ -1431,7 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5807e7657114028428edf4a02c68ace0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 5
 --- !u!54 &565090003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1934,7 +1930,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh6712
+  m_Name: pb_Mesh6936
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2115,10 +2111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c97b60e6e26b514aad1fc13b18a1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!64 &672387846
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7192,7 +7184,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh6846
+  m_Name: pb_Mesh7070
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -7543,10 +7535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c97b60e6e26b514aad1fc13b18a1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!64 &1160547533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8274,10 +8262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c97b60e6e26b514aad1fc13b18a1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1214816698
 GameObject:
   m_ObjectHideFlags: 0
@@ -27948,7 +27932,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552579318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4113721eb09c57d4c93c8dc8f8368f4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 91a81ea4deda2c94bbd2aa0e1b40621b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
@@ -27967,7 +27951,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: dc18950944cbd9946ba992493d5954b4, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 9ec40e440fc192d46ad7f9826f29ed32, type: 2}
 --- !u!4 &1552579320
 Transform:
   m_ObjectHideFlags: 0
@@ -28082,7 +28066,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1630825559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c97b60e6e26b514aad1fc13b18a1b82, type: 3}
+  m_Script: {fileID: 11500000, guid: 69213e8f94e0c4943952a743d63a1159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OverrideArea: 1
@@ -28120,10 +28104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c97b60e6e26b514aad1fc13b18a1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!64 &1643393140
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28506,7 +28486,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh6962
+  m_Name: pb_Mesh7186
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -28772,7 +28752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b21f54c38b357e4ea0597338f842655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 10
+  sensitivity: 3
 --- !u!81 &1812098688
 AudioListener:
   m_ObjectHideFlags: 0
@@ -29421,7 +29401,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh6948
+  m_Name: pb_Mesh7172
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

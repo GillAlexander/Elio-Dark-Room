@@ -17,6 +17,15 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKeyDown("l"))
+        {
+            sensitivity += 0.5f;
+        }
+        if (Input.GetKeyDown("k"))
+        {
+            sensitivity -= 0.5f;
+        }
         //Vector2 cameraChange = new Vector2(InputManager.MainCameraHorizontal(), InputManager.MainCameraVertical());
         Vector2 cameraChange = new Vector2(InputManager.MainCameraHorizontal(), 0);
         cameraChange = Vector2.Scale(cameraChange, new Vector2(sensitivity, sensitivity));
