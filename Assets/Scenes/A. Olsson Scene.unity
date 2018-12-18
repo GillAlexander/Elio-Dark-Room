@@ -12234,6 +12234,7 @@ GameObject:
   - component: {fileID: 455892311}
   - component: {fileID: 455892310}
   - component: {fileID: 455892313}
+  - component: {fileID: 455892314}
   m_Layer: 9
   m_Name: Main Camera
   m_TagString: Untagged
@@ -12328,6 +12329,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39ad6e04f5a35a4f87cb253bb54face, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &455892314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455892308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4974f53d8349374f89072f98dbd955d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultScore: {fileID: 1511993175}
+  newScore: Score 1
 --- !u!43 &473179188
 Mesh:
   m_ObjectHideFlags: 0
@@ -68690,8 +68704,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d8abaa2de77bc8f479188f9173871ff4, type: 3}
   - {fileID: 8300000, guid: 1bc785915f3ae224ba29db950355d884, type: 3}
   - {fileID: 8300000, guid: 959e8a442a6133f469a582099e909e4a, type: 3}
-  claps:
-  - {fileID: 0}
   found: {fileID: 8300000, guid: 8c7d40426718bf840a32f61ef1d355ad, type: 3}
   audioMixer: {fileID: 243093321953100610, guid: c0eab942f41957d4c930b0a911c010d9,
     type: 2}
