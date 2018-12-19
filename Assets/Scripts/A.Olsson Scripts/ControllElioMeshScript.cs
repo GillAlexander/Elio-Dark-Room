@@ -40,23 +40,23 @@ public class ControllElioMeshScript : MonoBehaviour
     }
     private void YouFoundElio()
     {
-            if (time >= 30)
+        if (time >= 30)
+        {
+            hidingAreaNumber = Random.Range(1, 5);
+            Debug.Log(hidingAreaNumber);
+            time = 0;
+        }
+        if (elioPlayerDistance < 8)
+        {
+            if (hidingAreaNumber == 1)
             {
-                hidingAreaNumber = Random.Range(1, 5);
-                Debug.Log(hidingAreaNumber);
-                time = 0;
-            }
-            if (elioPlayerDistance < 8)
-            {
-                if (hidingAreaNumber == 1)
+                while (elioHidingSpotPlayerDistance < 20)
                 {
-                    while (elioHidingSpotPlayerDistance < 20)
-                    {
                         
-                    }
-                    player.gameObject.SetActive(false);
-                    elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
-                    elioAgent.SetDestination(elioHidingNumber);
+                }
+                player.gameObject.SetActive(false);
+                elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+                elioAgent.SetDestination(elioHidingNumber);
                 }
                 else if (hidingAreaNumber == 2)
                 {
@@ -73,55 +73,57 @@ public class ControllElioMeshScript : MonoBehaviour
                     elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
                     elioAgent.SetDestination(elioHidingNumber);
                 }
-            }
-            else if (elioPlayerDistance > 12)
-            {
-                player.gameObject.SetActive(true);
-            }
-            //if (distance > 60)
-            //{
-            //    Debug.Log("You are too far away!");
-            //    elioAgent.SetDestination(player.transform.position);
-            //}
         }
-    private void OnCollisionEnter(Collision spheres)
-    {
-        /*
-         Elio springer och gömmer sig-(klar)
-         Elio springer till ny posision när du hittar han-(klar)
-         Elio's områdespositioner är timer kopplade-(klar)
-         Elio byter område efter en viss tid-(klar)
-         Elio kommer ha en övergångsfas till sitt nya område?
-         Elio vet alltid hur långt bort spelaren befinner sig-(klar)
-         Elio ropar mot spelaren när spelaren går förlångt bort 
-         Elio ser till att spelaren inte går förlångt bort genom att göra ljud ifrån sig som spelaren hör.
-         Elio svarar inte på spelarens visselljud när spelaren är inom en viss distans från Elio / göra det svårare för spelaren att hitta Elio
-         Elio kan inte få ett gömställe nära spelaren. -
-        */
-        if (spheres.gameObject.name == ("Player"))
+        else if (elioPlayerDistance > 12)
         {
-            if (hidingAreaNumber == 1)
-            {
-                elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
-                elioAgent.SetDestination(elioHidingNumber);
-            }
-            else if (hidingAreaNumber == 2)
-            {
-                elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
-                elioAgent.SetDestination(elioHidingNumber);
-            }
-            else if(hidingAreaNumber == 3)
-            {
-                elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
-                elioAgent.SetDestination(elioHidingNumber);
-            }
-            else if (hidingAreaNumber == 4)
-            {
-                elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
-                elioAgent.SetDestination(elioHidingNumber);
-            }
+            player.gameObject.SetActive(true);
         }
+        //if (distance > 60)
+        //{
+        //    Debug.Log("You are too far away!");
+        //    elioAgent.SetDestination(player.transform.position);
+        //}
     }
+
+    //private void OnCollisionEnter(Collision spheres)
+    //{
+    //    /*
+    //     Elio springer och gömmer sig-(klar)
+    //     Elio springer till ny posision när du hittar han-(klar)
+    //     Elio's områdespositioner är timer kopplade-(klar)
+    //     Elio byter område efter en viss tid-(klar)
+    //     Elio kommer ha en övergångsfas till sitt nya område?
+    //     Elio vet alltid hur långt bort spelaren befinner sig-(klar)
+    //     Elio ropar mot spelaren när spelaren går förlångt bort 
+    //     Elio ser till att spelaren inte går förlångt bort genom att göra ljud ifrån sig som spelaren hör.
+    //     Elio svarar inte på spelarens visselljud när spelaren är inom en viss distans från Elio / göra det svårare för spelaren att hitta Elio
+    //     Elio kan inte få ett gömställe nära spelaren när han blir funnen. -
+    //    */
+    //    if (spheres.gameObject.name == ("Player"))
+    //    {
+    //        if (hidingAreaNumber == 1)
+    //        {
+    //            elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+    //            elioAgent.SetDestination(elioHidingNumber);
+    //        }
+    //        else if (hidingAreaNumber == 2)
+    //        {
+    //            elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
+    //            elioAgent.SetDestination(elioHidingNumber);
+    //        }
+    //        else if(hidingAreaNumber == 3)
+    //        {
+    //            elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
+    //            elioAgent.SetDestination(elioHidingNumber);
+    //        }
+    //        else if (hidingAreaNumber == 4)
+    //        {
+    //            elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
+    //            elioAgent.SetDestination(elioHidingNumber);
+    //        }
+    //    }
+    //}
+
     private void CheckDistance()
     {
         elioPlayerDistance = Vector3.Distance(elio.transform.position, player.transform.position);
