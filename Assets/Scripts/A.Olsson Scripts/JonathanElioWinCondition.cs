@@ -53,25 +53,25 @@ public class JonathanElioWinCondition : MonoBehaviour
         //kolla sen ifall det är tillräckligt långt bort från spelaren. 
     }
 
-    //private void CheckDistance()
-    //{
-    //    if (elio)
-    //    {
-    //        float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
-    //        //print("Distance to other: " + Distance);
-    //        if (Distance <= 10)
-    //        {
-    //            Debug.Log("You are less than 10 from me");
-    //            Debug.Log("You found me");
-    //        }
-    //        else if (Distance <= 30)
-    //        {
-    //            Debug.Log("You are Less than 30 from me");
-    //        }
-    //        else
-    //        {
-    //            Debug.Log("You are far away");
-    //        }
-    //    }
-    //}
+    private void CheckDistance()
+    {
+        if (elio)
+        {
+            float Distance = Vector3.Distance(elio.transform.position, player.transform.position);
+            //print("Distance to other: " + Distance);
+            if (Distance <= 10)
+            {
+                Debug.Log("You are less than 10 from me");
+                Debug.Log("You found me");
+            }
+            else if (Distance <= 30)
+            {
+                Debug.Log("You are Less than 30 from me");
+            }
+            else
+            {
+                Debug.Log("You are far away");
+            }
+        }
+    }
 }
