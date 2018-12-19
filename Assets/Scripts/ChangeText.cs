@@ -3,16 +3,21 @@ using UnityEngine.UI;
 
 public class ChangeText : MonoBehaviour {
 
-    public Text defaultScore;
-    public string newScore;
-
+    public Text Score;
+    //public string newScore;
+    private int count;
 
 	void Start () {
-		
-	}
+        count = 0;
+        Score.text = "Score: " + count.ToString();
+    }
 	
 	
 	void Update () {
-        defaultScore.text = newScore;
-	}
+
+        if (Input.GetButtonDown("Clap")){
+            count = count + 1;
+            Score.text = "Score: " + count.ToString();
+        }
+    }
 }

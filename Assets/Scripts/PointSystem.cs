@@ -19,7 +19,7 @@ public class PointSystem : MonoBehaviour {
         
 
         Debug.Log("pointSystemUpdate");
-
+/*
         if (ElioWinCondition.foundElio == true && delayTimer>=2)
         {
            
@@ -32,7 +32,7 @@ public class PointSystem : MonoBehaviour {
         else if (ElioWinCondition.foundElio == false)
         {
             Debug.Log("Elio found false");
-        }
+        }*/
 	}
 
     IEnumerator ScoreDelay()
