@@ -16,7 +16,8 @@ public class ControllElioMeshScript : MonoBehaviour
     static Vector3 elioHidingNumber;
     int playerHasTouchedElio;
     float hidingAreaNumber = 1;
-    float distance;
+    float elioPlayerDistance;
+    float elioHidingSpotPlayerDistance;
     public float timeUntilElioMovesToNewArea;
     public float time;
 
@@ -45,10 +46,15 @@ public class ControllElioMeshScript : MonoBehaviour
                 Debug.Log(hidingAreaNumber);
                 time = 0;
             }
-            if (distance < 8)
+            if (elioPlayerDistance < 8)
             {
                 if (hidingAreaNumber == 1)
                 {
+                    while (elioHidingSpotPlayerDistance < 20)
+                    {
+                        
+                    }
+                    player.gameObject.SetActive(false);
                     elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
                     elioAgent.SetDestination(elioHidingNumber);
                 }
@@ -68,24 +74,29 @@ public class ControllElioMeshScript : MonoBehaviour
                     elioAgent.SetDestination(elioHidingNumber);
                 }
             }
-            if (distance > 60)
+            else if (elioPlayerDistance > 12)
             {
-            Debug.Log("You are too far away!");
-            elioAgent.SetDestination(player.transform.position);
+                player.gameObject.SetActive(true);
+            }
+            //if (distance > 60)
+            //{
+            //    Debug.Log("You are too far away!");
+            //    elioAgent.SetDestination(player.transform.position);
+            //}
         }
-    }
     private void OnCollisionEnter(Collision spheres)
     {
         /*
-         Elio springer och gömmer sig-
-         Elio springer till ny posision när du hittar han-
-         Elio's områdespositioner är timer kopplade
-         Elio byter område efter en viss tid
+         Elio springer och gömmer sig-(klar)
+         Elio springer till ny posision när du hittar han-(klar)
+         Elio's områdespositioner är timer kopplade-(klar)
+         Elio byter område efter en viss tid-(klar)
          Elio kommer ha en övergångsfas till sitt nya område?
-         Elio vet alltid hur långt bort spelaren befinner sig
+         Elio vet alltid hur långt bort spelaren befinner sig-(klar)
          Elio ropar mot spelaren när spelaren går förlångt bort 
          Elio ser till att spelaren inte går förlångt bort genom att göra ljud ifrån sig som spelaren hör.
          Elio svarar inte på spelarens visselljud när spelaren är inom en viss distans från Elio / göra det svårare för spelaren att hitta Elio
+         Elio kan inte få ett gömställe nära spelaren. -
         */
         if (spheres.gameObject.name == ("Player"))
         {
@@ -113,7 +124,7 @@ public class ControllElioMeshScript : MonoBehaviour
     }
     private void CheckDistance()
     {
-        distance = Vector3.Distance(elio.transform.position, player.transform.position);
+        elioPlayerDistance = Vector3.Distance(elio.transform.position, player.transform.position);
     }
 }
 
