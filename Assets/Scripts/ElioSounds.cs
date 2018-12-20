@@ -22,7 +22,6 @@ public class ElioSounds : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Vector3.Distance(player.position, transform.position));
         if (Input.GetButtonDown("Whistle"))
         {
             if (Vector3.Distance(player.position, transform.position) < 20)
