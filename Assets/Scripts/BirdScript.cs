@@ -16,7 +16,7 @@ public class BirdScript : MonoBehaviour
     IEnumerator Chirp()
     {
         if (birdCalls.Length < 2)
-            yield return new WaitForSeconds(Random.Range(9, 15));
+            yield return new WaitForSeconds(Random.Range(10, 20));
         else
             yield return new WaitForSeconds(Random.Range(3, 7));
 
