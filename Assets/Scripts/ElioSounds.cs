@@ -5,8 +5,9 @@ using UnityEngine.Audio;
 public class ElioSounds : MonoBehaviour
 {
     public AudioSource source;
+    public AudioClip[] farAway;
     public AudioClip[] giggles;
-    public AudioClip[] calls;
+    public AudioClip[] overHere;
     public AudioClip[] footsteps;
     public AudioMixerGroup[] audioMixer;
 
@@ -20,19 +21,36 @@ public class ElioSounds : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown("Whistle"))
-            StartCoroutine(Giggle());
+            StartCoroutine(OverHere());
 
-        if (isMoving)
-            isMoving = true;
-        else
-            isMoving = false;
+
     }
 
-    IEnumerator Giggle()
+    IEnumerator FarAway()
+    {
+        source.Stop();
+        yield return new WaitForSeconds(Random.Range(1.5f, 2.25f));
+        source.clip = farAway[Random.Range(0, giggles.Length)];
+        source.pitch = Random.Range(0.98f, 1.04f);
+        source.outputAudioMixerGroup = audioMixer[0];
+        source.Play();
+    }
+
+    IEnumerator Giggles()
     {
         source.Stop();
         yield return new WaitForSeconds(Random.Range(1.5f, 2.25f));
         source.clip = giggles[Random.Range(0, giggles.Length)];
+        source.pitch = Random.Range(0.98f, 1.04f);
+        source.outputAudioMixerGroup = audioMixer[0];
+        source.Play();
+    }
+
+    IEnumerator OverHere()
+    {
+        source.Stop();
+        yield return new WaitForSeconds(Random.Range(1.5f, 2.25f));
+        source.clip = overHere[Random.Range(0, giggles.Length)];
         source.pitch = Random.Range(0.98f, 1.04f);
         source.outputAudioMixerGroup = audioMixer[0];
         source.Play();
