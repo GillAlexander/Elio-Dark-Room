@@ -33,12 +33,12 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 16
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.25
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.2265017, g: 0.25447023, b: 0.29847327, a: 0.25}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -51,9 +51,9 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnvironmentLightingMode: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: c870b807047d2714b897c6f24119bf7a,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -591,7 +592,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 369131329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86bc323741a15a348b4007ad68065395, type: 3}
+  m_Script: {fileID: 11500000, guid: 71e3d015db09c79419bb5000ca58dc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   elio: {fileID: 369131329}
@@ -616,7 +617,7 @@ MonoBehaviour:
   - {fileID: 42995226}
   - {fileID: 1335261826}
   - {fileID: 859439206}
-  elioAgent: {fileID: 369131331}
+  elioAgent: {fileID: 0}
   timeUntilElioMovesToNewArea: 0
   time: 0
 --- !u!195 &369131331
@@ -25908,7 +25909,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1552579320}
   - component: {fileID: 1552579319}
-  - component: {fileID: 1552579321}
   m_Layer: 0
   m_Name: NavMeshController
   m_TagString: Untagged
@@ -25927,30 +25927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a81ea4deda2c94bbd2aa0e1b40621b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1552579320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1552579318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70, y: 0, z: 258}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1552579321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1552579318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78575bc58740bc2459127bac69e746e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_AgentTypeID: 0
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
@@ -25967,7 +25943,20 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: a43452a91eb1a184687abcf483bdf26f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6b4a33bda1281b4419ec153bfebd7474, type: 2}
+--- !u!4 &1552579320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552579318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 70, y: 0, z: 258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1568966279
 Prefab:
   m_ObjectHideFlags: 0
@@ -26203,7 +26192,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 150
+  far clip plane: 90
   field of view: 60
   orthographic: 0
   orthographic size: 5

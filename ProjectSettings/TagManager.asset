@@ -30,7 +30,7 @@ TagManager:
   - ElioLayer
   - HidingSpotLayer
   - WallLayer
-  - 
+  - IndustrialNonWalkableLayer
   - 
   - 
   - 
