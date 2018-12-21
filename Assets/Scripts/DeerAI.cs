@@ -39,8 +39,13 @@ public class DeerAI : MonoBehaviour
         }
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity)) 
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2f)) 
         {
+
+            if (hit.collider.tag == "Tree")
+            {
+
+            }
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             Debug.Log("Hit");
         }
