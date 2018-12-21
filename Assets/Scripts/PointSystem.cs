@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointSystem : MonoBehaviour {
     float delayTimer;
-    int gameScore = 0;
+    //int gameScore = 0;
 
     private void Start()
     {

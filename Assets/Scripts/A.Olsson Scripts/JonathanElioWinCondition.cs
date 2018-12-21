@@ -7,12 +7,11 @@ public class JonathanElioWinCondition : MonoBehaviour
 {
     public GameObject elio;
     public GameObject player;
-    bool foundElio = false;
     public GameObject[] ElioHidingSpot;
     float distance;
     public NavMeshAgent elioAgentTEST;
     static Vector3 elioHidingNumber;
-    static bool elioWasFoundNowElioWillMove = false;
+    //static bool elioWasFoundNowElioWillMove = false;
 
     private void Start()
     {
@@ -28,8 +27,7 @@ public class JonathanElioWinCondition : MonoBehaviour
         if (spheres.gameObject.name == ("Player"))
         {
             Debug.Log("You found Elio! You won!");
-            elioWasFoundNowElioWillMove = true;
-            foundElio = true;
+            //elioWasFoundNowElioWillMove = true;
             PlayerNoise.foundElio = true;
 
 
@@ -39,7 +37,6 @@ public class JonathanElioWinCondition : MonoBehaviour
 
             //    //Debug.Log(distance);
             //}
-            foundElio = false;
 
 
             //current/active hidingspot. 
@@ -48,7 +45,7 @@ public class JonathanElioWinCondition : MonoBehaviour
             //while distance längre än 50 m = true
 
         }
-        
+
         //först hittar nytt randomiserat gömställe.
         //kolla sen ifall det är tillräckligt långt bort från spelaren. 
     }

@@ -14076,6 +14076,11 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!224 &1484050301 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224113378875321752, guid: 928692e6e0963d84e9ee909fc49ddf63,
+    type: 2}
+  m_PrefabInternal: {fileID: 1927186834}
 --- !u!1001 &1529538243
 Prefab:
   m_ObjectHideFlags: 0
@@ -14137,6 +14142,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114320308044511212, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1484050301}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc0fff6028648d4cb3ab18b8b5c9351, type: 2}
   m_IsPrefabAsset: 0

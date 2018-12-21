@@ -15,10 +15,10 @@ using UnityEngine.Audio;
 public class _TESTPlayerVibrantingWalls : MonoBehaviour
 {
 
-    PlayerIndex playerIndex;
+    //PlayerIndex 0;
     GamePadState state;
     GamePadState prevState;
-    bool playerIndexSet = false;
+    //bool playerIndexSet = false;
     public float vibrationTime;
     public float vibrationDuration;
     [Range(0, 65)]
@@ -69,11 +69,11 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
 
             if (vibrationTime < 0)
             {
-                GamePad.SetVibration(playerIndex, 0, 0);
+                GamePad.SetVibration(0, 0, 0);
             }
             else
             {
-                GamePad.SetVibration(playerIndex, leftVibration, rightVibration);
+                GamePad.SetVibration(0, leftVibration, rightVibration);
             }
         }
         if (collision.gameObject.name == ("tree"))
@@ -81,17 +81,17 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
             Debug.Log("You are touching the tree");
             if (vibrationTime < 0)
             {
-                GamePad.SetVibration(playerIndex, 0, 0);
+                GamePad.SetVibration(0, 0, 0);
             }
             else
             {
-                GamePad.SetVibration(playerIndex, 0, 0.25f);
+                GamePad.SetVibration(0, 0, 0.25f);
             }
         }
 
         if (collision.gameObject.name == ("outerWall"))
         {
-            GamePad.SetVibration(playerIndex, 1, 1);
+            GamePad.SetVibration(0, 1, 1);
         }
     }
     public void OnCollisionEnter(Collision collision)
@@ -109,7 +109,7 @@ public class _TESTPlayerVibrantingWalls : MonoBehaviour
     {
         //playerIsTouchingWall = false;
         //Debug.Log("You are not touching the wall");
-        GamePad.SetVibration(playerIndex, 0, 0);
+        GamePad.SetVibration(0, 0, 0);
     }
 
     //public IEnumerator Footsteps()
