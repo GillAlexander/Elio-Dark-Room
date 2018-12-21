@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class DeerAI : MonoBehaviour
 {
-
+    public NavMeshAgent agent;
     public float speed;
     private float waitTime;
     public float startWaitTime;
@@ -16,6 +17,7 @@ public class DeerAI : MonoBehaviour
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpot.Length);
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
