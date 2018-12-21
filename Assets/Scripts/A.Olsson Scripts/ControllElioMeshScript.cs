@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class ControllElioMeshScript : MonoBehaviour
 {
     public GameObject elio;
@@ -44,8 +45,7 @@ public class ControllElioMeshScript : MonoBehaviour
     {
         if (time >= 30)
         {
-            hidingAreaNumber = Random.Range(1, 5);
-            Debug.Log(hidingAreaNumber);
+            hidingAreaNumber = Random.Range(0, Area1HidingSpots.Length);
             time = 0;
         }
         if (elioPlayerDistance < 8)
@@ -55,10 +55,9 @@ public class ControllElioMeshScript : MonoBehaviour
             {
                 if (hidingAreaNumber == 1)
                 {
-                    elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
-                    elioAgent.SetDestination(elioHidingNumber);
+                    
+                    StartCoroutine(ElioEnum());
 
-                    playerFoundElio = false;
                 }
                 else if (hidingAreaNumber == 2)
                 {
@@ -75,7 +74,12 @@ public class ControllElioMeshScript : MonoBehaviour
                     elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
                     elioAgent.SetDestination(elioHidingNumber);
                 }
+                
             }
+        }
+        else 
+        {
+            playerFoundElio = false;
         }
         //else if (elioPlayerDistance > 35)
         //{
@@ -130,6 +134,12 @@ public class ControllElioMeshScript : MonoBehaviour
     private void CheckDistance()
     {
         elioPlayerDistance = Vector3.Distance(elio.transform.position, player.transform.position);
+    }
+    IEnumerator ElioEnum()
+    {
+        elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+        elioAgent.SetDestination(elioHidingNumber);
+        yield return new WaitForSeconds(4);
     }
 }
 
