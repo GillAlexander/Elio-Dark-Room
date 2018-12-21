@@ -35,12 +35,17 @@ public class ControllElioMeshScript : MonoBehaviour
             hidingAreaNumber++;
             Debug.Log(hidingAreaNumber);
         }
-
         CheckDistance();
         YouFoundElio();
+        //makeElioHidingPlaces();
         time += Time.smoothDeltaTime;
         timePassedSinceYouFoundElio += Time.smoothDeltaTime;
     }
+    //Tar från raycast och säger vad elio ska göra.
+    //Gör så att elio kan röra sig runt kartan
+    //fixa så elio ska springa ifrån spelaren
+    //fixa så elio kan göma sig o bryta "line of site"
+
     private void YouFoundElio()
     {
         if (time >= 30)
@@ -55,9 +60,9 @@ public class ControllElioMeshScript : MonoBehaviour
             {
                 if (hidingAreaNumber == 1)
                 {
-                    
-                    StartCoroutine(ElioEnum());
-
+                    elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+                    elioAgent.SetDestination(elioHidingNumber);
+                    yield return new WaitForSeconds(4);
                 }
                 else if (hidingAreaNumber == 2)
                 {
@@ -74,17 +79,12 @@ public class ControllElioMeshScript : MonoBehaviour
                     elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
                     elioAgent.SetDestination(elioHidingNumber);
                 }
-                
             }
         }
-        else 
+        else
         {
             playerFoundElio = false;
         }
-        //else if (elioPlayerDistance > 35)
-        //{
-        //    player.gameObject.SetActive(true);
-        //}
         //if (distance > 60)
         //{
         //    Debug.Log("You are too far away!");
@@ -135,6 +135,13 @@ public class ControllElioMeshScript : MonoBehaviour
     {
         elioPlayerDistance = Vector3.Distance(elio.transform.position, player.transform.position);
     }
+    //private void makeElioHidingPlaces()
+    //{
+    //    for (int i = 0; i < 4; i++)
+    //    {
+    //        Area1HidingSpots[i] = new GameObject;
+    //    }
+    //}
     IEnumerator ElioEnum()
     {
         elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
