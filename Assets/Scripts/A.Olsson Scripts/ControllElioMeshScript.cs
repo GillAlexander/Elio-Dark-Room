@@ -62,7 +62,7 @@ public class ControllElioMeshScript : MonoBehaviour
                 {
                     elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
                     elioAgent.SetDestination(elioHidingNumber);
-                    yield return new WaitForSeconds(4);
+                    //yield return new WaitForSeconds(4);
                 }
                 else if (hidingAreaNumber == 2)
                 {
