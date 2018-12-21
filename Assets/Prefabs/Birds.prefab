@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 82092544137853356}
   - component: {fileID: 114235176402937866}
   m_Layer: 0
-  m_Name: Bird Common
+  m_Name: Bird Common (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   birdCalls:
   - {fileID: 8300000, guid: 39c6a580dc42b4c44afabf68400d5d8b, type: 3}
   - {fileID: 8300000, guid: bcd3a311c84d85943932541a57c80863, type: 3}
-  source: {fileID: 82092544137853356}
+  source: {fileID: 0}
 --- !u!114 &114356421046223914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1317,4 +1317,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdCalls:
   - {fileID: 8300000, guid: a47123a2668669247a225e46bd40749b, type: 3}
-  source: {fileID: 82092544137853356}
+  source: {fileID: 0}
