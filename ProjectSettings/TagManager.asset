@@ -15,6 +15,7 @@ TagManager:
   - Water
   - Wood
   - Terrain
+  - Tree
   layers:
   - Default
   - TransparentFX
