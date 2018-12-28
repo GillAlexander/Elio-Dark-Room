@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 308111450}
-  speed: 10
+  speed: 2
   startWaitTime: 3
   moveSpot:
   - {fileID: 530899886}
