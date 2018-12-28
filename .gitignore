@@ -37,7 +37,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.meta
-*.meta
 Assets/Scenes/J. Karlsson Scene.unity
-*.asset
-*.meta
