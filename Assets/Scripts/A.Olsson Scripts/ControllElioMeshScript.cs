@@ -18,14 +18,16 @@ public class ControllElioMeshScript : MonoBehaviour
     int playerHasTouchedElio;
     float hidingAreaNumber = 1;
     float elioPlayerDistance;
-    float elioHidingSpotPlayerDistance;
-    public float timeUntilElioMovesToNewArea;
+    float playerHidingSpotDistance;
     public float time;
-    public float timePassedSinceYouFoundElio;
+    public float timeUntilYouCanFindElio;
+    
 
+    public Transform testTarget;
     void Start()
     {
         elioAgent = GetComponent<NavMeshAgent>();
+        //player.GetComponent<Playercontroller>().enabled = false;
     }
 
     void Update()
@@ -34,56 +36,93 @@ public class ControllElioMeshScript : MonoBehaviour
         {
             hidingAreaNumber++;
             Debug.Log(hidingAreaNumber);
+            elioAgent.SetDestination(testTarget.position);
         }
         CheckDistance();
         YouFoundElio();
         //makeElioHidingPlaces();
         time += Time.smoothDeltaTime;
-        timePassedSinceYouFoundElio += Time.smoothDeltaTime;
+        timeUntilYouCanFindElio += Time.smoothDeltaTime;
     }
-    //Tar från raycast och säger vad elio ska göra.
     //Gör så att elio kan röra sig runt kartan
     //fixa så elio ska springa ifrån spelaren
     //fixa så elio kan göma sig o bryta "line of site"
 
     private void YouFoundElio()
     {
-        if (time >= 30)
+        if (time >= 20)
         {
-            hidingAreaNumber = Random.Range(0, Area1HidingSpots.Length);
+            hidingAreaNumber = Random.Range(1, 5);
             time = 0;
+            Debug.Log(hidingAreaNumber);
         }
-        if (elioPlayerDistance < 8)
+        if (elioPlayerDistance < 10)
         {
             playerFoundElio = true;
             if (playerFoundElio)
             {
-                if (hidingAreaNumber == 1)
+                if (timeUntilYouCanFindElio > 5)
                 {
-                    elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
-                    elioAgent.SetDestination(elioHidingNumber);
-                    //yield return new WaitForSeconds(4);
-                }
-                else if (hidingAreaNumber == 2)
-                {
-                    elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
-                    elioAgent.SetDestination(elioHidingNumber);
-                }
-                else if (hidingAreaNumber == 3)
-                {
-                    elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
-                    elioAgent.SetDestination(elioHidingNumber);
-                }
-                else if (hidingAreaNumber == 4)
-                {
-                    elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
-                    elioAgent.SetDestination(elioHidingNumber);
+                    timeUntilYouCanFindElio = 0;
+                    if (hidingAreaNumber == 1)
+                    {
+                        elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+                        playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        while(playerHidingSpotDistance <= 30)
+                        {
+                            elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+                            playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        }
+                        Debug.Log(elioHidingNumber);
+                        elioAgent.SetDestination(elioHidingNumber);
+                    }
+                    else if (hidingAreaNumber == 2)
+                    {
+                        elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
+                        Debug.Log(elioHidingNumber);
+                        playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        while (playerHidingSpotDistance <= 30)
+                        {
+                            elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
+                            playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        }
+                        elioAgent.SetDestination(elioHidingNumber);
+                    }
+                    else if (hidingAreaNumber == 3)
+                    {
+                        elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
+                        playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        while (playerHidingSpotDistance <= 30)
+                        {
+                            elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
+                            playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        }
+                        Debug.Log(elioHidingNumber);
+                        elioAgent.SetDestination(elioHidingNumber);
+                    }
+                    else if (hidingAreaNumber == 4)
+                    {
+                        elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
+                        playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        while (playerHidingSpotDistance <= 30)
+                        {
+                            elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
+                            playerHidingSpotDistance = Vector3.Distance(player.transform.position, elioHidingNumber);
+                        }
+                        Debug.Log(elioHidingNumber);
+                        elioAgent.SetDestination(elioHidingNumber);
+                    }
                 }
             }
         }
         else
         {
             playerFoundElio = false;
+        }
+
+        if (elioPlayerDistance > 50)
+        {
+
         }
         //if (distance > 60)
         //{
@@ -92,8 +131,6 @@ public class ControllElioMeshScript : MonoBehaviour
         //}
     }
 
-    //private void OnCollisionEnter(Collision spheres)
-    //{
     //    /*
     //     Elio springer och gömmer sig-(klar)
     //     Elio springer till ny posision när du hittar han-(klar)
@@ -106,31 +143,10 @@ public class ControllElioMeshScript : MonoBehaviour
     //     Elio svarar inte på spelarens visselljud när spelaren är inom en viss distans från Elio / göra det svårare för spelaren att hitta Elio
     //     Elio kan inte få ett gömställe nära spelaren när han blir funnen. -
     //    */
-    //    if (spheres.gameObject.name == ("Player"))
-    //    {
-    //        if (hidingAreaNumber == 1)
-    //        {
-    //            elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
-    //            elioAgent.SetDestination(elioHidingNumber);
-    //        }
-    //        else if (hidingAreaNumber == 2)
-    //        {
-    //            elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
-    //            elioAgent.SetDestination(elioHidingNumber);
-    //        }
-    //        else if(hidingAreaNumber == 3)
-    //        {
-    //            elioHidingNumber = Area3HidingSpots[Random.Range(0, Area3HidingSpots.Length)].transform.position;
-    //            elioAgent.SetDestination(elioHidingNumber);
-    //        }
-    //        else if (hidingAreaNumber == 4)
-    //        {
-    //            elioHidingNumber = Area4HidingSpots[Random.Range(0, Area4HidingSpots.Length)].transform.position;
-    //            elioAgent.SetDestination(elioHidingNumber);
-    //        }
-    //    }
+    //private void elioFindNewSpot()
+    //{
+    //    elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
     //}
-
     private void CheckDistance()
     {
         elioPlayerDistance = Vector3.Distance(elio.transform.position, player.transform.position);
@@ -142,11 +158,11 @@ public class ControllElioMeshScript : MonoBehaviour
     //        Area1HidingSpots[i] = new GameObject;
     //    }
     //}
-    IEnumerator ElioEnum()
-    {
-        elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
-        elioAgent.SetDestination(elioHidingNumber);
-        yield return new WaitForSeconds(4);
-    }
+    //IEnumerator ElioEnum()
+    //{
+    //    elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
+    //    elioAgent.SetDestination(elioHidingNumber);
+    //    yield return new WaitForSeconds(4);
+    //}
 }
 

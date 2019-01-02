@@ -30,20 +30,15 @@ public class JonathanElioWinCondition : MonoBehaviour
             //elioWasFoundNowElioWillMove = true;
             PlayerNoise.foundElio = true;
 
-
             //while (foundElio && distance < 10)
             //{
-
-
             //    //Debug.Log(distance);
             //}
-
 
             //current/active hidingspot. 
             //while distance to player (meter)
             //randomisera ny hiding spot
             //while distance längre än 50 m = true
-
         }
 
         //först hittar nytt randomiserat gömställe.
