@@ -41,12 +41,12 @@ public class PlayerFootsteps : MonoBehaviour
         if (isRunning)
         {
             startedRunning++;
-            stepDelay = 0.3f;
+            stepDelay = 0.4f;
         }
         else
         {
             startedRunning = 0;
-            stepDelay = 0.5f;
+            stepDelay = 0.7f;
         }
 
         if (startedRunning == 1)
