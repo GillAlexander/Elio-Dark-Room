@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.25
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.25}
+  m_IndirectSpecularColor: {r: 0.2265017, g: 0.25447023, b: 0.29847327, a: 0.25}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 41434297}
   - component: {fileID: 41434296}
   - component: {fileID: 41434295}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ocean50x50W750H750
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4459088096418590, guid: 3dc0fff6028648d4cb3ab18b8b5c9351, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.1
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 4459088096418590, guid: 3dc0fff6028648d4cb3ab18b8b5c9351, type: 2}
       propertyPath: m_LocalPosition.z
@@ -694,23 +694,23 @@ Prefab:
     - target: {fileID: 195391268353108848, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
         type: 2}
       propertyPath: m_Acceleration
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 195391268353108848, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
         type: 2}
       propertyPath: m_Speed
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114320308044511212, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
         type: 2}
       propertyPath: overHere.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 450c302e41b54104890a0440fd23bcf8, type: 3}
+      objectReference: {fileID: 8300000, guid: 1b8dd2ff1bb8a6549acc87da269f8757, type: 3}
     - target: {fileID: 114320308044511212, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
         type: 2}
       propertyPath: overHere.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 488801b11f8ec1b4982bfd14cb754c3c, type: 3}
+      objectReference: {fileID: 8300000, guid: d1de6e039b2ab2f478c470c2ceb76e76, type: 3}
     - target: {fileID: 114320308044511212, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
         type: 2}
       propertyPath: player
@@ -723,7 +723,12 @@ Prefab:
     - target: {fileID: 195391268353108848, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
         type: 2}
       propertyPath: m_AngularSpeed
-      value: 1000
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 195391268353108848, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc0fff6028648d4cb3ab18b8b5c9351, type: 2}
@@ -739,7 +744,7 @@ GameObject:
   - component: {fileID: 483990096}
   - component: {fileID: 483990095}
   - component: {fileID: 483990094}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ocean50x50W750H750
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485733520}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: 'Water '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1069,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565090000}
   m_LocalRotation: {x: -0, y: 0.13052319, z: -0, w: 0.99144524}
-  m_LocalPosition: {x: 0, y: 0, z: -182}
+  m_LocalPosition: {x: 0, y: 0, z: -160}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1812098686}
@@ -1088,7 +1093,7 @@ GameObject:
   - component: {fileID: 573079863}
   - component: {fileID: 573079862}
   - component: {fileID: 573079861}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ocean50x50W750H750
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1175,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16970
+  m_Name: pb_Mesh115986
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1416,7 +1421,7 @@ GameObject:
   - component: {fileID: 603856403}
   - component: {fileID: 603856402}
   - component: {fileID: 603856401}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ocean50x50W750H750
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1973,7 +1978,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16832
+  m_Name: pb_Mesh115878
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18512,7 +18517,7 @@ GameObject:
   - component: {fileID: 1372721375}
   - component: {fileID: 1372721374}
   - component: {fileID: 1372721373}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ocean50x50W750H750
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26062,7 +26067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690241033}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26179,7 +26184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728659224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78575bc58740bc2459127bac69e746e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 91a81ea4deda2c94bbd2aa0e1b40621b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
@@ -26198,7 +26203,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0ba5a86642920514b904591040743d99, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a3dbc3e1a0dbf784bb1815f63ef9b0f1, type: 2}
 --- !u!4 &1728659226
 Transform:
   m_ObjectHideFlags: 0
@@ -26519,7 +26524,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh38748
+  m_Name: pb_Mesh115942
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -26687,7 +26692,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2047625800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86bc323741a15a348b4007ad68065395, type: 3}
+  m_Script: {fileID: 11500000, guid: 71e3d015db09c79419bb5000ca58dc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   elio: {fileID: 2047625800}
@@ -26695,6 +26700,8 @@ MonoBehaviour:
   Area1HidingSpots:
   - {fileID: 244242282}
   - {fileID: 675326051}
+  - {fileID: 1856332747}
+  - {fileID: 1479022533}
   Area2HidingSpots:
   - {fileID: 1723341315}
   - {fileID: 1062153625}
@@ -26713,4 +26720,5 @@ MonoBehaviour:
   elioAgent: {fileID: 2047625801}
   time: 0
   timeUntilYouCanFindElio: 0
-  testTarget: {fileID: 593001339}
+  test: 1
+  testTarget: {fileID: 0}

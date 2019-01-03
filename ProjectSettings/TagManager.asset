@@ -32,7 +32,7 @@ TagManager:
   - HidingSpotLayer
   - WallLayer
   - IndustrialNonWalkableLayer
-  - 
+  - WaterLayer
   - 
   - 
   - 
