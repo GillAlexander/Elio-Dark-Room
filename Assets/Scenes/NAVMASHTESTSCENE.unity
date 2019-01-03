@@ -26094,7 +26094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728659224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91a81ea4deda2c94bbd2aa0e1b40621b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8549c3d770c4d4c91b8ab7349237dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
@@ -26103,7 +26103,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 9527
+    m_Bits: 1335
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -26113,7 +26113,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: a3dbc3e1a0dbf784bb1815f63ef9b0f1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8b5506f9b58fcd943b929f651b2aa0b4, type: 2}
 --- !u!4 &1728659226
 Transform:
   m_ObjectHideFlags: 0
@@ -26594,7 +26594,7 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 195391268353108848, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
     type: 2}
   m_PrefabInternal: {fileID: 375996484}
---- !u!114 &2047625808
+--- !u!114 &2047625802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26602,7 +26602,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2047625800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e3d015db09c79419bb5000ca58dc4b, type: 3}
+  m_Script: {fileID: 11500000, guid: d26e3ccf8f0bfac439c2ec76d448156c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   elio: {fileID: 2047625800}
@@ -26630,5 +26630,4 @@ MonoBehaviour:
   elioAgent: {fileID: 2047625801}
   time: 0
   timeUntilYouCanFindElio: 0
-  test: 1
   testTarget: {fileID: 0}
