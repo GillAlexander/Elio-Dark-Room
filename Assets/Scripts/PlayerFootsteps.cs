@@ -5,21 +5,15 @@ using UnityEngine.Audio;
 public class PlayerFootsteps : MonoBehaviour
 {
     private AudioClip[] footstepsBank;
-    public AudioClip[] runConcrete;
     public AudioClip[] runDirt;
     public AudioClip[] runGrass;
     public AudioClip[] runGravel;
-    public AudioClip[] runIndoors;
-    public AudioClip[] runMetal;
     public AudioClip[] runSnow;
     public AudioClip[] runWater;
     public AudioClip[] runWood;
-    public AudioClip[] walkConcrete;
     public AudioClip[] walkDirt;
     public AudioClip[] walkGrass;
     public AudioClip[] walkGravel;
-    public AudioClip[] walkIndoors;
-    public AudioClip[] walkMetal;
     public AudioClip[] walkSnow;
     public AudioClip[] walkWater;
     public AudioClip[] walkWood;
@@ -28,7 +22,7 @@ public class PlayerFootsteps : MonoBehaviour
     public static bool isMoving = false;
     public static bool isRunning = false;
     public static int startedRunning;
-    public static string surfaceTag;
+    string surfaceTag;
     float stepDelay;
 
     void Start()
@@ -38,6 +32,8 @@ public class PlayerFootsteps : MonoBehaviour
 
     void Update()
     {
+
+        CheckGround();
         if (isRunning)
         {
             startedRunning++;
@@ -54,6 +50,25 @@ public class PlayerFootsteps : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(Footsteps());
         }
+    }
+
+    void CheckGround()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit))
+        {
+            surfaceTag = hit.transform.tag;
+
+            if (hit.transform.tag == "Water")
+            {
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
+                    surfaceTag = hit.transform.tag;
+                else
+                    surfaceTag = "Grass";
+            }
+        }
+        else
+            surfaceTag = "Grass";
     }
 
     public IEnumerator Footsteps()
@@ -77,13 +92,6 @@ public class PlayerFootsteps : MonoBehaviour
     {
         switch (surfaceTag)
         {
-            case "Concrete":
-                if (isRunning)
-                    footstepsBank = runConcrete;
-                else
-                    footstepsBank = walkConcrete;
-                break;
-
             case "Dirt":
                 if (isRunning)
                     footstepsBank = runDirt;
@@ -103,20 +111,6 @@ public class PlayerFootsteps : MonoBehaviour
                     footstepsBank = runGravel;
                 else
                     footstepsBank = walkGravel;
-                break;
-
-            case "Indoors":
-                if (isRunning)
-                    footstepsBank = runIndoors;
-                else
-                    footstepsBank = walkIndoors;
-                break;
-
-            case "Metal":
-                if (isRunning)
-                    footstepsBank = runMetal;
-                else
-                    footstepsBank = walkMetal;
                 break;
 
             case "Snow":

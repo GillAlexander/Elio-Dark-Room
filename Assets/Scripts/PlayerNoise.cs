@@ -5,7 +5,6 @@ using UnityEngine.Audio;
 public class PlayerNoise : MonoBehaviour
 {
     public AudioClip[] whistles;
-    public AudioClip found;
     public AudioMixerGroup audioMixer;
     public AudioSource audioSource;
     public static bool foundElio = false;
@@ -17,15 +16,6 @@ public class PlayerNoise : MonoBehaviour
         {
             justWhistled = true;
             StartCoroutine(Whistle());
-        }
-
-        if (foundElio)
-        {
-            audioSource.Stop();
-            audioSource.clip = found;
-            audioSource.outputAudioMixerGroup = audioMixer;
-            audioSource.Play();
-            foundElio = false;
         }
     }
 

@@ -39,15 +39,7 @@ public class Playercontroller : MonoBehaviour
         movement.y *= Time.deltaTime;
 
         transform.Translate(movement.x, 0, movement.y);
-
-        CheckGround();
     }
 
-    void CheckGround()
-    {
-        RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit))
-            PlayerFootsteps.surfaceTag = hit.transform.tag;
-    }
 }
