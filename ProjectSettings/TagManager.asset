@@ -16,6 +16,7 @@ TagManager:
   - Wood
   - Terrain
   - Tree
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - WallLayer
   - IndustrialNonWalkableLayer
   - WaterLayer
-  - 
+  - TreeLayer
   - 
   - 
   - 
