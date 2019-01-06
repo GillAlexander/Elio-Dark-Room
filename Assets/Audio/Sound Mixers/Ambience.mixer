@@ -21,6 +21,7 @@ AudioMixerController:
     - d1dc76fb30485d84685c5d1e3707e86a
     - cf5443f8756daaa49aee474c380ac5c6
     - 72f52a3b93aeb12448411f571b9b62ee
+    - f605621593d99d24dad80da3d805cd10
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -35,6 +36,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 243155425418540484}
   - {fileID: 243345280847396000}
+  - {fileID: 243890180203010184}
   m_Volume: ab0308b0d9c16c1468854482694e35c7
   m_Pitch: 7f1c35807522828459c145313413fe4a
   m_Effects:
@@ -65,6 +67,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 738869f8bf551ab429c176178f521f65
   m_FloatValues:
+    4bf81032646974f4a82d05d911723741: -12
     7c4e06561adff5241869c3962479661d: -5
     5994d9299d85eac449a60b3d95151c22: -12
   m_TransitionOverrides: {}
@@ -102,6 +105,23 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &243890180203010184
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: River
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f605621593d99d24dad80da3d805cd10
+  m_Children: []
+  m_Volume: 4bf81032646974f4a82d05d911723741
+  m_Pitch: 3a277f9149f1ed540b470e8cd326d342
+  m_Effects:
+  - {fileID: 244788554049697084}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &244506945031218266
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -111,6 +131,19 @@ AudioMixerEffectController:
   m_EffectID: a6ffaf199f6f19b498be25e5967c76d5
   m_EffectName: Attenuation
   m_MixLevel: a8fa1df538f526e4bbb68939522e7b4c
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244788554049697084
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 07a443dc1e67c5f49b7439eebd8c8eeb
+  m_EffectName: Attenuation
+  m_MixLevel: b01272110a692ad41b5a0ec4815c54f8
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0

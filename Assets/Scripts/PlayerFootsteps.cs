@@ -19,6 +19,7 @@ public class PlayerFootsteps : MonoBehaviour
     public AudioClip[] walkWood;
     public AudioSource audioSource;
     public AudioMixerGroup audioMixer;
+    public AudioMixer mixer;
     public static bool isMoving = false;
     public static bool isRunning = false;
     public static int startedRunning;
@@ -32,7 +33,6 @@ public class PlayerFootsteps : MonoBehaviour
 
     void Update()
     {
-
         CheckGround();
         if (isRunning)
         {
@@ -61,7 +61,7 @@ public class PlayerFootsteps : MonoBehaviour
 
             if (hit.transform.tag == "Water")
             {
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
                     surfaceTag = hit.transform.tag;
                 else
                     surfaceTag = "Grass";
@@ -77,6 +77,14 @@ public class PlayerFootsteps : MonoBehaviour
         {
             audioSource.Stop();
             DetermineSurface();
+            if (surfaceTag == "Water")
+            {
+                mixer.SetFloat("FootstepsParam", 4);
+            }
+            else
+            {
+                mixer.SetFloat("FootstepsParam", -4);
+            }
             audioSource.clip = footstepsBank[Random.Range(0, footstepsBank.Length)];
             audioSource.pitch = Random.Range(0.85f, 1.15f);
             audioSource.outputAudioMixerGroup = audioMixer;
