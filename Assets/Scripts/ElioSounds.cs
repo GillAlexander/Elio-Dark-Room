@@ -22,7 +22,7 @@ public class ElioSounds : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Whistle"))
+        if (Input.GetButtonDown("Whistle") && !PlayerNoise.justWhistled)
         {
             if (Vector3.Distance(player.position, transform.position) < 20)
                 StartCoroutine(Giggles());

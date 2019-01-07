@@ -243,13 +243,13 @@ MonoBehaviour:
   source: {fileID: 82239108641632688}
   farAway:
   - {fileID: 8300000, guid: 0c3ea26faaa09da4785c2e044e49c72f, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 5add0798f071c0c46b8c1fd501b3b8b5, type: 3}
   giggles:
   - {fileID: 8300000, guid: dcd885a803328524fbed1416ba1c3c60, type: 3}
   - {fileID: 8300000, guid: 1cfcfed5013d22a4a90b0780eefd7a67, type: 3}
   overHere:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: d9934c603af48fd4d857f28f4ac7dc9c, type: 3}
+  - {fileID: 8300000, guid: 66e121ac01957074fbf9b1ebbf230735, type: 3}
   footsteps:
   - {fileID: 8300000, guid: 1e4ad9d4a83e51d4db3dd2dd79481a4e, type: 3}
   - {fileID: 8300000, guid: 477fb01125d9a2a41aa41bd2c9bb44ae, type: 3}
