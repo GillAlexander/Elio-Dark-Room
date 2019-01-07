@@ -34,7 +34,7 @@ public class WindControl : MonoBehaviour
         mixer.SetFloat("WindParam", windChange);
         if (onSnow && windChange < 4)
         {
-            windChange += 0.2f;
+            windChange += 0.1f;
             yield return new WaitForSeconds(0.1f);
             StartCoroutine(WindFade());
         }
