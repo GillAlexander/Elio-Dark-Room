@@ -14145,7 +14145,8 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 534948864}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114166318468522282, guid: 3dc0fff6028648d4cb3ab18b8b5c9351, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3dc0fff6028648d4cb3ab18b8b5c9351, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1625910236
@@ -14307,7 +14308,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh25644
+  m_Name: pb_Mesh18240
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
