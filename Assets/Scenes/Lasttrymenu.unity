@@ -1454,9 +1454,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: "H\xF6gl\xE4sning av"
-      m_Image: {fileID: 0}
     - m_Text: "H\xF6gl\xE4sning p\xE5"
+      m_Image: {fileID: 0}
+    - m_Text: "H\xF6gl\xE4sning av"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
