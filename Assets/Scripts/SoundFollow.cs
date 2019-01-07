@@ -16,12 +16,6 @@ public class SoundFollow : MonoBehaviour
 
         // get the two closest waypoints and find a point in between them
         transform.position = Vector3.Lerp(transform.position, ClosestPointOnLine(waypoints[0], waypoints[1], player.position), Time.deltaTime * 2);
-
-
-        for (int i = 0; i < waypoints.Length; i++)
-        {
-            Debug.DrawRay(waypoints[i], Vector3.down, Color.red);
-        }
     }
 
     Vector3 ClosestPointOnLine(Vector3 vA, Vector3 vB, Vector3 vPoint)
