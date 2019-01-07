@@ -17,6 +17,7 @@ TagManager:
   - Terrain
   - Tree
   - Obstacle
+  - InvisWall
   layers:
   - Default
   - TransparentFX
