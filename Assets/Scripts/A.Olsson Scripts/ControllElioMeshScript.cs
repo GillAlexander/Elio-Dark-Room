@@ -44,6 +44,10 @@ public class ControllElioMeshScript : MonoBehaviour
         //{
         //    elioAgent.SetDestination(player.transform.position - (elioPlayerDistance * 30));
         //}
+        if (timeUntilGameOver < 180)
+        {
+            elioAgent.SetDestination(player.transform.position);
+        }
     }
     private void ElioAI()
     {
