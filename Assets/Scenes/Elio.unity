@@ -4452,22 +4452,22 @@ Prefab:
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 120
+      value: 72.68004
       objectReference: {fileID: 0}
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.00007270276
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
@@ -4482,12 +4482,12 @@ Prefab:
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 230
+      value: 93.54176
       objectReference: {fileID: 0}
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 6.5
+      value: 7.9227133
       objectReference: {fileID: 0}
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
@@ -4543,7 +4543,7 @@ Prefab:
     - target: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.008
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a217571c53772fa4388d653e5d084519, type: 2}
@@ -16632,7 +16632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2019270474}
   - component: {fileID: 2019270476}
-  - component: {fileID: 2019270475}
   m_Layer: 0
   m_Name: sun
   m_TagString: Untagged
@@ -16653,17 +16652,6 @@ Transform:
   m_Father: {fileID: 2060310623}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: -180.00002}
---- !u!114 &2019270475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2019270473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cfe9b9088a1b304782a672508e4b53c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &2019270476
 Light:
   m_ObjectHideFlags: 0
