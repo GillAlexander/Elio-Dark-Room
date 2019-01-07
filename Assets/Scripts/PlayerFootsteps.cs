@@ -23,7 +23,7 @@ public class PlayerFootsteps : MonoBehaviour
     public static bool isMoving = false;
     public static bool isRunning = false;
     public static int startedRunning;
-    string surfaceTag;
+    public static string surfaceTag;
     float stepDelay;
 
     void Start()
@@ -71,7 +71,7 @@ public class PlayerFootsteps : MonoBehaviour
             surfaceTag = "Grass";
     }
 
-    public IEnumerator Footsteps()
+    IEnumerator Footsteps()
     {
         if (isMoving)
         {

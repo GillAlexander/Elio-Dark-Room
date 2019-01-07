@@ -8,7 +8,7 @@ public class PlayerNoise : MonoBehaviour
     public AudioMixerGroup audioMixer;
     public AudioSource audioSource;
     public static bool foundElio = false;
-    bool justWhistled = false;
+    public static bool justWhistled = false;
 
     void Update()
     {
