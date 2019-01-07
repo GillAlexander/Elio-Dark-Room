@@ -12,7 +12,7 @@ public class ElioSounds : MonoBehaviour
     public AudioClip[] footsteps;
     public AudioMixerGroup[] audioMixer;
     bool tooFar = false;
-    bool isMoving = false;
+    public static bool isMoving = false;
 
     private void Start()
     {
@@ -22,6 +22,7 @@ public class ElioSounds : MonoBehaviour
 
     private void Update()
     {
+        CheckGround();
         if (Input.GetButtonDown("Whistle") && !PlayerNoise.justWhistled)
         {
             if (Vector3.Distance(player.position, transform.position) < 20)
@@ -34,6 +35,25 @@ public class ElioSounds : MonoBehaviour
             tooFar = true;
         else
             tooFar = false;
+    }
+
+    void CheckGround()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit))
+        {
+            PlayerFootsteps.surfaceTag = hit.transform.tag;
+
+            if (hit.transform.tag == "Water")
+            {
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
+                    PlayerFootsteps.surfaceTag = hit.transform.tag;
+                else
+                    PlayerFootsteps.surfaceTag = "Grass";
+            }
+        }
+        else
+            PlayerFootsteps.surfaceTag = "Grass";
     }
 
     IEnumerator FarAway()
@@ -83,8 +103,9 @@ public class ElioSounds : MonoBehaviour
             source.pitch = Random.Range(0.85f, 1.2f);
             source.outputAudioMixerGroup = audioMixer[1];
             source.Play();
+
+            yield return new WaitForSeconds(0.4f);
+            StartCoroutine(Footsteps());
         }
-        yield return new WaitForSeconds(0.4f);
-        StartCoroutine(Footsteps());
     }
 }
