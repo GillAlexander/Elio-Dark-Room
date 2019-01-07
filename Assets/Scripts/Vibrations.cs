@@ -27,18 +27,12 @@ public class Vibrations : MonoBehaviour
     public float rightVibration;
     //bool playerIsTouchingWall = false;
     //bool playerIsWalkingWhileTouchingwall = false;
-    //Rigidbody rb;
-    //Vector3 playerAngelWhileTouchingWall;
 
     //Johans GÅ kod, kan användas vid kollision/glid till väggarna
     //public static bool isMoving = false;
     //public static bool isRunning = false;
     //public static int startedRunning;
 
-    void Start()
-    {
-        //rb = GetComponent<Rigidbody>();
-    }
     void Update()
     {
         if (vibrationTime > 0)
@@ -46,39 +40,22 @@ public class Vibrations : MonoBehaviour
             vibrationTime -= Time.deltaTime;
         }
 
-        //playerAngelWhileTouchingWall = rb.velocity;
-        //if (isRunning)
-        //    startedRunning++;
-        //else
-        //    startedRunning = 0;
-        //if (startedRunning == 1)
-        //{
-        //    StopAllCoroutines();
-        //    StartCoroutine(Footsteps());
-        //}
     }
     void OnCollisionStay(Collision collision)
     {
-        //collision.gameObject.name == ("wall")
-        if (collision.gameObject.layer == 13)
+        if (collision.gameObject.tag == "InvisWall")
         {
-            //playerIsTouchingWall = true;
-            //if (playerIsTouchingWall)
-            //{
-            //    Debug.Log("ifPlayerIsTouchingTheWall = You are touching the wall");
-            //}
-
             if (vibrationTime < 0)
             {
                 GamePad.SetVibration(0, 0, 0);
             }
-            else
+            else if(vibrationTime >= 0.3)
             {
                 GamePad.SetVibration(0, leftVibration, rightVibration);
             }
         }
-        //collision.gameObject.layer == 16
-        //collision.gameObject.name == ("tree")
+
+        /*
         if (collision.gameObject.layer == 16)
         {
             Debug.Log("You are touching the tree");
@@ -91,11 +68,7 @@ public class Vibrations : MonoBehaviour
                 GamePad.SetVibration(0, 0, 0.25f);
             }
         }
-
-        if (collision.gameObject.name == ("outerWall"))
-        {
-            GamePad.SetVibration(0, 1, 1);
-        }
+        */
     }
     public void OnCollisionEnter(Collision collision)
     {
@@ -103,7 +76,11 @@ public class Vibrations : MonoBehaviour
         {
             vibrationTime = vibrationDuration;
         }
-        if (collision.gameObject.name == ("tree"))
+        //if (TerrainData.FindObjectOfType<Tree>().tag == "Tree")
+        //{
+        //    vibrationTime = vibrationDuration;
+        //}
+        if (collision.gameObject.tag == "InvisWall")
         {
             vibrationTime = vibrationDuration;
         }
