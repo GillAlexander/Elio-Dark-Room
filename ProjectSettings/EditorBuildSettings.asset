@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MostViableProductScene.unity
-    guid: 96059cac43854dc44bbb9247595565a0
+    path: Assets/Scenes/Meny/Lasttrymenu.unity
+    guid: 119a74a04c13e7948b005320468a8285
   m_configObjects: {}
