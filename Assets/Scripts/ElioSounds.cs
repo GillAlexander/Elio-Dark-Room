@@ -10,10 +10,20 @@ public class ElioSounds : MonoBehaviour
     public AudioClip[] farAway;
     public AudioClip[] giggles;
     public AudioClip[] overHere;
-    public AudioClip[] footsteps;
+    AudioClip[] footstepsBank;
+    public AudioClip[] runDirt;
+    public AudioClip[] runGrass;
+    public AudioClip[] runSnow;
+    public AudioClip[] runWater;
+    public AudioClip[] walkDirt;
+    public AudioClip[] walkGrass;
+    public AudioClip[] walkSnow;
+    public AudioClip[] walkWater;
     public AudioMixerGroup[] audioMixer;
+    string surfaceTag;
     bool tooFar = false;
     public static bool isMoving = false;
+    public static bool isRunning = false;
 
     private void Start()
     {
@@ -43,19 +53,58 @@ public class ElioSounds : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit))
         {
-            PlayerFootsteps.surfaceTag = hit.transform.tag;
+            surfaceTag = hit.transform.tag;
 
             if (hit.transform.tag == "Water")
             {
                 if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
-                    PlayerFootsteps.surfaceTag = hit.transform.tag;
+                    surfaceTag = hit.transform.tag;
                 else
-                    PlayerFootsteps.surfaceTag = "Grass";
+                    surfaceTag = "Grass";
             }
         }
         else
-            PlayerFootsteps.surfaceTag = "Grass";
+            surfaceTag = "Grass";
+
+        switch (surfaceTag)
+        {
+            case "Dirt":
+                if (isRunning)
+                    footstepsBank = runDirt;
+                else
+                    footstepsBank = walkDirt;
+                break;
+
+            case "Grass":
+                if (isRunning)
+                    footstepsBank = runGrass;
+                else
+                    footstepsBank = walkGrass;
+                break;
+
+            case "Snow":
+                if (isRunning)
+                    footstepsBank = runSnow;
+                else
+                    footstepsBank = walkSnow;
+                break;
+
+            case "Water":
+                if (isRunning)
+                    footstepsBank = runWater;
+                else
+                    footstepsBank = walkWater;
+                break;
+
+            default:
+                if (isRunning)
+                    footstepsBank = runGrass;
+                else
+                    footstepsBank = walkGrass;
+                break;
+        }
     }
+
 
     IEnumerator FarAway()
     {
@@ -97,13 +146,11 @@ public class ElioSounds : MonoBehaviour
 
     IEnumerator Footsteps()
     {
-        Debug.Log("Inne i Footsteps");
         if (isMoving)
         {
-            Debug.Log("isMoving är true");
             sourceFootsteps.Stop();
-            sourceFootsteps.clip = footsteps[Random.Range(0, footsteps.Length)];
-            sourceFootsteps.pitch = Random.Range(0.85f, 1.2f);
+            sourceFootsteps.clip = footstepsBank[Random.Range(0, footstepsBank.Length)];
+            sourceFootsteps.pitch = Random.Range(0.85f, 1.15f);
             sourceFootsteps.outputAudioMixerGroup = audioMixer[1];
             sourceFootsteps.Play();
         }

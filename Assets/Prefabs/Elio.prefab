@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411898351376364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 178, y: 6, z: 192}
+  m_LocalPosition: {x: 208.6, y: 13.7, z: 273.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4809593413001396}
@@ -408,10 +408,40 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d35045448bd2da40a28a3cd744d3ac5, type: 3}
   - {fileID: 8300000, guid: b4a058b65b8920843a9e817839a1f4a4, type: 3}
   - {fileID: 8300000, guid: d095c4fb419744f4ba799c7db0cefda5, type: 3}
-  footsteps:
+  runDirt:
+  - {fileID: 8300000, guid: cff458f6897892c4a93293eb02075789, type: 3}
+  - {fileID: 8300000, guid: 634464569b6d3524bbb15be160cc372c, type: 3}
+  - {fileID: 8300000, guid: 86e50796858549a4ba971a89829b5921, type: 3}
+  runGrass:
   - {fileID: 8300000, guid: 1e4ad9d4a83e51d4db3dd2dd79481a4e, type: 3}
   - {fileID: 8300000, guid: 477fb01125d9a2a41aa41bd2c9bb44ae, type: 3}
   - {fileID: 8300000, guid: a3ca84e1b7e342842b52ecee6ffd269d, type: 3}
+  runSnow:
+  - {fileID: 8300000, guid: 76cbb79d985892245bf14b36c3c27ead, type: 3}
+  - {fileID: 8300000, guid: aeb2ba41881141f49abb19e25fed2b45, type: 3}
+  - {fileID: 8300000, guid: 18f70ec99478259489b5aea3163b026b, type: 3}
+  runWater:
+  - {fileID: 8300000, guid: 6c63e77e4d80ce84f87dc0e53a21f31c, type: 3}
+  - {fileID: 8300000, guid: 094fbbbe900042e47b2f78e9e1814017, type: 3}
+  - {fileID: 8300000, guid: 9c79d007b828798418d887756e7ae540, type: 3}
+  - {fileID: 8300000, guid: 5474e5d90408f8942b06356710f8ae01, type: 3}
+  walkDirt:
+  - {fileID: 8300000, guid: bc7e69a03f6de3347b7e242a85542415, type: 3}
+  - {fileID: 8300000, guid: 52ded4517dd82aa4690644ff6e7d35fe, type: 3}
+  - {fileID: 8300000, guid: 34d2ce60f9e6cae48b027660d148c84a, type: 3}
+  walkGrass:
+  - {fileID: 8300000, guid: 1e4ad9d4a83e51d4db3dd2dd79481a4e, type: 3}
+  - {fileID: 8300000, guid: 477fb01125d9a2a41aa41bd2c9bb44ae, type: 3}
+  - {fileID: 8300000, guid: a3ca84e1b7e342842b52ecee6ffd269d, type: 3}
+  walkSnow:
+  - {fileID: 8300000, guid: c1327004f7dcc49418ada8ffacbc3a4f, type: 3}
+  - {fileID: 8300000, guid: 77e7752f33414cd47a9f4297f5d51ded, type: 3}
+  - {fileID: 8300000, guid: 66eb2262b8fd72f40a3dab6e44f86f6c, type: 3}
+  walkWater:
+  - {fileID: 8300000, guid: 87fa3a2628d1f5848ae4b085fe57e1df, type: 3}
+  - {fileID: 8300000, guid: 25e427541edfe39478d45d406091f121, type: 3}
+  - {fileID: 8300000, guid: 418854127bc516b46aa1c6d29dbf64c8, type: 3}
+  - {fileID: 8300000, guid: f0947063a205f2c46be1be7063097107, type: 3}
   audioMixer:
   - {fileID: 243978377151723378, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
   - {fileID: 243827785072369040, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
@@ -426,17 +456,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26e3ccf8f0bfac439c2ec76d448156c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elio: {fileID: 0}
+  elio: {fileID: 1411898351376364}
   player: {fileID: 0}
   Area1HidingSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Area2HidingSpots: []
-  Area3HidingSpots: []
-  Area4HidingSpots: []
-  elioAgent: {fileID: 0}
+  Area2HidingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Area3HidingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Area4HidingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timeUntilGameOver: 0
   timeUntilElioDecidesToChangeHidingSpotArea: 0
   timeUntilYouCanFindElio: 0

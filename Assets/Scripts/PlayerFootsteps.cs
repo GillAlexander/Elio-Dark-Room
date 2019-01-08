@@ -4,19 +4,15 @@ using UnityEngine.Audio;
 
 public class PlayerFootsteps : MonoBehaviour
 {
-    private AudioClip[] footstepsBank;
+    AudioClip[] footstepsBank;
     public AudioClip[] runDirt;
     public AudioClip[] runGrass;
-    public AudioClip[] runGravel;
     public AudioClip[] runSnow;
     public AudioClip[] runWater;
-    public AudioClip[] runWood;
     public AudioClip[] walkDirt;
     public AudioClip[] walkGrass;
-    public AudioClip[] walkGravel;
     public AudioClip[] walkSnow;
     public AudioClip[] walkWater;
-    public AudioClip[] walkWood;
     public AudioSource audioSource;
     public AudioMixerGroup audioMixer;
     public AudioMixer mixer;
@@ -69,35 +65,7 @@ public class PlayerFootsteps : MonoBehaviour
         }
         else
             surfaceTag = "Grass";
-    }
 
-    IEnumerator Footsteps()
-    {
-        if (isMoving)
-        {
-            audioSource.Stop();
-            DetermineSurface();
-            if (surfaceTag == "Water")
-            {
-                mixer.SetFloat("FootstepsParam", 4);
-            }
-            else
-            {
-                mixer.SetFloat("FootstepsParam", -4);
-            }
-            audioSource.clip = footstepsBank[Random.Range(0, footstepsBank.Length)];
-            audioSource.pitch = Random.Range(0.85f, 1.15f);
-            audioSource.outputAudioMixerGroup = audioMixer;
-            audioSource.Play();
-        }
-
-        yield return new WaitForSeconds(stepDelay);
-
-        StartCoroutine(Footsteps());
-    }
-
-    void DetermineSurface()
-    {
         switch (surfaceTag)
         {
             case "Dirt":
@@ -114,13 +82,6 @@ public class PlayerFootsteps : MonoBehaviour
                     footstepsBank = walkGrass;
                 break;
 
-            case "Gravel":
-                if (isRunning)
-                    footstepsBank = runGravel;
-                else
-                    footstepsBank = walkGravel;
-                break;
-
             case "Snow":
                 if (isRunning)
                     footstepsBank = runSnow;
@@ -135,13 +96,6 @@ public class PlayerFootsteps : MonoBehaviour
                     footstepsBank = walkWater;
                 break;
 
-            case "Wood":
-                if (isRunning)
-                    footstepsBank = runWood;
-                else
-                    footstepsBank = walkWood;
-                break;
-
             default:
                 if (isRunning)
                     footstepsBank = runGrass;
@@ -149,5 +103,25 @@ public class PlayerFootsteps : MonoBehaviour
                     footstepsBank = walkGrass;
                 break;
         }
+    }
+
+    IEnumerator Footsteps()
+    {
+        if (isMoving)
+        {
+            audioSource.Stop();
+            if (surfaceTag == "Water")
+                mixer.SetFloat("FootstepsParam", 4);
+            else
+                mixer.SetFloat("FootstepsParam", -4);
+
+            audioSource.clip = footstepsBank[Random.Range(0, footstepsBank.Length)];
+            audioSource.pitch = Random.Range(0.85f, 1.15f);
+            audioSource.outputAudioMixerGroup = audioMixer;
+            audioSource.Play();
+        }
+
+        yield return new WaitForSeconds(stepDelay);
+        StartCoroutine(Footsteps());
     }
 }
