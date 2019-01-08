@@ -23,6 +23,7 @@ public class ControllElioMeshScript : MonoBehaviour
     void Start()
     {
         elioAgent = GetComponent<NavMeshAgent>();
+
     }
 
     void Update()
