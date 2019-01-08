@@ -9,6 +9,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public GameObject elio;
     public GameObject player;
     public GameObject[] HidingSpots;
+    public ArrayList hidingPlaces;
     public NavMeshAgent elioAgent;
     static Vector3 elioHidingNumber;
     int playerHasTouchedElio;
@@ -19,11 +20,19 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeUntilGameOver;
     public float timeUntilYouCanFindElio;
     bool elioHasAHidingSpot = false;
-
+    
     void Start()
     {
         elioAgent = GetComponent<NavMeshAgent>();
 
+        //Transform[] hidingPlaces = new Transform[HidingSpots.Length];
+
+        HidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
+        for (int i = 0; i < HidingSpots.Length ; i++)
+        {
+            //hidingPlaces[i] = HidingSpots[i].GetComponent<Transform>().position;
+        }
+        
     }
 
     void Update()
