@@ -19,6 +19,7 @@ TagManager:
   - Obstacle
   - InvisWall
   - HidingSpot
+  - SpawnSpot
   layers:
   - Default
   - TransparentFX
