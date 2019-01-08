@@ -33,7 +33,7 @@ TagManager:
   - ElioLayer
   - HidingSpotLayer
   - WallLayer
-  - SoundMakingLayer
+  - IndustrialNonWalkableLayer
   - WaterLayer
   - TreeLayer
   - 
