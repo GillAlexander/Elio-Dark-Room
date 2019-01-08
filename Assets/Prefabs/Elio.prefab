@@ -9,39 +9,22 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1704724585607300}
+  m_RootGameObject: {fileID: 1411898351376364}
   m_IsPrefabAsset: 1
---- !u!1 &1311541005661638
+--- !u!1 &1411898351376364
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4523286752042792}
-  - component: {fileID: 114320308044511212}
-  - component: {fileID: 82239108641632688}
-  m_Layer: 11
-  m_Name: ElioSounds
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1704724585607300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4459088096418590}
-  - component: {fileID: 33026759521383644}
-  - component: {fileID: 23211428430557488}
-  - component: {fileID: 136712200478478364}
-  - component: {fileID: 54140772904184998}
-  - component: {fileID: 114444059572326846}
-  - component: {fileID: 195391268353108848}
+  - component: {fileID: 4706458395976176}
+  - component: {fileID: 33223142847040214}
+  - component: {fileID: 23218724936237134}
+  - component: {fileID: 136135715595954548}
+  - component: {fileID: 54625046262730514}
+  - component: {fileID: 114166318468522282}
+  - component: {fileID: 195692971866538490}
   m_Layer: 11
   m_Name: Elio
   m_TagString: Untagged
@@ -49,39 +32,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4459088096418590
+--- !u!1 &1720962994032396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4809593413001396}
+  - component: {fileID: 114350456591915348}
+  - component: {fileID: 82397223556904550}
+  m_Layer: 11
+  m_Name: ElioSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4706458395976176
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
+  m_GameObject: {fileID: 1411898351376364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 1.1, z: -162}
+  m_LocalPosition: {x: 178, y: 6, z: 192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4523286752042792}
+  - {fileID: 4809593413001396}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4523286752042792
+--- !u!4 &4809593413001396
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311541005661638}
+  m_GameObject: {fileID: 1720962994032396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4459088096418590}
+  m_Father: {fileID: 4706458395976176}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23211428430557488
+--- !u!23 &23218724936237134
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
+  m_GameObject: {fileID: 1411898351376364}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -111,19 +111,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33026759521383644
+--- !u!33 &33223142847040214
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
+  m_GameObject: {fileID: 1411898351376364}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54140772904184998
+--- !u!54 &54625046262730514
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
+  m_GameObject: {fileID: 1411898351376364}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -133,12 +133,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!82 &82239108641632688
+--- !u!82 &82397223556904550
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311541005661638}
+  m_GameObject: {fileID: 1720962994032396}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -153,9 +153,9 @@ AudioSource:
   Priority: 0
   DopplerLevel: 1
   MinDistance: 5
-  MaxDistance: 140
+  MaxDistance: 60
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -163,23 +163,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.083333336
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -12.004798
+      outSlope: -12.004798
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.16666667
+      value: 0.43528748
+      inSlope: -3.0011995
+      outSlope: -3.0011995
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.33333334
+      value: 0.18528748
+      inSlope: -0.7502999
+      outSlope: -0.7502999
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6666667
+      value: 0.060287476
+      inSlope: -0.18757497
+      outSlope: -0.18757497
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.083366595
+      outSlope: -0.083366595
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -228,19 +255,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114320308044511212
+--- !u!114 &114166318468522282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311541005661638}
+  m_GameObject: {fileID: 1411898351376364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23377ba9d6bd4c44fb15a74463ba53d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elio: {fileID: 1411898351376364}
+  player: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &114350456591915348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720962994032396}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad9a5bdf071c8814c8943f0f520a5eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  source: {fileID: 82239108641632688}
+  player: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519, type: 2}
+  source: {fileID: 82397223556904550}
   farAway:
   - {fileID: 8300000, guid: 0c3ea26faaa09da4785c2e044e49c72f, type: 3}
   - {fileID: 8300000, guid: 5add0798f071c0c46b8c1fd501b3b8b5, type: 3}
@@ -257,26 +298,12 @@ MonoBehaviour:
   audioMixer:
   - {fileID: 243978377151723378, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
   - {fileID: 243827785072369040, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
---- !u!114 &114444059572326846
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23377ba9d6bd4c44fb15a74463ba53d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elio: {fileID: 1704724585607300}
-  player: {fileID: 0}
-  Target: {fileID: 0}
---- !u!136 &136712200478478364
+--- !u!136 &136135715595954548
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
+  m_GameObject: {fileID: 1411898351376364}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -284,12 +311,12 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &195391268353108848
+--- !u!195 &195692971866538490
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704724585607300}
+  m_GameObject: {fileID: 1411898351376364}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
