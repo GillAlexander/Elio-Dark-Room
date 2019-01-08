@@ -96,16 +96,18 @@ public class ElioSounds : MonoBehaviour
 
     IEnumerator Footsteps()
     {
+        Debug.Log("Inne i Footsteps");
         if (isMoving)
         {
+            Debug.Log("isMoving är true");
             source.Stop();
             source.clip = footsteps[Random.Range(0, footsteps.Length)];
             source.pitch = Random.Range(0.85f, 1.2f);
             source.outputAudioMixerGroup = audioMixer[1];
             source.Play();
-
-            yield return new WaitForSeconds(0.4f);
-            StartCoroutine(Footsteps());
         }
+
+        yield return new WaitForSeconds(0.4f);
+        StartCoroutine(Footsteps());
     }
 }
