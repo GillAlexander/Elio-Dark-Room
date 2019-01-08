@@ -465,6 +465,7 @@ MonoBehaviour:
   audioSource: {fileID: 82638956819772700}
   audioMixer: {fileID: 243827785072369040, guid: c0eab942f41957d4c930b0a911c010d9,
     type: 2}
+  mixer: {fileID: 24100000, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
 --- !u!114 &114506877014995144
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -280,17 +280,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9a5bdf071c8814c8943f0f520a5eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 224047260891028750, guid: a217571c53772fa4388d653e5d084519, type: 2}
+  player: {fileID: 0}
   source: {fileID: 82397223556904550}
   farAway:
-  - {fileID: 8300000, guid: 0c3ea26faaa09da4785c2e044e49c72f, type: 3}
-  - {fileID: 8300000, guid: 5add0798f071c0c46b8c1fd501b3b8b5, type: 3}
+  - {fileID: 8300000, guid: 8dbd8b4972629154faa3dd1d921cd0cf, type: 3}
+  - {fileID: 8300000, guid: 26f3d61eb5a7b0c4994983357c2c6abb, type: 3}
+  - {fileID: 8300000, guid: a38d8e88f91140f4f9cfa07c514cdc34, type: 3}
+  - {fileID: 8300000, guid: 46b20b4a902fb074c9e096cacb720796, type: 3}
   giggles:
-  - {fileID: 8300000, guid: dcd885a803328524fbed1416ba1c3c60, type: 3}
-  - {fileID: 8300000, guid: 1cfcfed5013d22a4a90b0780eefd7a67, type: 3}
+  - {fileID: 8300000, guid: 54c12e82a4d80804b9e578e7fab70c40, type: 3}
+  - {fileID: 8300000, guid: a38b688c00b37ce4db7f1bce177aab68, type: 3}
+  - {fileID: 8300000, guid: 718ba6f85a2e8244d9a29b1d04d59535, type: 3}
   overHere:
-  - {fileID: 8300000, guid: d9934c603af48fd4d857f28f4ac7dc9c, type: 3}
-  - {fileID: 8300000, guid: 66e121ac01957074fbf9b1ebbf230735, type: 3}
+  - {fileID: 8300000, guid: 2c297fc8b85ba85468d23cd05b051724, type: 3}
+  - {fileID: 8300000, guid: 0f3f0fae57349534a86514db5e124370, type: 3}
+  - {fileID: 8300000, guid: eaf228114c86f6940a9c47f4674cf510, type: 3}
+  - {fileID: 8300000, guid: 7d35045448bd2da40a28a3cd744d3ac5, type: 3}
+  - {fileID: 8300000, guid: b4a058b65b8920843a9e817839a1f4a4, type: 3}
+  - {fileID: 8300000, guid: d095c4fb419744f4ba799c7db0cefda5, type: 3}
   footsteps:
   - {fileID: 8300000, guid: 1e4ad9d4a83e51d4db3dd2dd79481a4e, type: 3}
   - {fileID: 8300000, guid: 477fb01125d9a2a41aa41bd2c9bb44ae, type: 3}
