@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411898351376364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 208.6, y: 13.7, z: 273.7}
+  m_LocalPosition: {x: 242.6, y: 4.74, z: 160.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4809593413001396}
@@ -395,7 +395,7 @@ MonoBehaviour:
   farAway:
   - {fileID: 8300000, guid: 8dbd8b4972629154faa3dd1d921cd0cf, type: 3}
   - {fileID: 8300000, guid: 26f3d61eb5a7b0c4994983357c2c6abb, type: 3}
-  - {fileID: 8300000, guid: a38d8e88f91140f4f9cfa07c514cdc34, type: 3}
+  - {fileID: 8300000, guid: 46b20b4a902fb074c9e096cacb720796, type: 3}
   - {fileID: 8300000, guid: 46b20b4a902fb074c9e096cacb720796, type: 3}
   giggles:
   - {fileID: 8300000, guid: 54c12e82a4d80804b9e578e7fab70c40, type: 3}
@@ -458,28 +458,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elio: {fileID: 1411898351376364}
   player: {fileID: 0}
-  Area1HidingSpots:
+  HidingSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Area2HidingSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Area3HidingSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Area4HidingSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  elioAgent: {fileID: 195692971866538490}
   timeUntilGameOver: 0
-  timeUntilElioDecidesToChangeHidingSpotArea: 0
   timeUntilYouCanFindElio: 0
 --- !u!136 &136135715595954548
 CapsuleCollider:

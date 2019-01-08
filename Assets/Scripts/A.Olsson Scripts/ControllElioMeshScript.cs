@@ -17,7 +17,6 @@ public class ControllElioMeshScript : MonoBehaviour
     float distanceBetweenPlayerAndHidingSpot;
     float distanceBetweenElioAndHidingSpot;
     public float timeUntilGameOver;
-    public float timeUntilElioDecidesToChangeHidingSpotArea;
     public float timeUntilYouCanFindElio;
     bool elioHasAHidingSpot = false;
 
@@ -30,25 +29,19 @@ public class ControllElioMeshScript : MonoBehaviour
     {
         CheckDistance();
         ElioAI();
-        timeUntilElioDecidesToChangeHidingSpotArea += Time.smoothDeltaTime;
         timeUntilYouCanFindElio += Time.smoothDeltaTime;
         timeUntilGameOver += Time.smoothDeltaTime;
 
         distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
         distanceBetweenElioAndHidingSpot = Vector3.Distance(elio.transform.position, elioHidingNumber);
-
-        if (distanceBetweenElioAndHidingSpot < 2)
+        Debug.Log(distanceBetweenElioAndPlayer);
+        if (distanceBetweenElioAndHidingSpot < 3)
             ElioSounds.isMoving = false;
         else
             ElioSounds.isMoving = true;
     }
     private void ElioAI()
     {
-        if (timeUntilElioDecidesToChangeHidingSpotArea >= 20)
-        {
-            timeUntilElioDecidesToChangeHidingSpotArea = 0;
-            //hidingAreaNumber = Random.Range(1, 5);
-        }
         if (distanceBetweenElioAndPlayer >= 60)
         {
             elioAgent.GetComponent<NavMeshAgent>().speed = 8;
@@ -75,16 +68,12 @@ public class ControllElioMeshScript : MonoBehaviour
 
                 if (distanceBetweenElioAndPlayer <= 5)
                 {
-                    if (timeUntilYouCanFindElio > 5)
-                    {
-                        timeUntilYouCanFindElio = 0;
-
-
+                    if (timeUntilYouCanFindElio > 2)
+                    {   timeUntilYouCanFindElio = 0;
+                        
                         elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
 
                         int safety = 0;
-
-                        //bygg om till 1 super array, kolla ifall Elio kan hitta en hiding spot inom viss distance = 100 distans
 
                         do
                         {
@@ -102,9 +91,20 @@ public class ControllElioMeshScript : MonoBehaviour
 
                         elioAgent.SetDestination(elioHidingNumber);
                         elioHasAHidingSpot = true;
+                        
+                    }
+                }
+            }
+        }
+    }
 
+    private void CheckDistance()
+    {
+        distanceBetweenElioAndPlayer = Vector3.Distance(elio.transform.position, player.transform.position);
+    }
+}
 
-                        /*
+/*
                         else if (hidingAreaNumber == 2)
                         {
                             elioHidingNumber = Area2HidingSpots[Random.Range(0, Area2HidingSpots.Length)].transform.position;
@@ -142,14 +142,3 @@ public class ControllElioMeshScript : MonoBehaviour
                             elioHasAHidingSpot = true;
                         }
                         */
-                    }
-                }
-            }
-        }
-    }
-
-    private void CheckDistance()
-    {
-        distanceBetweenElioAndPlayer = Vector3.Distance(elio.transform.position, player.transform.position);
-    }
-}
