@@ -68,7 +68,7 @@ public class ElioSounds : MonoBehaviour
             source.Play();
         }
 
-        yield return new WaitForSeconds(Random.Range(2.5f, 3.5f));
+        yield return new WaitForSeconds(Random.Range(3f, 4f));
         StartCoroutine(FarAway());
     }
 
