@@ -14405,8 +14405,7 @@ NavMeshAgent:
 --- !u!114 &1523664721
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114166318468522282, guid: 3dc0fff6028648d4cb3ab18b8b5c9351,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523664719}
   m_Enabled: 1

@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 23218724936237134}
   - component: {fileID: 136135715595954548}
   - component: {fileID: 54625046262730514}
-  - component: {fileID: 114166318468522282}
   - component: {fileID: 195692971866538490}
+  - component: {fileID: 114684033871559928}
   m_Layer: 11
   m_Name: Elio
   m_TagString: Untagged
@@ -255,20 +255,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114166318468522282
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1411898351376364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23377ba9d6bd4c44fb15a74463ba53d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elio: {fileID: 1411898351376364}
-  player: {fileID: 0}
-  Target: {fileID: 0}
 --- !u!114 &114350456591915348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   source: {fileID: 82397223556904550}
+  sourceFootsteps: {fileID: 0}
   farAway:
   - {fileID: 8300000, guid: 8dbd8b4972629154faa3dd1d921cd0cf, type: 3}
   - {fileID: 8300000, guid: 26f3d61eb5a7b0c4994983357c2c6abb, type: 3}
@@ -305,6 +292,31 @@ MonoBehaviour:
   audioMixer:
   - {fileID: 243978377151723378, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
   - {fileID: 243827785072369040, guid: c0eab942f41957d4c930b0a911c010d9, type: 2}
+--- !u!114 &114684033871559928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411898351376364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e3ccf8f0bfac439c2ec76d448156c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elio: {fileID: 0}
+  player: {fileID: 0}
+  Area1HidingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Area2HidingSpots: []
+  Area3HidingSpots: []
+  Area4HidingSpots: []
+  elioAgent: {fileID: 0}
+  timeUntilGameOver: 0
+  timeUntilElioDecidesToChangeHidingSpotArea: 0
+  timeUntilYouCanFindElio: 0
 --- !u!136 &136135715595954548
 CapsuleCollider:
   m_ObjectHideFlags: 1
