@@ -6,6 +6,7 @@ public class ElioSounds : MonoBehaviour
 {
     public Transform player;
     public AudioSource source;
+    public AudioSource sourceFootsteps;
     public AudioClip[] farAway;
     public AudioClip[] giggles;
     public AudioClip[] overHere;
@@ -100,11 +101,11 @@ public class ElioSounds : MonoBehaviour
         if (isMoving)
         {
             Debug.Log("isMoving är true");
-            source.Stop();
-            source.clip = footsteps[Random.Range(0, footsteps.Length)];
-            source.pitch = Random.Range(0.85f, 1.2f);
-            source.outputAudioMixerGroup = audioMixer[1];
-            source.Play();
+            sourceFootsteps.Stop();
+            sourceFootsteps.clip = footsteps[Random.Range(0, footsteps.Length)];
+            sourceFootsteps.pitch = Random.Range(0.85f, 1.2f);
+            sourceFootsteps.outputAudioMixerGroup = audioMixer[1];
+            sourceFootsteps.Play();
         }
 
         yield return new WaitForSeconds(0.4f);
