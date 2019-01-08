@@ -24,7 +24,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeUntilElioDecidesToChangeHidingSpotArea;
     public float timeUntilYouCanFindElio;
     bool elioHasAHidingSpot = false;
-    bool elioIsHiding = false;
+
     //if elio is hiding = true, if not hiding = false       -- När Elio rör sig:  ElioSounds.isMoving = true;
     void Start()
     {
@@ -71,7 +71,7 @@ public class ControllElioMeshScript : MonoBehaviour
             elioAgent.GetComponent<NavMeshAgent>().speed = 4;
             elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
             elioAgent.SetDestination(player.transform.position);
-            elioIsHiding = false;
+            ElioSounds.isMoving = true;
         }
         else if (distanceBetweenElioAndPlayer < 60)
         {
@@ -84,13 +84,11 @@ public class ControllElioMeshScript : MonoBehaviour
                 elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
                 if (distanceBetweenElioAndHidingspot <= 3)
                 {
-                    elioIsHiding = true;
-                    Debug.Log(elioIsHiding);
+                    ElioSounds.isMoving = false;
                 }
                 else if (distanceBetweenElioAndHidingspot > 3)
                 {
-                    elioIsHiding = false;
-                    Debug.Log(elioIsHiding);
+                    ElioSounds.isMoving = true;
                 }
 
                 if (elioHasAHidingSpot)
@@ -121,12 +119,12 @@ public class ControllElioMeshScript : MonoBehaviour
                                 elioHidingNumber = Area1HidingSpots[Random.Range(0, Area1HidingSpots.Length)].transform.position;
                                 distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
                             }
-                            
+
                             //(distance between elio and hiding spot)
                             //if elio is near hidning = true
                             elioAgent.SetDestination(elioHidingNumber);
                             elioHasAHidingSpot = true;
-                            
+
                         }
                         else if (hidingAreaNumber == 2)
                         {
