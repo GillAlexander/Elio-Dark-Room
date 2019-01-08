@@ -73,10 +73,10 @@ NavMeshProjectSettings:
   m_Settings:
   - serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 10
-    agentHeight: 7
+    agentRadius: 15
+    agentHeight: 50
     agentSlope: 60
-    agentClimb: 2
+    agentClimb: 25
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
