@@ -155,7 +155,7 @@ public class ElioSounds : MonoBehaviour
             sourceFootsteps.Play();
         }
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.35f);
         StartCoroutine(Footsteps());
     }
 }
