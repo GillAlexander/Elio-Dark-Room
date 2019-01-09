@@ -24,6 +24,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeToQuitGame;
     public float timeForElioToSitDown;
     public float timeForElioToMoveToNewHidingPlace;
+    float timeForElio = 30;
     bool elioHasAHidingSpot = false;
 
 
@@ -47,28 +48,32 @@ public class ControllElioMeshScript : MonoBehaviour
 
         distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
         distanceBetweenElioAndHidingSpot = Vector3.Distance(elio.transform.position, elioHidingNumber);
-
-        if (distanceBetweenElioAndHidingSpot < 5)
+        if (timeUntilGameOver <= timeForElio)
         {
-            elioAgent.GetComponent<NavMeshAgent>().speed = 0;
-            elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
-            anim.SetBool("Wait", true);
-            timeForElioToSitDown += Time.smoothDeltaTime;
-            if (timeForElioToSitDown > 1 && anim.GetBool("Wait") == true)
+            if (distanceBetweenElioAndHidingSpot < 2)
             {
-                timeForElioToSitDown = 0;
-                anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
-            }
-            ElioSounds.isMoving = false;
+                elioAgent.GetComponent<NavMeshAgent>().speed = 0;
+                elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
+                anim.SetBool("Wait", true);
+                timeForElioToSitDown += Time.smoothDeltaTime;
+                if (timeForElioToSitDown > 1 && anim.GetBool("Wait") == true)
+                {
+                    timeForElioToSitDown = 0;
+                    anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
+                }
+                ElioSounds.isMoving = false;
 
+            }
+            else
+            {
+                ElioSounds.isMoving = true;
+                anim.SetBool("Wait", false);
+                elioAgent.GetComponent<NavMeshAgent>().speed = 4;
+                elioAgent.GetComponent<NavMeshAgent>().acceleration = 2;
+            }
         }
-        else
-        {
-            ElioSounds.isMoving = true;
-            anim.SetBool("Wait", false);
-            elioAgent.GetComponent<NavMeshAgent>().speed = 4;
-            elioAgent.GetComponent<NavMeshAgent>().acceleration = 2;
-        }
+        
+        
 
         if (ElioSounds.isMoving == false)
         {
@@ -85,8 +90,8 @@ public class ControllElioMeshScript : MonoBehaviour
             anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
             //anim.Play("Armature|Runing");
         }
-
-        if (timeUntilGameOver >= 240)
+        
+            if (timeUntilGameOver >= timeForElio)
         {
             elioAgent.SetDestination(player.transform.position);
             if (distanceBetweenElioAndPlayer < 10)
@@ -97,9 +102,8 @@ public class ControllElioMeshScript : MonoBehaviour
                 timeToQuitGame += Time.smoothDeltaTime;
 
                 ElioSounds.gameOver++;
-                if (timeToQuitGame > 3)//Så lång tid det tar att säga hej då replik
+                if (timeToQuitGame > 4.5f)
                 {
-                    //Game over
                     SceneManager.LoadScene("Lasttrymenu");
                 }
             }
@@ -108,68 +112,72 @@ public class ControllElioMeshScript : MonoBehaviour
     }
     private void ElioAI()
     {
-        if (distanceBetweenElioAndPlayer >= 60)
+        if (timeUntilGameOver <= timeForElio)
         {
-            elioAgent.GetComponent<NavMeshAgent>().speed = 8;
-            elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
-            elioAgent.SetDestination(player.transform.position);
-        }
-        else if (distanceBetweenElioAndPlayer < 60)
-        {
-            elioAgent.GetComponent<NavMeshAgent>().speed = 4;
-            elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
-
-            if (distanceBetweenElioAndPlayer <= 58)
+            if (distanceBetweenElioAndPlayer >= 60)
             {
                 elioAgent.GetComponent<NavMeshAgent>().speed = 8;
                 elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
+                elioAgent.SetDestination(player.transform.position);
+            }
+            else if (distanceBetweenElioAndPlayer < 60)
+            {
+                elioAgent.GetComponent<NavMeshAgent>().speed = 4;
+                elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
 
-                if (elioHasAHidingSpot)
+                if (distanceBetweenElioAndPlayer <= 58)
                 {
-                    timeForElioToMoveToNewHidingPlace += Time.smoothDeltaTime;
-                    if (timeForElioToMoveToNewHidingPlace > 1)
+                    elioAgent.GetComponent<NavMeshAgent>().speed = 8;
+                    elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
+
+                    if (elioHasAHidingSpot)
                     {
-                        if (distanceBetweenElioAndPlayer <= 58)
+                        timeForElioToMoveToNewHidingPlace += Time.smoothDeltaTime;
+                        if (timeForElioToMoveToNewHidingPlace > 1)
                         {
-                            setElioDestinationToHidingSpot();
+                            if (distanceBetweenElioAndPlayer <= 58)
+                            {
+                                setElioDestinationToHidingSpot();
+                            }
                         }
+
                     }
 
-                }
-
-                if (distanceBetweenElioAndPlayer <= 5)
-                {
-
-                    if (timeUntilYouCanFindElio > 5)
+                    if (distanceBetweenElioAndPlayer <= 5)
                     {
-                        if (ElioSounds.gameOver == 0 && timeUntilGameOver > 5)
-                            ElioSounds.elioFound = true;
 
-                        elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
-
-                        int safety = 0;
-
-                        do
+                        if (timeUntilYouCanFindElio > 5)
                         {
+                            if (ElioSounds.gameOver == 0 && timeUntilGameOver > 5)
+                                ElioSounds.elioFound = true;
+
                             elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
-                            distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
 
-                            safety++;
-                            if (safety >= 100)
+                            int safety = 0;
+
+                            do
                             {
-                                Debug.Log("bröt mer än 100");
-                                break;
-                            }
+                                elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
+                                distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
 
-                        } while (distanceBetweenPlayerAndHidingSpot < 10 || distanceBetweenPlayerAndHidingSpot >= 80);
+                                safety++;
+                                if (safety >= 100)
+                                {
+                                    Debug.Log("bröt mer än 100");
+                                    break;
+                                }
 
-                        setElioDestinationToHidingSpot();
-                        elioHasAHidingSpot = true;
-                        timeUntilYouCanFindElio = 0;
+                            } while (distanceBetweenPlayerAndHidingSpot < 10 || distanceBetweenPlayerAndHidingSpot >= 80);
+
+                            setElioDestinationToHidingSpot();
+                            elioHasAHidingSpot = true;
+                            timeUntilYouCanFindElio = 0;
+                        }
                     }
                 }
             }
         }
+       
     }
 
     private void CheckDistance()
