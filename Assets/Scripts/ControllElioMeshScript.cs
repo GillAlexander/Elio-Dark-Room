@@ -40,6 +40,7 @@ public class ControllElioMeshScript : MonoBehaviour
 
     void Update()
     {
+        
         CheckDistance();
         ElioAI();
         timeUntilYouCanFindElio += Time.smoothDeltaTime;
@@ -111,7 +112,7 @@ public class ControllElioMeshScript : MonoBehaviour
                 if (timeToQuitGame > 3)//Så lång tid det tar att säga hej då replik
                 {
                     //Game over
-                    SceneManager.LoadScene("Lasttrymenu");
+                    Application.Quit();
                 }
             }
         }
