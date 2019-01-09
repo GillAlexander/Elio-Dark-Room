@@ -66,6 +66,14 @@ public static class InputManager
     {
         return Input.GetButtonDown("Y_Button");
     }
+    public static bool BButton()
+    {
+        return Input.GetButtonDown("B_Button");
+    }
+    public static bool AButton()
+    {
+        return Input.GetButtonDown("A_Button");
+    }
     public static bool SprintButton()
     {
         return Input.GetButton("Sprint");
