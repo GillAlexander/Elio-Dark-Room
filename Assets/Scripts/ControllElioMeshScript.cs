@@ -44,11 +44,19 @@ public class ControllElioMeshScript : MonoBehaviour
 
         distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
         distanceBetweenElioAndHidingSpot = Vector3.Distance(elio.transform.position, elioHidingNumber);
-
-        if (distanceBetweenElioAndHidingSpot < 3)
+        Debug.Log(elioAgent.speed);
+        if (distanceBetweenElioAndHidingSpot < 2)
+        {
             ElioSounds.isMoving = false;
+            elioAgent.GetComponent<NavMeshAgent>().speed = 0;
+            elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
+        }
         else
+        {
             ElioSounds.isMoving = true;
+            elioAgent.GetComponent<NavMeshAgent>().speed = 4;
+            elioAgent.GetComponent<NavMeshAgent>().acceleration = 2;
+        }
 
         if (ElioSounds.isMoving == false)
         {
@@ -66,7 +74,7 @@ public class ControllElioMeshScript : MonoBehaviour
             anim.Play("Armature|Runing");
         }
 
-        if (timeUntilGameOver >= 20)
+        if (timeUntilGameOver >= 180)
         {
             elioAgent.SetDestination(player.transform.position);
             if (distanceBetweenElioAndPlayer < 10)
@@ -88,16 +96,19 @@ public class ControllElioMeshScript : MonoBehaviour
     {
         if (distanceBetweenElioAndPlayer >= 60)
         {
-            setElioSpeed();
+            elioAgent.GetComponent<NavMeshAgent>().speed = 8;
+            elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
             elioAgent.SetDestination(player.transform.position);
         }
         else if (distanceBetweenElioAndPlayer < 60)
         {
-            elioSpeedIsZero();
+            elioAgent.GetComponent<NavMeshAgent>().speed = 4;
+            elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
 
             if (distanceBetweenElioAndPlayer <= 58)
             {
-                setElioSpeed();
+                elioAgent.GetComponent<NavMeshAgent>().speed = 8;
+                elioAgent.GetComponent<NavMeshAgent>().acceleration = 4;
 
                 if (elioHasAHidingSpot)
                 {
