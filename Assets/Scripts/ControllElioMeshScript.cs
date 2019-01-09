@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ControllElioMeshScript : MonoBehaviour
 {
+    public Animator anim;
     public GameObject elio;
     public GameObject player;
     public GameObject[] HidingSpots;
@@ -51,15 +52,18 @@ public class ControllElioMeshScript : MonoBehaviour
 
         if (ElioSounds.isMoving == false)
         {
-            //Idle animation
+            anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
+            anim.Play("Armature|Idle");
         }
         else if(ElioSounds.isMoving = true && elioAgent.speed > 0 && elioAgent.speed <= 4)
         {
-            //Gå animation
+            anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
+            anim.Play("Armature|Walking");
         }
         else
         {
-            //Spring Animation
+            anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
+            anim.Play("Armature|Runing");
         }
 
         if (timeUntilGameOver >= 20)
