@@ -86,7 +86,7 @@ public class ControllElioMeshScript : MonoBehaviour
             //anim.Play("Armature|Runing");
         }
 
-        if (timeUntilGameOver >= 15)
+        if (timeUntilGameOver >= 240)
         {
             elioAgent.SetDestination(player.transform.position);
             if (distanceBetweenElioAndPlayer < 10)
