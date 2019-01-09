@@ -1423,7 +1423,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -1741,22 +1741,24 @@ MonoBehaviour:
   player: {fileID: 0}
   source: {fileID: 82893081301933364}
   sourceFootsteps: {fileID: 82670198446750974}
+  count:
+  - {fileID: 8300000, guid: 97a8724faf36a1249be39d7caf007809, type: 3}
+  - {fileID: 8300000, guid: ba8794534e3200f419d271d6e06dc1c7, type: 3}
+  - {fileID: 8300000, guid: c858e4f964a5c724bafb432299eab7b4, type: 3}
   farAway:
   - {fileID: 8300000, guid: 8dbd8b4972629154faa3dd1d921cd0cf, type: 3}
   - {fileID: 8300000, guid: 26f3d61eb5a7b0c4994983357c2c6abb, type: 3}
   - {fileID: 8300000, guid: 46b20b4a902fb074c9e096cacb720796, type: 3}
   - {fileID: 8300000, guid: 46b20b4a902fb074c9e096cacb720796, type: 3}
+  found:
+  - {fileID: 8300000, guid: 97248f3633741534eb16364103e5a5aa, type: 3}
+  - {fileID: 8300000, guid: 351c7bec6f28f1e42b28a3254cb6a0d2, type: 3}
+  - {fileID: 8300000, guid: 396d08aa9a7d1ed45a95b13ccdcda8ed, type: 3}
   giggles:
   - {fileID: 8300000, guid: 54c12e82a4d80804b9e578e7fab70c40, type: 3}
   - {fileID: 8300000, guid: a38b688c00b37ce4db7f1bce177aab68, type: 3}
   - {fileID: 8300000, guid: 718ba6f85a2e8244d9a29b1d04d59535, type: 3}
-  overHere:
-  - {fileID: 8300000, guid: 2c297fc8b85ba85468d23cd05b051724, type: 3}
-  - {fileID: 8300000, guid: 0f3f0fae57349534a86514db5e124370, type: 3}
-  - {fileID: 8300000, guid: eaf228114c86f6940a9c47f4674cf510, type: 3}
-  - {fileID: 8300000, guid: 7d35045448bd2da40a28a3cd744d3ac5, type: 3}
-  - {fileID: 8300000, guid: b4a058b65b8920843a9e817839a1f4a4, type: 3}
-  - {fileID: 8300000, guid: d095c4fb419744f4ba799c7db0cefda5, type: 3}
+  late: []
   runDirt:
   - {fileID: 8300000, guid: cff458f6897892c4a93293eb02075789, type: 3}
   - {fileID: 8300000, guid: 634464569b6d3524bbb15be160cc372c, type: 3}
@@ -1769,6 +1771,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76cbb79d985892245bf14b36c3c27ead, type: 3}
   - {fileID: 8300000, guid: aeb2ba41881141f49abb19e25fed2b45, type: 3}
   - {fileID: 8300000, guid: 18f70ec99478259489b5aea3163b026b, type: 3}
+  overHere:
+  - {fileID: 8300000, guid: 2c297fc8b85ba85468d23cd05b051724, type: 3}
+  - {fileID: 8300000, guid: 0f3f0fae57349534a86514db5e124370, type: 3}
+  - {fileID: 8300000, guid: eaf228114c86f6940a9c47f4674cf510, type: 3}
+  - {fileID: 8300000, guid: 7d35045448bd2da40a28a3cd744d3ac5, type: 3}
+  - {fileID: 8300000, guid: b4a058b65b8920843a9e817839a1f4a4, type: 3}
+  - {fileID: 8300000, guid: d095c4fb419744f4ba799c7db0cefda5, type: 3}
   runWater:
   - {fileID: 8300000, guid: 6c63e77e4d80ce84f87dc0e53a21f31c, type: 3}
   - {fileID: 8300000, guid: 094fbbbe900042e47b2f78e9e1814017, type: 3}
@@ -1813,6 +1822,7 @@ MonoBehaviour:
   timeUntilGameOver: 0
   timeUntilYouCanFindElio: 0
   timeToQuitGame: 0
+  timeForElioToSitDown: 0
 --- !u!136 &136207672967075180
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1992,10 +2002,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 0
-  m_Acceleration: 0
+  m_Acceleration: 2.5
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
