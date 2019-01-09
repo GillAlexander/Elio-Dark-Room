@@ -30,7 +30,7 @@ public class ControllElioMeshScript : MonoBehaviour
     void Start()
     {
         elioAgent = GetComponent<NavMeshAgent>();
-
+        timeUntilYouCanFindElio = 5;
         //Transform[] hidingPlaces = new Transform[HidingSpots.Length];
 
         HidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
@@ -86,7 +86,7 @@ public class ControllElioMeshScript : MonoBehaviour
             //anim.Play("Armature|Runing");
         }
 
-        if (timeUntilGameOver >= 180)
+        if (timeUntilGameOver >= 15)
         {
             elioAgent.SetDestination(player.transform.position);
             if (distanceBetweenElioAndPlayer < 10)
@@ -142,8 +142,7 @@ public class ControllElioMeshScript : MonoBehaviour
 
                     if (timeUntilYouCanFindElio > 5)
                     {
-                        timeUntilYouCanFindElio = 0;
-                        if (ElioSounds.gameOver == 0)
+                        if (ElioSounds.gameOver == 0 && timeUntilGameOver > 5)
                             ElioSounds.elioFound = true;
 
                         elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
@@ -166,12 +165,8 @@ public class ControllElioMeshScript : MonoBehaviour
 
                         setElioDestinationToHidingSpot();
                         elioHasAHidingSpot = true;
+                        timeUntilYouCanFindElio = 0;
                     }
-
-
-
-
-
                 }
             }
         }
