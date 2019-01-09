@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MouseOver : MonoBehaviour
 {
     AudioSource source;
     public AudioClip[] choices;
     public static string select = "";
+    public static bool pointerEnter = false;
+    public static bool pointerFix = false;
 
     void Start()
     {
@@ -19,22 +19,38 @@ public class MouseOver : MonoBehaviour
         {
             case "Start":
                 source.clip = choices[1];
-                source.Play();
+                if (pointerEnter && !pointerFix)
+                {
+                    source.Play();
+                    pointerFix = pointerEnter;
+                }
                 break;
 
             case "About":
                 source.clip = choices[2];
-                source.Play();
+                if (pointerEnter && !pointerFix)
+                {
+                    source.Play();
+                    pointerFix = pointerEnter;
+                }
                 break;
 
             case "Settings":
                 source.clip = choices[3];
-                source.Play();
+                if (pointerEnter && !pointerFix)
+                {
+                    source.Play();
+                    pointerFix = pointerEnter;
+                }
                 break;
 
             case "Exit":
                 source.clip = choices[4];
-                source.Play();
+                if (pointerEnter && !pointerFix)
+                {
+                    source.Play();
+                    pointerFix = pointerEnter;
+                }
                 break;
 
             default:
