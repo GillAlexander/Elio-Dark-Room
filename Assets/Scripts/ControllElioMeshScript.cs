@@ -59,7 +59,6 @@ public class ControllElioMeshScript : MonoBehaviour
             }
             ElioSounds.isMoving = false;
             
-            anim.SetBool("Wait", false);
         }
         else
         {
