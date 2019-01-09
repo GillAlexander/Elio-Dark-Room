@@ -7,17 +7,13 @@ public class MouseOver : MonoBehaviour
     public static string select = "";
     public static bool pointerEnter = false;
     public static bool pointerFix = false;
-    public bool pointEnt;
-    public bool pointFix;
 
     private void Update()
     {
-        pointEnt = pointerEnter;
-        pointFix = pointerFix;
         switch (select)
         {
             case "Start":
-                source.clip = choices[1];
+                source.clip = choices[0];
                 if (pointerEnter && !pointerFix)
                 {
                     source.Play();
@@ -26,7 +22,7 @@ public class MouseOver : MonoBehaviour
                 break;
 
             case "About":
-                source.clip = choices[2];
+                source.clip = choices[1];
                 if (pointerEnter && !pointerFix)
                 {
                     source.Play();
@@ -35,7 +31,7 @@ public class MouseOver : MonoBehaviour
                 break;
 
             case "Settings":
-                source.clip = choices[3];
+                source.clip = choices[2];
                 if (pointerEnter && !pointerFix)
                 {
                     source.Play();
@@ -44,7 +40,7 @@ public class MouseOver : MonoBehaviour
                 break;
 
             case "Exit":
-                source.clip = choices[4];
+                source.clip = choices[3];
                 if (pointerEnter && !pointerFix)
                 {
                     source.Play();

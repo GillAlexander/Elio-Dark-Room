@@ -8,7 +8,7 @@ public class mouseHooverScript : MonoBehaviour
     public void OnMouseEnter()
     {
         MouseOver.select = "Start";
-
+        MouseOver.pointerEnter = true;
     }
     public void OnMouseExit()
     {
