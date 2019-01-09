@@ -61,17 +61,17 @@ public class ControllElioMeshScript : MonoBehaviour
         if (ElioSounds.isMoving == false)
         {
             anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
-            anim.Play("Armature|Idle");
+            //anim.Play("Armature|Idle");
         }
         else if(ElioSounds.isMoving = true && elioAgent.speed > 0 && elioAgent.speed <= 4)
         {
             anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
-            anim.Play("Armature|Walking");
+            //anim.Play("Armature|Walking");
         }
         else
         {
             anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
-            anim.Play("Armature|Runing");
+            //anim.Play("Armature|Runing");
         }
 
         if (timeUntilGameOver >= 180)
