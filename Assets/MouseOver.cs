@@ -2,19 +2,18 @@
 
 public class MouseOver : MonoBehaviour
 {
-    AudioSource source;
+    public AudioSource source;
     public AudioClip[] choices;
     public static string select = "";
     public static bool pointerEnter = false;
     public static bool pointerFix = false;
-
-    void Start()
-    {
-        source = GetComponent<AudioSource>();
-    }
+    public bool pointEnt;
+    public bool pointFix;
 
     private void Update()
     {
+        pointEnt = pointerEnter;
+        pointFix = pointerFix;
         switch (select)
         {
             case "Start":

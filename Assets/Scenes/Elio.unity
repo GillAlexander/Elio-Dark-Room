@@ -21696,18 +21696,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4330268732745710, guid: 51f6128a186757f429ecd9af1785ff64, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4330268732745710, guid: 51f6128a186757f429ecd9af1785ff64, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4330268732745710, guid: 51f6128a186757f429ecd9af1785ff64, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.2
-      objectReference: {fileID: 0}
+    - target: {fileID: 114023537243929854, guid: 51f6128a186757f429ecd9af1785ff64,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1129574064}
     - target: {fileID: 114896443621161286, guid: 51f6128a186757f429ecd9af1785ff64,
         type: 2}
       propertyPath: player
