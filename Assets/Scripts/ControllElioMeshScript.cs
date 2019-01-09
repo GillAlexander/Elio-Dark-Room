@@ -25,8 +25,8 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeForElioToSitDown;
     public float timeForElioToMoveToNewHidingPlace;
     bool elioHasAHidingSpot = false;
-    
-    
+
+
     void Start()
     {
         elioAgent = GetComponent<NavMeshAgent>();
@@ -34,7 +34,7 @@ public class ControllElioMeshScript : MonoBehaviour
         //Transform[] hidingPlaces = new Transform[HidingSpots.Length];
 
         HidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
-        
+
     }
 
     void Update()
@@ -60,7 +60,7 @@ public class ControllElioMeshScript : MonoBehaviour
                 anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
             }
             ElioSounds.isMoving = false;
-            
+
         }
         else
         {
@@ -75,7 +75,7 @@ public class ControllElioMeshScript : MonoBehaviour
             anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
             //anim.Play("Armature|Idle");
         }
-        else if(ElioSounds.isMoving = true && elioAgent.speed > 0 && elioAgent.speed <= 4)
+        else if (ElioSounds.isMoving = true && elioAgent.speed > 0 && elioAgent.speed <= 4)
         {
             anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
             //anim.Play("Armature|Walking");
@@ -104,7 +104,7 @@ public class ControllElioMeshScript : MonoBehaviour
                 }
             }
         }
-        
+
     }
     private void ElioAI()
     {
@@ -134,44 +134,44 @@ public class ControllElioMeshScript : MonoBehaviour
                             setElioDestinationToHidingSpot();
                         }
                     }
-                    
+
                 }
 
                 if (distanceBetweenElioAndPlayer <= 5)
                 {
-                    
-                        if (timeUntilYouCanFindElio > 3)
-                        {
-                            timeUntilYouCanFindElio = 0;
 
+                    if (timeUntilYouCanFindElio > 5)
+                    {
+                        timeUntilYouCanFindElio = 0;
+                        if (ElioSounds.gameOver == 0)
                             ElioSounds.elioFound = true;
 
+                        elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
+
+                        int safety = 0;
+
+                        do
+                        {
                             elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
+                            distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
 
-                            int safety = 0;
-
-                            do
+                            safety++;
+                            if (safety >= 100)
                             {
-                                elioHidingNumber = HidingSpots[Random.Range(0, HidingSpots.Length)].transform.position;
-                                distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
+                                Debug.Log("bröt mer än 100");
+                                break;
+                            }
 
-                                safety++;
-                                if (safety >= 100)
-                                {
-                                    Debug.Log("bröt mer än 100");
-                                    break;
-                                }
+                        } while (distanceBetweenPlayerAndHidingSpot < 10 || distanceBetweenPlayerAndHidingSpot >= 80);
 
-                            } while (distanceBetweenPlayerAndHidingSpot < 10 || distanceBetweenPlayerAndHidingSpot >= 80);
-
-                            setElioDestinationToHidingSpot();
-                            elioHasAHidingSpot = true;
-                        }
-                    
+                        setElioDestinationToHidingSpot();
+                        elioHasAHidingSpot = true;
+                    }
 
 
 
-                    
+
+
                 }
             }
         }

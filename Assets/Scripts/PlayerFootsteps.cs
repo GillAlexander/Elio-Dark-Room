@@ -57,7 +57,7 @@ public class PlayerFootsteps : MonoBehaviour
 
             if (hit.transform.tag == "Water")
             {
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.25f))
                     surfaceTag = hit.transform.tag;
                 else
                     surfaceTag = "Grass";

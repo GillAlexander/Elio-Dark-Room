@@ -47,6 +47,7 @@ public class ElioSounds : MonoBehaviour
 
         if (elioFound && !elioFoundFix)
         {
+            elioFoundFix = true;
             StartCoroutine(Found());
         }
 
@@ -76,7 +77,7 @@ public class ElioSounds : MonoBehaviour
 
             if (hit.transform.tag == "Water")
             {
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.25f))
                     surfaceTag = hit.transform.tag;
                 else
                     surfaceTag = "Grass";
@@ -171,7 +172,7 @@ public class ElioSounds : MonoBehaviour
         source.pitch = 1;
         source.outputAudioMixerGroup = audioMixer[0];
         source.Play();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(1.5f);
         StartCoroutine(Count());
     }
 
@@ -183,8 +184,9 @@ public class ElioSounds : MonoBehaviour
         source.pitch = 1;
         source.outputAudioMixerGroup = audioMixer[0];
         source.Play();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(4);
         elioFound = false;
+        elioFoundFix = false;
     }
 
     IEnumerator Late()
