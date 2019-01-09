@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public class MouseOverStart : MonoBehaviour
+public class MouseOverExit : MonoBehaviour
 {
     public void OnMouseEnter()
     {
-        MouseOverSound.select = "Start";
+        MouseOverSound.select = "Exit";
         MouseOverSound.pointerEnter = true;
     }
     public void OnMouseExit()

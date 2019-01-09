@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MouseOver : MonoBehaviour
+public class MouseOverSound : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip[] choices;
