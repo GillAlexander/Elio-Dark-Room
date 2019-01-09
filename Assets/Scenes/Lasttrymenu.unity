@@ -2731,6 +2731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069697694}
   - component: {fileID: 2069697693}
+  - component: {fileID: 2069697695}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -2748,7 +2749,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243528441243488620, guid: fd79d031d5c0799438e369a0696fab20,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: bbf12a192e7ee904bacc0c283dd43416, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0f2d195952a67c6449b593b0c47f7e7c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2847,6 +2848,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069697695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069697692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f28c1600ec9044baecf9b5a3f12d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: fd79d031d5c0799438e369a0696fab20, type: 2}
 --- !u!1 &2104187484
 GameObject:
   m_ObjectHideFlags: 0
