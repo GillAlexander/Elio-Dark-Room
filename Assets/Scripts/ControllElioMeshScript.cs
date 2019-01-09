@@ -45,7 +45,7 @@ public class ControllElioMeshScript : MonoBehaviour
         distanceBetweenPlayerAndHidingSpot = Vector3.Distance(player.transform.position, elioHidingNumber);
         distanceBetweenElioAndHidingSpot = Vector3.Distance(elio.transform.position, elioHidingNumber);
         Debug.Log(elioAgent.speed);
-        if (distanceBetweenElioAndHidingSpot < 2)
+        if (distanceBetweenElioAndHidingSpot < 5)
         {
             ElioSounds.isMoving = false;
             elioAgent.GetComponent<NavMeshAgent>().speed = 0;
