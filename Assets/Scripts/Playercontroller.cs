@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Playercontroller : MonoBehaviour
 {
@@ -17,8 +18,9 @@ public class Playercontroller : MonoBehaviour
         }
         if (Input.GetKeyDown("escape"))
         {
-            Application.Quit(); // Quits the game
+            SceneManager.LoadScene("Lasttrymenu");
         }
+
         movement = new Vector2(InputManager.MainHorizontal() * speed, InputManager.MainVertical() * speed);
 
         if (movement.x != 0 || movement.y != 0)
