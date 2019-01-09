@@ -22,6 +22,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeUntilGameOver;
     public float timeUntilYouCanFindElio;
     public float timeToQuitGame;
+    public float timeForElioToSitDown;
     bool elioHasAHidingSpot = false;
     
     
@@ -47,13 +48,23 @@ public class ControllElioMeshScript : MonoBehaviour
         Debug.Log(elioAgent.speed);
         if (distanceBetweenElioAndHidingSpot < 5)
         {
-            ElioSounds.isMoving = false;
             elioAgent.GetComponent<NavMeshAgent>().speed = 0;
             elioAgent.GetComponent<NavMeshAgent>().acceleration = 0;
+            anim.SetBool("Wait", true);
+            timeForElioToSitDown += Time.smoothDeltaTime;
+            if (timeForElioToSitDown > 1 && anim.GetBool("Wait") == true)
+            {
+                timeForElioToSitDown = 0;
+                anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
+            }
+            ElioSounds.isMoving = false;
+            
+            anim.SetBool("Wait", false);
         }
         else
         {
             ElioSounds.isMoving = true;
+            anim.SetBool("Wait", false);
             elioAgent.GetComponent<NavMeshAgent>().speed = 4;
             elioAgent.GetComponent<NavMeshAgent>().acceleration = 2;
         }
