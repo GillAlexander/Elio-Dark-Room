@@ -24,7 +24,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeToQuitGame;
     public float timeForElioToSitDown;
     public float timeForElioToMoveToNewHidingPlace;
-    float timeForElio = 30;
+    float timeForElio = 260;
     bool elioHasAHidingSpot = false;
 
 
