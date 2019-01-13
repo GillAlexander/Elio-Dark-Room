@@ -188,7 +188,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot67
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1819,7 +1819,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot55
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2013,7 +2013,7 @@ GameObject:
   m_Layer: 12
   m_Name: SpawnSpot
   m_TagString: SpawnSpot
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2024,7 +2024,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 38909139}
   m_LocalRotation: {x: 0.12099701, y: -0.5953096, z: 0.09128487, w: 0.78907114}
-  m_LocalPosition: {x: 154.76547, y: 0.9576006, z: 88.90401}
+  m_LocalPosition: {x: 154.76547, y: -1.04, z: 91.9}
   m_LocalScale: {x: 1.0000014, y: 1.0000002, z: 1.000001}
   m_Children: []
   m_Father: {fileID: 1539740062}
@@ -2663,7 +2663,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot35
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2931,7 +2931,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot58
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8778,7 +8778,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot24
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9223,7 +9223,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot32
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10481,7 +10481,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot62
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10698,7 +10698,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot36
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11804,7 +11804,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot64
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11887,7 +11887,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot56
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12859,7 +12859,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot65
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13058,7 +13058,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot27
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13133,7 +13133,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot51
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13864,7 +13864,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot22
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -14051,7 +14051,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot4
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -14264,7 +14264,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot20
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -14762,7 +14762,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot63
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -16958,7 +16958,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot38
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -16986,7 +16986,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot11
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17073,7 +17073,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot43
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17656,7 +17656,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot13
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17802,7 +17802,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot1
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17830,7 +17830,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot3
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -18354,7 +18354,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot19
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -18441,7 +18441,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot10
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -19270,7 +19270,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot44
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -19538,7 +19538,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot2
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20312,7 +20312,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot8
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20521,7 +20521,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot61
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20549,7 +20549,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot30
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -21455,7 +21455,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot37
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -21483,7 +21483,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot15
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -23234,7 +23234,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot25
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -25110,7 +25110,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot26
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -25549,7 +25549,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot42
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -27230,7 +27230,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot16
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29178,7 +29178,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot7
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29383,7 +29383,7 @@ GameObject:
   m_Layer: 12
   m_Name: SpawnSpot
   m_TagString: SpawnSpot
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29927,7 +29927,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot50
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -33073,7 +33073,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot46
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34849,7 +34849,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot45
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -35730,7 +35730,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot40
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -35758,7 +35758,7 @@ GameObject:
   m_Layer: 12
   m_Name: SpawnSpot
   m_TagString: SpawnSpot
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -35769,7 +35769,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116655562}
   m_LocalRotation: {x: 0.16976784, y: -0.2990877, z: 0.05416359, w: 0.93743896}
-  m_LocalPosition: {x: -195.4, y: 7.0763893, z: 69.7}
+  m_LocalPosition: {x: -167.4, y: 6.08, z: 19.7}
   m_LocalScale: {x: 1.0000014, y: 1.0000002, z: 1.000001}
   m_Children: []
   m_Father: {fileID: 1539740062}
@@ -36286,7 +36286,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot59
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36566,7 +36566,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot52
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -37012,7 +37012,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot23
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39437,7 +39437,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot47
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -40458,7 +40458,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot70
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -41643,7 +41643,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot53
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43499,7 +43499,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot29
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43944,7 +43944,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot17
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44374,7 +44374,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot5
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45440,7 +45440,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot60
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45594,7 +45594,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot49
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -46277,7 +46277,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot68
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -46738,7 +46738,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot21
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -48429,7 +48429,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot48
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -49651,7 +49651,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot34
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -50482,7 +50482,7 @@ GameObject:
   m_Layer: 12
   m_Name: SpawnSpot
   m_TagString: SpawnSpot
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -51869,7 +51869,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot6
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -52045,7 +52045,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot69
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -52073,7 +52073,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot28
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -52215,7 +52215,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot12
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -52369,7 +52369,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot39
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -52781,7 +52781,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot66
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -53307,7 +53307,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot57
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54880,7 +54880,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot9
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -56369,7 +56369,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot54
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -56649,7 +56649,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot31
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -58651,7 +58651,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot41
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -59266,7 +59266,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot33
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -59467,7 +59467,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot14
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -61599,7 +61599,7 @@ GameObject:
   m_Layer: 12
   m_Name: HidingSpot18
   m_TagString: HidingSpot
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
