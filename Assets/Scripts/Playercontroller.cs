@@ -16,10 +16,6 @@ public class Playercontroller : MonoBehaviour
         {
             speed -= 0.5f;
         }
-        if (Input.GetKeyDown("escape"))
-        {
-            SceneManager.LoadScene("Lasttrymenu");
-        }
 
         movement = new Vector2(InputManager.MainHorizontal() * speed, InputManager.MainVertical() * speed);
 
