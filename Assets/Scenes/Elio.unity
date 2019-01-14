@@ -48415,6 +48415,12 @@ Prefab:
       propertyPath: m_BaseOffset
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114023537243929854, guid: 51f6128a186757f429ecd9af1785ff64,
+        type: 2}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24100000, guid: c0eab942f41957d4c930b0a911c010d9,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51f6128a186757f429ecd9af1785ff64, type: 2}
   m_IsPrefabAsset: 0
