@@ -2311,9 +2311,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: "H\xF6gl\xE4sning p\xE5"
+    - m_Text: "Inst\xE4llning 1"
       m_Image: {fileID: 0}
-    - m_Text: "H\xF6gl\xE4sning av"
+    - m_Text: "Inst\xE4llning 2"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
