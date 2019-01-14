@@ -85,6 +85,7 @@ public class ControllElioMeshScript : MonoBehaviour
             elioAgent.SetDestination(player.transform.position);
             elioAgent.speed = 2.5f;
             elioAgent.acceleration = 1;
+            ElioAnimations();
             if (distanceBetweenElioAndPlayer < 10)
             {
                 
