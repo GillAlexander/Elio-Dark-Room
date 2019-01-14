@@ -24,7 +24,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeToQuitGame;
     public float timeForElioToSitDown;
     public float timeForElioToMoveToNewHidingPlace;
-    public float timeForElio = 245;
+    public float timeForElio = 5;
     bool elioHasAHidingSpot = false;
 
 
@@ -40,6 +40,10 @@ public class ControllElioMeshScript : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetButton("Cancel"))
+        {
+            SceneManager.LoadScene("Lasttrymenu");
+        }
         timeUntilYouCanFindElio += Time.smoothDeltaTime;
         timeUntilGameOver += Time.smoothDeltaTime;
         timeForElioToMoveToNewHidingPlace += Time.smoothDeltaTime;

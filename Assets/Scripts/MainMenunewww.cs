@@ -9,6 +9,10 @@ public class MainMenunewww : MonoBehaviour
     public GameObject inställningarMeny;
     public GameObject mainMeny;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     private void Update()
     {
