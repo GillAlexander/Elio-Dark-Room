@@ -22,6 +22,7 @@ public class ElioSounds : MonoBehaviour
     public AudioClip[] walkGrass;
     public AudioClip[] walkSnow;
     public AudioClip[] walkWater;
+    public AudioMixer mixer;
     public AudioMixerGroup[] audioMixer;
     string surfaceTag;
     bool tooFar = false;
@@ -55,9 +56,15 @@ public class ElioSounds : MonoBehaviour
         if (Input.GetButtonDown("Whistle") && !PlayerNoise.justWhistled)
         {
             if (Vector3.Distance(player.position, transform.position) < 20)
+            {
+                mixer.SetFloat("ElioVoiceParam", 3);
                 StartCoroutine(Giggles());
+            }
             else
+            {
+                mixer.SetFloat("ElioVoiceParam", -6);
                 StartCoroutine(OverHere());
+            }
         }
 
         if (Vector3.Distance(player.position, transform.position) > 50)
