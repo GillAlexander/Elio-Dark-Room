@@ -82,10 +82,11 @@ public class ControllElioMeshScript : MonoBehaviour
         if (timeUntilGameOver > timeForElio)
         {
             ElioAI();
+            anim.SetFloat("Speed", Mathf.Abs(elioAgent.speed));
+            anim.SetBool("Wait", false);
             elioAgent.SetDestination(player.transform.position);
-            elioAgent.speed = 2.5f;
+            elioAgent.speed = 4f;
             elioAgent.acceleration = 1;
-            ElioAnimations();
             if (distanceBetweenElioAndPlayer < 10)
             {
                 
