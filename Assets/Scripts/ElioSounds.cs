@@ -34,6 +34,7 @@ public class ElioSounds : MonoBehaviour
 
     private void Start()
     {
+        CheckGround();
         StartCoroutine(Footsteps());
         StartCoroutine(FarAway());
     }

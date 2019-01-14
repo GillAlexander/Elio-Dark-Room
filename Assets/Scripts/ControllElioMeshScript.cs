@@ -24,7 +24,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeToQuitGame;
     public float timeForElioToSitDown;
     public float timeForElioToMoveToNewHidingPlace;
-    public float timeForElio = 5;
+    public float timeForElio = 240;
     bool elioHasAHidingSpot = false;
 
 
@@ -42,6 +42,7 @@ public class ControllElioMeshScript : MonoBehaviour
     {
         if (Input.GetButton("Cancel"))
         {
+            ElioSounds.isMoving = false;
             SceneManager.LoadScene("Lasttrymenu");
         }
         timeUntilYouCanFindElio += Time.smoothDeltaTime;
@@ -99,6 +100,7 @@ public class ControllElioMeshScript : MonoBehaviour
                 ElioSounds.gameOver++;
                 if (timeToQuitGame > 4.5f)
                 {
+                    ElioSounds.isMoving = false;
                     SceneManager.LoadScene("Lasttrymenu");
                 }
             }
