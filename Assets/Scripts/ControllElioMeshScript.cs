@@ -24,7 +24,7 @@ public class ControllElioMeshScript : MonoBehaviour
     public float timeToQuitGame;
     public float timeForElioToSitDown;
     public float timeForElioToMoveToNewHidingPlace;
-    float timeForElio = 260;
+    float timeForElio = 25;
     bool elioHasAHidingSpot = false;
 
 
@@ -50,6 +50,7 @@ public class ControllElioMeshScript : MonoBehaviour
         {
 
             ElioAI();
+            
             if (distanceBetweenElioAndHidingSpot < 2)
             {
                 elioAgent.GetComponent<NavMeshAgent>().speed = 0;
@@ -78,14 +79,15 @@ public class ControllElioMeshScript : MonoBehaviour
             }
         }
         
-        if (timeUntilGameOver >= timeForElio)
+        if (timeUntilGameOver > timeForElio)
         {
-         elioAgent.SetDestination(player.transform.position);
+            ElioAI();
+            elioAgent.SetDestination(player.transform.position);
+            elioAgent.speed = 2.5f;
+            elioAgent.acceleration = 1;
             if (distanceBetweenElioAndPlayer < 10)
             {
-                elioAgent.speed = 2.5f;
-                elioAgent.acceleration = 1;
-                elioAgent.stoppingDistance = 5;
+                
                 timeToQuitGame += Time.smoothDeltaTime;
 
                 ElioSounds.gameOver++;
@@ -118,7 +120,7 @@ public class ControllElioMeshScript : MonoBehaviour
 
                 if (elioHasAHidingSpot)
                 {
-                    timeForElioToMoveToNewHidingPlace += Time.smoothDeltaTime;
+                    //timeForElioToMoveToNewHidingPlace += Time.smoothDeltaTime;
                     if (timeForElioToMoveToNewHidingPlace > 1)
                     {
                         if (distanceBetweenElioAndPlayer <= 58)
